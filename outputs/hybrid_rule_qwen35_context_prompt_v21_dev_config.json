@@ -1,0 +1,19 @@
+{
+  "experiment_id": "rule_qwen35_context_prompt_v21_dev_hybrid_v1",
+  "created_at_utc": "2026-09-02T20:12:13.369857+00:00",
+  "dataset": "frozen 48-item Development Set",
+  "rule_component": "frozen rule_baseline_v1",
+  "llm_component": "qwen35_9b_with_context_prompt_v21_dev_v1",
+  "llm_prompt_version": "v2.1",
+  "llm_input_mode": "with_context",
+  "hybrid_policy": "all_rule_predictions__plus_llm_required_predictions",
+  "provider_calls": 0,
+  "component_sha256": {
+    "rule_predictions": "8B53636F970051CEDDF302C6ECA9420B11A4373C8ED4BBCEEC0403405B40F688",
+    "v2.1_predictions": "0AF33642DB992EEE91C2C633E7CF8A00F4F9366DE8EEC9A8F7998D4F52393D52"
+  },
+  "frozen_comparison_inputs": {
+    "v1_hybrid_evaluation_sha256": "998E6CF0B03B5D7FEADF48359CF95989D9F7C2E4E9E9E775EFE8AAA8D439435C",
+    "v2_hybrid_evaluation_sha256": "038CE349747A16C1C62BAA8F05C8A1305D707CA120EA87DB760C2C8E968D1D32"
+  }
+}

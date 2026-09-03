@@ -1,0 +1,21 @@
+{
+  "experiment_id": "qwen35_9b_no_context_v1",
+  "model": "qwen3.5:9b",
+  "provider": "ollama",
+  "provider_endpoint": "http://127.0.0.1:11434/api/generate",
+  "input_mode": "without_context",
+  "temperature": 0.0,
+  "thinking": false,
+  "stream": false,
+  "prompt_version": "v1",
+  "parser_policy": "stage_6a_strict_no_repair",
+  "retry_policy": "off",
+  "structured_output": false,
+  "timeout_seconds": 120.0,
+  "dataset": "48-item synthetic development benchmark v1",
+  "dataset_item_count": 48,
+  "created_at_utc": "2026-09-02T18:02:21.283557+00:00",
+  "dev_path": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\data\\dev.csv",
+  "glossary_path": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\data\\glossary.csv",
+  "annotations_path_for_evaluation_only": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\data\\dev_annotations.csv"
+}

@@ -1,0 +1,58 @@
+{
+  "release": "J-GameLQA v1",
+  "version": "1.0.0",
+  "release_date": "2026-09-04",
+  "status": "frozen_portfolio_release",
+  "final_candidate": {
+    "rule": "Rule Baseline v1",
+    "llm": "Qwen3.5-9B",
+    "prompt": "Prompt v2.1",
+    "input_mode": "with_context",
+    "hybrid_policy": {
+      "rule_addressable": "rule",
+      "llm_required": "context_aware_llm"
+    }
+  },
+  "heldout_result": {
+    "tp": 58,
+    "fp": 41,
+    "fn": 8,
+    "precision": 0.5858585858585859,
+    "recall": 0.8787878787878788,
+    "f1": 0.7030303030303031
+  },
+  "prompt_sha256": "F17B7336A7DF4048D0A32AD4EF600F6391F85C77F00D0CA5D676A63899F14F69",
+  "test_sha256": "2EB9565F7334DEB6EC552578ECDB7F7A697DA097F08DBED14F12BAFCCED2E785",
+  "heldout_result_artifact": "outputs/heldout_method_comparison_v1.json",
+  "heldout_result_artifact_sha256": "31208B6B2BF2B3AC1CFDFD3DA14ABC8A76F85EED43A4D1B5AB5FC602F5A8D329",
+  "heldout_freeze_manifest_sha256": "E0545DE0F6EE4DFC784441A5F5B059A9E3C40127A60C0ADA42D231FD08D02D3E",
+  "document_sha256": {
+    "README.md": "7368F160D158CA17EC56C316F2F42CF96EEF43F1A1193411A810E3B851585BAD",
+    "RELEASE_NOTES.md": "2AC1DE9BEA512CE39808537F1F12C3D89E003BCB91B824944AF385FF6DC55699",
+    "docs/architecture.md": "B0F46B27AA9A583B7141543861914B38BA8236EF30F7A7E80A9F327A580CB989",
+    "docs/experiment_flow.md": "F90F4B5E36BA91D7D1AD7C95F22839005F1BD49C5A5AD1AD021A6567107A47D4",
+    "docs/interview_deep_dive.md": "09932A12B01CD15902B156B395F2CA15D04687AA16D50951493B0073E42F180A",
+    "docs/job_talk_tracks.md": "B30BEEBD3E4673DB43807D8686E289A579DC00E9BF9C206ADAC5C88FC025AB2B",
+    "docs/portfolio_onepager.md": "034980C92EDC9DBFD4B678D6E6AC45596A4EE20DC1B602C56A13FD90BE217159",
+    "docs/resume_cn.md": "850FE0761F4C3805814D73266C43F2A595C81D1C2F248011335114B1DC559C2E",
+    "docs/reproducibility.md": "689496285670D42486A1312B279289BD4F6268546098AC629974398D48A5B427",
+    "docs/public_release_audit.md": "797B6863599D8011D84C689C2FE8F6C1527852F649FF87D4C6D89539B301AC1A",
+    "docs/github_release_checklist.md": "F325F7FE85EA4314A1660D43C35810421F3A8B8FEF212D9674BF28A752739FE6",
+    "docs/git_commit_plan.md": "757D69FA25DF3252D856AA4EB4771A7305511CFEE9D29EB257DE2C210B16CC76",
+    "docs/heldout_evaluation_results.md": "BEEA66D4F35960EA6774673BE524FC3EEA422B52B2FE74A96C82993E864EF4B5",
+    "docs/assets/j-gamelqa-architecture.svg": "BC59F62CF8F09C97037EC25AFEAD2F761EAC628195C27D1F4FC73FF9ADD290D7",
+    "docs/assets/j-gamelqa-experiment-flow.svg": "4A3D5CCC21FEBFF1E09046B368C43A2AAC15869FB810385BA6289FFA20A478BD"
+  },
+  "counts": {
+    "automated_unittest_count": 176,
+    "development_sample_count": 48,
+    "held_out_test_sample_count": 60,
+    "held_out_reference_detection_count": 66
+  },
+  "policy": {
+    "ollama_calls_during_release_packaging": 0,
+    "held_out_test_inference_during_release_packaging": 0,
+    "held_out_test_evaluation_during_release_packaging": 0,
+    "no_retuning": "Future development requires Test v2 or an external human-reviewed evaluation set."
+  }
+}

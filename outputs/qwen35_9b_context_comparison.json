@@ -1,0 +1,1219 @@
+{
+  "experiments": {
+    "no_context": {
+      "experiment_id": "qwen35_9b_no_context_v1",
+      "model": "qwen3.5:9b",
+      "provider": "ollama",
+      "provider_endpoint": "http://127.0.0.1:11434/api/generate",
+      "input_mode": "without_context",
+      "temperature": 0.0,
+      "thinking": false,
+      "stream": false,
+      "prompt_version": "v1",
+      "parser_policy": "stage_6a_strict_no_repair",
+      "retry_policy": "off",
+      "structured_output": false,
+      "timeout_seconds": 120.0,
+      "dataset": "48-item synthetic development benchmark v1",
+      "dataset_item_count": 48,
+      "created_at_utc": "2026-09-02T18:02:21.283557+00:00",
+      "dev_path": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\data\\dev.csv",
+      "glossary_path": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\data\\glossary.csv",
+      "annotations_path_for_evaluation_only": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\data\\dev_annotations.csv"
+    },
+    "with_context": {
+      "experiment_id": "qwen35_9b_with_context_v1",
+      "model": "qwen3.5:9b",
+      "provider": "ollama",
+      "provider_endpoint": "http://127.0.0.1:11434/api/generate",
+      "input_mode": "with_context",
+      "temperature": 0.0,
+      "thinking": false,
+      "stream": false,
+      "prompt_version": "v1",
+      "parser_policy": "stage_6a_strict_no_repair",
+      "retry_policy": "off",
+      "structured_output": false,
+      "timeout_seconds": 120.0,
+      "dataset": "48-item synthetic development benchmark v1",
+      "dataset_item_count": 48,
+      "created_at_utc": "2026-09-02T18:24:57.275965+00:00",
+      "dev_path": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\data\\dev.csv",
+      "glossary_path": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\data\\glossary.csv",
+      "annotations_path_for_evaluation_only": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\data\\dev_annotations.csv"
+    }
+  },
+  "controlled_experiment_check": {
+    "intended_variable": "input_mode",
+    "no_context_input_mode": "without_context",
+    "with_context_input_mode": "with_context",
+    "controlled_settings": {
+      "model": {
+        "no_context": "qwen3.5:9b",
+        "with_context": "qwen3.5:9b",
+        "same": true
+      },
+      "provider": {
+        "no_context": "ollama",
+        "with_context": "ollama",
+        "same": true
+      },
+      "provider_endpoint": {
+        "no_context": "http://127.0.0.1:11434/api/generate",
+        "with_context": "http://127.0.0.1:11434/api/generate",
+        "same": true
+      },
+      "temperature": {
+        "no_context": 0.0,
+        "with_context": 0.0,
+        "same": true
+      },
+      "thinking": {
+        "no_context": false,
+        "with_context": false,
+        "same": true
+      },
+      "stream": {
+        "no_context": false,
+        "with_context": false,
+        "same": true
+      },
+      "prompt_version": {
+        "no_context": "v1",
+        "with_context": "v1",
+        "same": true
+      },
+      "parser_policy": {
+        "no_context": "stage_6a_strict_no_repair",
+        "with_context": "stage_6a_strict_no_repair",
+        "same": true
+      },
+      "retry_policy": {
+        "no_context": "off",
+        "with_context": "off",
+        "same": true
+      },
+      "structured_output": {
+        "no_context": false,
+        "with_context": false,
+        "same": true
+      },
+      "timeout_seconds": {
+        "no_context": 120.0,
+        "with_context": 120.0,
+        "same": true
+      },
+      "dataset": {
+        "no_context": "48-item synthetic development benchmark v1",
+        "with_context": "48-item synthetic development benchmark v1",
+        "same": true
+      },
+      "dataset_item_count": {
+        "no_context": 48,
+        "with_context": 48,
+        "same": true
+      },
+      "dev_path": {
+        "no_context": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\data\\dev.csv",
+        "with_context": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\data\\dev.csv",
+        "same": true
+      },
+      "glossary_path": {
+        "no_context": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\data\\glossary.csv",
+        "with_context": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\data\\glossary.csv",
+        "same": true
+      },
+      "annotations_path_for_evaluation_only": {
+        "no_context": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\data\\dev_annotations.csv",
+        "with_context": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\data\\dev_annotations.csv",
+        "same": true
+      }
+    },
+    "unintended_differences": []
+  },
+  "overall": {
+    "no_context": {
+      "tp": 25,
+      "fp": 17,
+      "fn": 26,
+      "precision": 0.5952380952380952,
+      "recall": 0.49019607843137253,
+      "f1": 0.5376344086021505
+    },
+    "with_context": {
+      "tp": 34,
+      "fp": 18,
+      "fn": 17,
+      "precision": 0.6538461538461539,
+      "recall": 0.6666666666666666,
+      "f1": 0.6601941747572816
+    },
+    "delta": {
+      "tp": 9,
+      "fp": 1,
+      "fn": -9,
+      "precision": 0.05860805860805862,
+      "recall": 0.1764705882352941,
+      "f1": 0.12255976615513109
+    }
+  },
+  "llm_required": {
+    "no_context": {
+      "tp": 13,
+      "fp": 15,
+      "fn": 12,
+      "precision": 0.4642857142857143,
+      "recall": 0.52,
+      "f1": 0.49056603773584906
+    },
+    "with_context": {
+      "tp": 23,
+      "fp": 15,
+      "fn": 2,
+      "precision": 0.6052631578947368,
+      "recall": 0.92,
+      "f1": 0.7301587301587301
+    },
+    "delta": {
+      "tp": 10,
+      "fp": 0,
+      "fn": -10,
+      "precision": 0.14097744360902253,
+      "recall": 0.4,
+      "f1": 0.23959269242288106
+    }
+  },
+  "context_sensitive_subset": {
+    "issue_types": [
+      "character_voice_mismatch",
+      "first_person_mismatch",
+      "keigo_mismatch"
+    ],
+    "no_context": {
+      "tp": 2,
+      "fp": 1,
+      "fn": 9,
+      "precision": 0.6666666666666666,
+      "recall": 0.18181818181818182,
+      "f1": 0.28571428571428575
+    },
+    "with_context": {
+      "tp": 11,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.8461538461538461,
+      "recall": 1.0,
+      "f1": 0.9166666666666666
+    },
+    "delta": {
+      "tp": 9,
+      "fp": 1,
+      "fn": -9,
+      "precision": 0.17948717948717952,
+      "recall": 0.8181818181818181,
+      "f1": 0.6309523809523809
+    }
+  },
+  "rule_addressable": {
+    "no_context": {
+      "tp": 12,
+      "fp": 2,
+      "fn": 14,
+      "precision": 0.8571428571428571,
+      "recall": 0.46153846153846156,
+      "f1": 0.6
+    },
+    "with_context": {
+      "tp": 11,
+      "fp": 3,
+      "fn": 15,
+      "precision": 0.7857142857142857,
+      "recall": 0.4230769230769231,
+      "f1": 0.55
+    },
+    "delta": {
+      "tp": -1,
+      "fp": 1,
+      "fn": 1,
+      "precision": -0.0714285714285714,
+      "recall": -0.03846153846153849,
+      "f1": -0.04999999999999993
+    }
+  },
+  "per_issue": [
+    {
+      "issue_type": "addition",
+      "no_context": {
+        "issue_type": "addition",
+        "reference_count": 3,
+        "prediction_count": 5,
+        "tp": 3,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.7499999999999999
+      },
+      "with_context": {
+        "issue_type": "addition",
+        "reference_count": 3,
+        "prediction_count": 5,
+        "tp": 3,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.7499999999999999
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "issue_type": "character_voice_mismatch",
+      "no_context": {
+        "issue_type": "character_voice_mismatch",
+        "reference_count": 4,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "with_context": {
+        "issue_type": "character_voice_mismatch",
+        "reference_count": 4,
+        "prediction_count": 5,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888888888888889
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": 5,
+        "tp": 4,
+        "fp": 1,
+        "fn": -4,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888888888888889
+      }
+    },
+    {
+      "issue_type": "first_person_mismatch",
+      "no_context": {
+        "issue_type": "first_person_mismatch",
+        "reference_count": 3,
+        "prediction_count": 2,
+        "tp": 1,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.5,
+        "recall": 0.3333333333333333,
+        "f1": 0.4
+      },
+      "with_context": {
+        "issue_type": "first_person_mismatch",
+        "reference_count": 3,
+        "prediction_count": 3,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": 1,
+        "tp": 2,
+        "fp": -1,
+        "fn": -2,
+        "precision": 0.5,
+        "recall": 0.6666666666666667,
+        "f1": 0.6
+      }
+    },
+    {
+      "issue_type": "keigo_mismatch",
+      "no_context": {
+        "issue_type": "keigo_mismatch",
+        "reference_count": 4,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.25,
+        "f1": 0.4
+      },
+      "with_context": {
+        "issue_type": "keigo_mismatch",
+        "reference_count": 4,
+        "prediction_count": 5,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888888888888889
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": 4,
+        "tp": 3,
+        "fp": 1,
+        "fn": -3,
+        "precision": -0.19999999999999996,
+        "recall": 0.75,
+        "f1": 0.48888888888888893
+      }
+    },
+    {
+      "issue_type": "length_overflow",
+      "no_context": {
+        "issue_type": "length_overflow",
+        "reference_count": 2,
+        "prediction_count": 3,
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8
+      },
+      "with_context": {
+        "issue_type": "length_overflow",
+        "reference_count": 2,
+        "prediction_count": 3,
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "issue_type": "linebreak_mismatch",
+      "no_context": {
+        "issue_type": "linebreak_mismatch",
+        "reference_count": 2,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "with_context": {
+        "issue_type": "linebreak_mismatch",
+        "reference_count": 2,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "issue_type": "markup_extra",
+      "no_context": {
+        "issue_type": "markup_extra",
+        "reference_count": 2,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "with_context": {
+        "issue_type": "markup_extra",
+        "reference_count": 2,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "issue_type": "markup_malformed",
+      "no_context": {
+        "issue_type": "markup_malformed",
+        "reference_count": 1,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "with_context": {
+        "issue_type": "markup_malformed",
+        "reference_count": 1,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "issue_type": "markup_missing",
+      "no_context": {
+        "issue_type": "markup_missing",
+        "reference_count": 2,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "with_context": {
+        "issue_type": "markup_missing",
+        "reference_count": 2,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "issue_type": "markup_modified",
+      "no_context": {
+        "issue_type": "markup_modified",
+        "reference_count": 1,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "with_context": {
+        "issue_type": "markup_modified",
+        "reference_count": 1,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": -1,
+        "tp": -1,
+        "fp": 0,
+        "fn": 1,
+        "precision": -1.0,
+        "recall": -1.0,
+        "f1": -1.0
+      }
+    },
+    {
+      "issue_type": "markup_order_mismatch",
+      "no_context": {
+        "issue_type": "markup_order_mismatch",
+        "reference_count": 1,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "with_context": {
+        "issue_type": "markup_order_mismatch",
+        "reference_count": 1,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "issue_type": "mistranslation",
+      "no_context": {
+        "issue_type": "mistranslation",
+        "reference_count": 4,
+        "prediction_count": 12,
+        "tp": 4,
+        "fp": 8,
+        "fn": 0,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5
+      },
+      "with_context": {
+        "issue_type": "mistranslation",
+        "reference_count": 4,
+        "prediction_count": 11,
+        "tp": 4,
+        "fp": 7,
+        "fn": 0,
+        "precision": 0.36363636363636365,
+        "recall": 1.0,
+        "f1": 0.5333333333333333
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": -1,
+        "tp": 0,
+        "fp": -1,
+        "fn": 0,
+        "precision": 0.03030303030303033,
+        "recall": 0.0,
+        "f1": 0.033333333333333326
+      }
+    },
+    {
+      "issue_type": "number_extra",
+      "no_context": {
+        "issue_type": "number_extra",
+        "reference_count": 1,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "with_context": {
+        "issue_type": "number_extra",
+        "reference_count": 1,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "issue_type": "number_mismatch",
+      "no_context": {
+        "issue_type": "number_mismatch",
+        "reference_count": 2,
+        "prediction_count": 3,
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8
+      },
+      "with_context": {
+        "issue_type": "number_mismatch",
+        "reference_count": 2,
+        "prediction_count": 4,
+        "tp": 2,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": 1,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "precision": -0.16666666666666663,
+        "recall": 0.0,
+        "f1": -0.13333333333333341
+      }
+    },
+    {
+      "issue_type": "number_missing",
+      "no_context": {
+        "issue_type": "number_missing",
+        "reference_count": 2,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666
+      },
+      "with_context": {
+        "issue_type": "number_missing",
+        "reference_count": 2,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "issue_type": "omission",
+      "no_context": {
+        "issue_type": "omission",
+        "reference_count": 4,
+        "prediction_count": 7,
+        "tp": 3,
+        "fp": 4,
+        "fn": 1,
+        "precision": 0.42857142857142855,
+        "recall": 0.75,
+        "f1": 0.5454545454545454
+      },
+      "with_context": {
+        "issue_type": "omission",
+        "reference_count": 4,
+        "prediction_count": 8,
+        "tp": 4,
+        "fp": 4,
+        "fn": 0,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": -1,
+        "precision": 0.07142857142857145,
+        "recall": 0.25,
+        "f1": 0.12121212121212122
+      }
+    },
+    {
+      "issue_type": "placeholder_extra",
+      "no_context": {
+        "issue_type": "placeholder_extra",
+        "reference_count": 2,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "with_context": {
+        "issue_type": "placeholder_extra",
+        "reference_count": 2,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "issue_type": "placeholder_missing",
+      "no_context": {
+        "issue_type": "placeholder_missing",
+        "reference_count": 2,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "with_context": {
+        "issue_type": "placeholder_missing",
+        "reference_count": 2,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "issue_type": "placeholder_modified",
+      "no_context": {
+        "issue_type": "placeholder_modified",
+        "reference_count": 1,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "with_context": {
+        "issue_type": "placeholder_modified",
+        "reference_count": 1,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "issue_type": "terminology_forbidden",
+      "no_context": {
+        "issue_type": "terminology_forbidden",
+        "reference_count": 3,
+        "prediction_count": 3,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "with_context": {
+        "issue_type": "terminology_forbidden",
+        "reference_count": 3,
+        "prediction_count": 3,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "issue_type": "terminology_not_approved",
+      "no_context": {
+        "issue_type": "terminology_not_approved",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "with_context": {
+        "issue_type": "terminology_not_approved",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "issue_type": "translationese",
+      "no_context": {
+        "issue_type": "translationese",
+        "reference_count": 3,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5
+      },
+      "with_context": {
+        "issue_type": "translationese",
+        "reference_count": 3,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5
+      },
+      "delta": {
+        "reference_count": 0,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    }
+  ],
+  "paired_changes": {
+    "context_fixes": [
+      {
+        "string_id": "DEV_009",
+        "issue_type": "first_person_mismatch",
+        "before_status": "false_negative",
+        "after_status": "true_positive"
+      },
+      {
+        "string_id": "DEV_010",
+        "issue_type": "character_voice_mismatch",
+        "before_status": "false_negative",
+        "after_status": "true_positive"
+      },
+      {
+        "string_id": "DEV_035",
+        "issue_type": "keigo_mismatch",
+        "before_status": "false_negative",
+        "after_status": "true_positive"
+      },
+      {
+        "string_id": "DEV_036",
+        "issue_type": "first_person_mismatch",
+        "before_status": "false_negative",
+        "after_status": "true_positive"
+      },
+      {
+        "string_id": "DEV_037",
+        "issue_type": "character_voice_mismatch",
+        "before_status": "false_negative",
+        "after_status": "true_positive"
+      },
+      {
+        "string_id": "DEV_040",
+        "issue_type": "keigo_mismatch",
+        "before_status": "false_negative",
+        "after_status": "true_positive"
+      },
+      {
+        "string_id": "DEV_041",
+        "issue_type": "translationese",
+        "before_status": "false_negative",
+        "after_status": "true_positive"
+      },
+      {
+        "string_id": "DEV_042",
+        "issue_type": "character_voice_mismatch",
+        "before_status": "false_negative",
+        "after_status": "true_positive"
+      },
+      {
+        "string_id": "DEV_043",
+        "issue_type": "omission",
+        "before_status": "false_negative",
+        "after_status": "true_positive"
+      },
+      {
+        "string_id": "DEV_044",
+        "issue_type": "character_voice_mismatch",
+        "before_status": "false_negative",
+        "after_status": "true_positive"
+      },
+      {
+        "string_id": "DEV_046",
+        "issue_type": "keigo_mismatch",
+        "before_status": "false_negative",
+        "after_status": "true_positive"
+      }
+    ],
+    "context_regressions": [
+      {
+        "string_id": "DEV_022",
+        "issue_type": "markup_modified",
+        "before_status": "true_positive",
+        "after_status": "false_negative"
+      },
+      {
+        "string_id": "DEV_034",
+        "issue_type": "translationese",
+        "before_status": "true_positive",
+        "after_status": "false_negative"
+      }
+    ],
+    "new_false_positives": [
+      {
+        "string_id": "DEV_006",
+        "issue_type": "omission",
+        "before_status": "not_predicted",
+        "after_status": "false_positive"
+      },
+      {
+        "string_id": "DEV_007",
+        "issue_type": "keigo_mismatch",
+        "before_status": "not_predicted",
+        "after_status": "false_positive"
+      },
+      {
+        "string_id": "DEV_008",
+        "issue_type": "character_voice_mismatch",
+        "before_status": "not_predicted",
+        "after_status": "false_positive"
+      },
+      {
+        "string_id": "DEV_012",
+        "issue_type": "omission",
+        "before_status": "not_predicted",
+        "after_status": "false_positive"
+      },
+      {
+        "string_id": "DEV_034",
+        "issue_type": "mistranslation",
+        "before_status": "not_predicted",
+        "after_status": "false_positive"
+      },
+      {
+        "string_id": "DEV_043",
+        "issue_type": "number_mismatch",
+        "before_status": "not_predicted",
+        "after_status": "false_positive"
+      }
+    ],
+    "resolved_false_positives": [
+      {
+        "string_id": "DEV_009",
+        "issue_type": "mistranslation",
+        "before_status": "false_positive",
+        "after_status": "not_predicted"
+      },
+      {
+        "string_id": "DEV_010",
+        "issue_type": "first_person_mismatch",
+        "before_status": "false_positive",
+        "after_status": "not_predicted"
+      },
+      {
+        "string_id": "DEV_012",
+        "issue_type": "mistranslation",
+        "before_status": "false_positive",
+        "after_status": "not_predicted"
+      },
+      {
+        "string_id": "DEV_035",
+        "issue_type": "omission",
+        "before_status": "false_positive",
+        "after_status": "not_predicted"
+      },
+      {
+        "string_id": "DEV_044",
+        "issue_type": "omission",
+        "before_status": "false_positive",
+        "after_status": "not_predicted"
+      }
+    ]
+  },
+  "protocol": {
+    "no_context": {
+      "total_requests": 48,
+      "successful_provider_calls": 48,
+      "provider_failures": 0,
+      "provider_failure_details": [],
+      "protocol_successful_responses": 48,
+      "parse_failures": 0,
+      "schema_failures": 0,
+      "validation_failures": 0,
+      "unknown_issue_types": [],
+      "unknown_issue_type_count": 0,
+      "duplicate_predictions": [],
+      "duplicate_prediction_key_count": 0,
+      "protocol_success_rate": 1.0,
+      "protocol_success_rate_denominator": "successful_provider_calls",
+      "raw_prediction_count": 42,
+      "unique_prediction_detection_count": 42,
+      "mean_latency_seconds": 1.5561094083386706,
+      "median_latency_seconds": 1.5827504000044428,
+      "thinking_content_responses": 0
+    },
+    "with_context": {
+      "total_requests": 48,
+      "successful_provider_calls": 48,
+      "provider_failures": 0,
+      "provider_failure_details": [],
+      "protocol_successful_responses": 48,
+      "parse_failures": 0,
+      "schema_failures": 0,
+      "validation_failures": 0,
+      "unknown_issue_types": [],
+      "unknown_issue_type_count": 0,
+      "duplicate_predictions": [
+        {
+          "string_id": "DEV_012",
+          "issue_type": "omission",
+          "count": 2
+        }
+      ],
+      "duplicate_prediction_key_count": 1,
+      "protocol_success_rate": 1.0,
+      "protocol_success_rate_denominator": "successful_provider_calls",
+      "raw_prediction_count": 53,
+      "unique_prediction_detection_count": 52,
+      "mean_latency_seconds": 2.0025091604184126,
+      "median_latency_seconds": 1.6198895000270568,
+      "thinking_content_responses": 0
+    }
+  }
+}

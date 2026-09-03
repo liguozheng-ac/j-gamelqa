@@ -1,0 +1,4 @@
+﻿string_id,checker,issue_type,severity,message,source_span,target_span,evidence,needs_human_review
+PILOT_002,placeholder,placeholder_missing,major,源文与日语译文的 Placeholder 不一致。,{player_name},,"{""missing"": [""{player_name}""], ""extra"": []}",False
+PILOT_003,placeholder,placeholder_modified,major,源文与日语译文的 Placeholder 不一致。,{item_count},{item_num},"{""missing"": [""{item_count}""], ""extra"": [""{item_num}""]}",False
+PILOT_004,number,number_mismatch,major,源文与日语译文中的数字、数值或百分比不一致。,3,5,"{""source_numbers"": [""3""], ""target_numbers"": [""5""], ""missing"": [""3""], ""extra"": [""5""]}",False

@@ -1,0 +1,665 @@
+[
+  {
+    "string_id": "DEV_002",
+    "checker": "japanese_llm",
+    "issue_type": "omission",
+    "severity": "minor",
+    "message": "Japanese LLM evaluator detected omission.",
+    "source_span": "{player_name}",
+    "target_span": null,
+    "evidence": {
+      "reason": "The Japanese target omits the player name placeholder present in the source text."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_003",
+    "checker": "japanese_llm",
+    "issue_type": "number_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected number_mismatch.",
+    "source_span": "{item_count}",
+    "target_span": "{item_num}",
+    "evidence": {
+      "reason": "The source placeholder item_count is replaced by a different placeholder name item_num in the target."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_004",
+    "checker": "japanese_llm",
+    "issue_type": "number_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected number_mismatch.",
+    "source_span": "3分钟",
+    "target_span": "5分後",
+    "evidence": {
+      "reason": "The source specifies a countdown of 3 minutes while the target incorrectly states 5 minutes."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_005",
+    "checker": "japanese_llm",
+    "issue_type": "omission",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected omission.",
+    "source_span": "并点亮信号火盆",
+    "target_span": null,
+    "evidence": {
+      "reason": "The Japanese target omits the instruction to light the signal fire basin, which is a critical part of the quest objective."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_006",
+    "checker": "japanese_llm",
+    "issue_type": "mistranslation",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected mistranslation.",
+    "source_span": "不要攻击",
+    "target_span": "攻撃しろ",
+    "evidence": {
+      "reason": "The source instructs not to attack the supply vehicle, while the target incorrectly commands the player to attack it."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_007",
+    "checker": "japanese_llm",
+    "issue_type": "mistranslation",
+    "severity": "major",
+    "message": "Japanese LLM evaluator detected mistranslation.",
+    "source_span": "为难",
+    "target_span": "困難を感じさせる",
+    "evidence": {
+      "reason": "The source '为难' implies being put in a difficult position or dilemma, whereas the target '困難を感じさせる' literally means 'makes me feel difficulty', which is an unnatural and inaccurate translation of the intended meaning."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_007",
+    "checker": "japanese_llm",
+    "issue_type": "translationese",
+    "severity": "minor",
+    "message": "Japanese LLM evaluator detected translationese.",
+    "source_span": "这个决定让我感到非常为难",
+    "target_span": "この決定は私に非常に困難を感じさせる",
+    "evidence": {
+      "reason": "The Japanese sentence structure and word choice follow the Chinese source too literally, resulting in unnatural phrasing that does not sound like native Japanese dialogue."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_008",
+    "checker": "japanese_llm",
+    "issue_type": "keigo_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected keigo_mismatch.",
+    "source_span": "请您过目",
+    "target_span": "見てくれ",
+    "evidence": {
+      "reason": "The speaker is a new recruit addressing a superior officer, requiring humble language (kenjougo) and honorifics, but the target uses blunt imperative forms inappropriate for this relationship."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_008",
+    "checker": "japanese_llm",
+    "issue_type": "character_voice_mismatch",
+    "severity": "major",
+    "message": "Japanese LLM evaluator detected character_voice_mismatch.",
+    "source_span": "新兵阿岳",
+    "target_span": "見てくれ",
+    "evidence": {
+      "reason": "The phrase '見てくれ' is aggressive and rude, conflicting with the expected voice of a respectful new recruit speaking to their direct superior."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_009",
+    "checker": "japanese_llm",
+    "issue_type": "first_person_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected first_person_mismatch.",
+    "source_span": "我",
+    "target_span": "私は",
+    "evidence": {
+      "reason": "The speaker profile requires the use of '俺' (ore) but the target uses '私' (watashi)."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_010",
+    "checker": "japanese_llm",
+    "issue_type": "character_voice_mismatch",
+    "severity": "major",
+    "message": "Japanese LLM evaluator detected character_voice_mismatch.",
+    "source_span": "本小姐",
+    "target_span": "簡単だよ",
+    "evidence": {
+      "reason": "The target uses casual 'だ' and 'よ' instead of the required polite 'ですわ' ending specified in the character profile."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_012",
+    "checker": "japanese_llm",
+    "issue_type": "omission",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected omission.",
+    "source_span": "生命值",
+    "target_span": null,
+    "evidence": {
+      "reason": "The Japanese target omits the literal translation of '生命值' (HP/Life Points) and replaces it with '最大 HP', altering the specific UI label structure."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_012",
+    "checker": "japanese_llm",
+    "issue_type": "omission",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected omission.",
+    "source_span": "%(current)d/%(maximum)d",
+    "target_span": null,
+    "evidence": {
+      "reason": "The source format displays Current/Maximum in a single slash-separated string, while the target splits them into two separate labeled fields."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_016",
+    "checker": "japanese_llm",
+    "issue_type": "length_overflow",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected length_overflow.",
+    "source_span": null,
+    "target_span": "装備を変更しますか？",
+    "evidence": {
+      "reason": "The Japanese target contains 12 characters including punctuation, exceeding the maximum length of 10."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_018",
+    "checker": "japanese_llm",
+    "issue_type": "addition",
+    "severity": "minor",
+    "message": "Japanese LLM evaluator detected addition.",
+    "source_span": null,
+    "target_span": "{player_name}",
+    "evidence": {
+      "reason": "The Japanese target inserts a player name placeholder that is not present in the Chinese source text."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_019",
+    "checker": "japanese_llm",
+    "issue_type": "number_missing",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected number_missing.",
+    "source_span": "15",
+    "target_span": null,
+    "evidence": {
+      "reason": "The Japanese target omits the specific value '15' for stamina consumption present in the source text."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_020",
+    "checker": "japanese_llm",
+    "issue_type": "addition",
+    "severity": "minor",
+    "message": "Japanese LLM evaluator detected addition.",
+    "source_span": null,
+    "target_span": "30秒間",
+    "evidence": {
+      "reason": "The target adds a specific duration of 30 seconds which is not present in the source text."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_021",
+    "checker": "japanese_llm",
+    "issue_type": "markup_malformed",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected markup_malformed.",
+    "source_span": "<b>",
+    "target_span": "<b緊急</b>",
+    "evidence": {
+      "reason": "The closing tag for bold is missing, leaving the markup incomplete."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_022",
+    "checker": "japanese_llm",
+    "issue_type": "mistranslation",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected mistranslation.",
+    "source_span": "<color=red>生命值过低</color>",
+    "target_span": "<color=blue>HPが残りわずかです</color>",
+    "evidence": {
+      "reason": "The target changes the color from red to blue and alters the meaning from 'low health' to 'very little HP remaining', which contradicts the source text."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_023",
+    "checker": "japanese_llm",
+    "issue_type": "omission",
+    "severity": "minor",
+    "message": "Japanese LLM evaluator detected omission.",
+    "source_span": "按下<b>确认</b>",
+    "target_span": "<b>決定を押して</b>",
+    "evidence": {
+      "reason": "The target translates '确认' as '決定' but omits the explicit instruction to press the button implied by '按下', though this is a minor nuance in instructional text."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_027",
+    "checker": "japanese_llm",
+    "issue_type": "length_overflow",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected length_overflow.",
+    "source_span": null,
+    "target_span": "この装備を本当に破棄してもよろしいですか？",
+    "evidence": {
+      "reason": "The Japanese target contains 23 characters which exceeds the maximum allowed length of 12."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_028",
+    "checker": "japanese_llm",
+    "issue_type": "terminology_forbidden",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected terminology_forbidden.",
+    "source_span": "传送门",
+    "target_span": "ポータル",
+    "evidence": {
+      "reason": "The glossary explicitly forbids the term 'ポータル' for '传送门', requiring '転送門' instead."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_029",
+    "checker": "japanese_llm",
+    "issue_type": "terminology_not_approved",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected terminology_not_approved.",
+    "source_span": "补给车",
+    "target_span": "物資運搬車",
+    "evidence": {
+      "reason": "The approved term for '补给车' is '補給車', but the target uses '物資運搬車'."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_030",
+    "checker": "japanese_llm",
+    "issue_type": "omission",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected omission.",
+    "source_span": "取回地图后不要留下痕迹",
+    "target_span": null,
+    "evidence": {
+      "reason": "The target omits the instruction not to leave traces after retrieving the map."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_031",
+    "checker": "japanese_llm",
+    "issue_type": "addition",
+    "severity": "minor",
+    "message": "Japanese LLM evaluator detected addition.",
+    "source_span": null,
+    "target_span": "夜明け前に",
+    "evidence": {
+      "reason": "The target adds the condition 'before dawn' which is not present in the source text."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_032",
+    "checker": "japanese_llm",
+    "issue_type": "addition",
+    "severity": "major",
+    "message": "Japanese LLM evaluator detected addition.",
+    "source_span": null,
+    "target_span": "妹と一緒に",
+    "evidence": {
+      "reason": "The target adds the phrase 'with my sister' which is not present in the source text."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_033",
+    "checker": "japanese_llm",
+    "issue_type": "mistranslation",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected mistranslation.",
+    "source_span": "魔法伤害",
+    "target_span": "物理ダメージ",
+    "evidence": {
+      "reason": "The source specifies magic damage but the target incorrectly translates it as physical damage."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_034",
+    "checker": "japanese_llm",
+    "issue_type": "translationese",
+    "severity": "minor",
+    "message": "Japanese LLM evaluator detected translationese.",
+    "source_span": "只要...就...",
+    "target_span": "...さえすれば...",
+    "evidence": {
+      "reason": "The Japanese uses a literal translation of the Chinese conditional structure 'as long as' with 'さえすれば', which sounds unnatural for simple instructional text where '鳴れば' would be more idiomatic."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_035",
+    "checker": "japanese_llm",
+    "issue_type": "keigo_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected keigo_mismatch.",
+    "source_span": "客人，请稍等，我马上为您包装。",
+    "target_span": "客、待て。今包むから。",
+    "evidence": {
+      "reason": "The target uses blunt imperative forms (待て) and plain speech for a shopkeeper addressing a customer, whereas the source requires polite honorifics suitable for a service interaction."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_035",
+    "checker": "japanese_llm",
+    "issue_type": "character_voice_mismatch",
+    "severity": "major",
+    "message": "Japanese LLM evaluator detected character_voice_mismatch.",
+    "source_span": "客人，请稍等，我马上为您包装。",
+    "target_span": "客、待て。今包むから。",
+    "evidence": {
+      "reason": "The target's aggressive and rude tone contradicts the expected polite voice of a shopkeeper speaking to a customer in a retail setting."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_036",
+    "checker": "japanese_llm",
+    "issue_type": "first_person_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected first_person_mismatch.",
+    "source_span": "我",
+    "target_span": "俺",
+    "evidence": {
+      "reason": "The speaker's profile states they previously referred to themselves as 'boku', but the target uses 'ore' which contradicts this established voice."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_037",
+    "checker": "japanese_llm",
+    "issue_type": "keigo_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected keigo_mismatch.",
+    "source_span": "切勿贸然开启",
+    "target_span": "ノリで開けんなよ",
+    "evidence": {
+      "reason": "The target uses casual imperative '开けんな' and particle 'よ', which contradicts the source's formal warning tone required for an elder sage speaking to a junior adventurer."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_037",
+    "checker": "japanese_llm",
+    "issue_type": "character_voice_mismatch",
+    "severity": "major",
+    "message": "Japanese LLM evaluator detected character_voice_mismatch.",
+    "source_span": "玄珀刚念完石碑上的封印文",
+    "target_span": "ノリで開けんなよ",
+    "evidence": {
+      "reason": "The phrase 'ノリで' (just kidding/for fun) creates a playful tone that conflicts with the solemn, grave atmosphere of an ancient seal and the sage's established dignified persona."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_038",
+    "checker": "japanese_llm",
+    "issue_type": "terminology_forbidden",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected terminology_forbidden.",
+    "source_span": "传送门",
+    "target_span": "ポータル",
+    "evidence": {
+      "reason": "The glossary explicitly forbids the term ポータル for 传送门, requiring 転送門 instead."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_039",
+    "checker": "japanese_llm",
+    "issue_type": "omission",
+    "severity": "major",
+    "message": "Japanese LLM evaluator detected omission.",
+    "source_span": "20%",
+    "target_span": null,
+    "evidence": {
+      "reason": "The Japanese target omits the specific value '20%' present in the source text."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_040",
+    "checker": "japanese_llm",
+    "issue_type": "number_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected number_mismatch.",
+    "source_span": "10秒",
+    "target_span": "5秒",
+    "evidence": {
+      "reason": "The target changes the source time limit from 10 seconds to 5 seconds."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_040",
+    "checker": "japanese_llm",
+    "issue_type": "keigo_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected keigo_mismatch.",
+    "source_span": "请在...下令",
+    "target_span": "...命令を出せ",
+    "evidence": {
+      "reason": "The subordinate uses a direct imperative form to the superior instead of appropriate humble or polite language."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_041",
+    "checker": "japanese_llm",
+    "issue_type": "length_overflow",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected length_overflow.",
+    "source_span": "我对此没有异议。",
+    "target_span": "私はこのことに対して異議というものを持っていません。",
+    "evidence": {
+      "reason": "The Japanese target contains 34 characters which exceeds the maximum allowed length of 16."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_041",
+    "checker": "japanese_llm",
+    "issue_type": "keigo_mismatch",
+    "severity": "major",
+    "message": "Japanese LLM evaluator detected keigo_mismatch.",
+    "source_span": "我对此没有异议。",
+    "target_span": "私はこのことに対して異議というものを持っていません。",
+    "evidence": {
+      "reason": "The speaker is a cautious clerk addressing a lord, but the target uses plain form '持っています' instead of required humble language like '存じます' or '差し上げます'."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_042",
+    "checker": "japanese_llm",
+    "issue_type": "first_person_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected first_person_mismatch.",
+    "source_span": "本大爷",
+    "target_span": "私は",
+    "evidence": {
+      "reason": "The source uses the arrogant self-reference 'ben daire' which conflicts with the target's standard 'watashi', ignoring the character profile requirement to use 'ore'."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_042",
+    "checker": "japanese_llm",
+    "issue_type": "character_voice_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected character_voice_mismatch.",
+    "source_span": "怎能难倒本大爷！",
+    "target_span": "には困りません。",
+    "evidence": {
+      "reason": "The target's polite sentence ending 'masen' contradicts the character profile requirement for a rough, arrogant mercenary who must use strong endings like 'ze'."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_043",
+    "checker": "japanese_llm",
+    "issue_type": "mistranslation",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected mistranslation.",
+    "source_span": "红色钥匙",
+    "target_span": "青い鍵",
+    "evidence": {
+      "reason": "The source specifies a red key but the target translates it as a blue key."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_044",
+    "checker": "japanese_llm",
+    "issue_type": "mistranslation",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected mistranslation.",
+    "source_span": "金币？这种俗物也配让我弯腰去捡？",
+    "target_span": "お金ですか？拾っておきましょう。",
+    "evidence": {
+      "reason": "The target translates the source's expression of disdain and refusal to pick up money as a polite offer to pick it up, completely contradicting the character's arrogant tone."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_044",
+    "checker": "japanese_llm",
+    "issue_type": "character_voice_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected character_voice_mismatch.",
+    "source_span": "这种俗物也配让我弯腰去捡？",
+    "target_span": "拾っておきましょう。",
+    "evidence": {
+      "reason": "The target lacks the required arrogant tone and the specific sentence ending 'ですわ' mandated by the character profile."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_044",
+    "checker": "japanese_llm",
+    "issue_type": "terminology_not_approved",
+    "severity": "major",
+    "message": "Japanese LLM evaluator detected terminology_not_approved.",
+    "source_span": "金币",
+    "target_span": "お金",
+    "evidence": {
+      "reason": "The source term '金币' is translated as 'お金' instead of the approved glossary term '金貨'."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_045",
+    "checker": "japanese_llm",
+    "issue_type": "addition",
+    "severity": "major",
+    "message": "Japanese LLM evaluator detected addition.",
+    "source_span": null,
+    "target_span": "明日また来てください。",
+    "evidence": {
+      "reason": "The target adds an instruction to return tomorrow which is not present in the source text."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_045",
+    "checker": "japanese_llm",
+    "issue_type": "placeholder_missing",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected placeholder_missing.",
+    "source_span": null,
+    "target_span": "{guest_name}",
+    "evidence": {
+      "reason": "The target includes a placeholder for guest name while the source does not contain any corresponding variable."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_046",
+    "checker": "japanese_llm",
+    "issue_type": "terminology_forbidden",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected terminology_forbidden.",
+    "source_span": "侦察报告",
+    "target_span": "スカウトレポート",
+    "evidence": {
+      "reason": "The target uses the forbidden term 'スカウトレポート' instead of the approved translation '偵察報告'."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_046",
+    "checker": "japanese_llm",
+    "issue_type": "keigo_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected keigo_mismatch.",
+    "source_span": "陛下，侦察报告已经整理完毕。",
+    "target_span": "王様、スカウトレポートはまとめたぞ。",
+    "evidence": {
+      "reason": "The target uses the rough masculine sentence ending 'ぞ' and lacks honorifics, which is inappropriate for a servant addressing their king."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_047",
+    "checker": "japanese_llm",
+    "issue_type": "omission",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected omission.",
+    "source_span": "集合地点：古井",
+    "target_span": null,
+    "evidence": {
+      "reason": "The Japanese target omits the instruction to gather at the ancient well found in the source text."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_048",
+    "checker": "japanese_llm",
+    "issue_type": "mistranslation",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected mistranslation.",
+    "source_span": "移动速度",
+    "target_span": "攻撃速度",
+    "evidence": {
+      "reason": "The source states the skill reduces movement speed, but the target incorrectly translates this as reducing attack speed."
+    },
+    "needs_human_review": true
+  }
+]

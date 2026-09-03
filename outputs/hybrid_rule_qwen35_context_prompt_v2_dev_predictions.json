@@ -1,0 +1,1068 @@
+[
+  {
+    "string_id": "DEV_002",
+    "checker": "placeholder",
+    "issue_type": "placeholder_missing",
+    "severity": "major",
+    "message": "源文与日语译文的 Placeholder 不一致。",
+    "source_span": "{player_name}",
+    "target_span": null,
+    "evidence": {
+      "missing": [
+        "{player_name}"
+      ],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_003",
+    "checker": "placeholder",
+    "issue_type": "placeholder_modified",
+    "severity": "major",
+    "message": "源文与日语译文的 Placeholder 不一致。",
+    "source_span": "{item_count}",
+    "target_span": "{item_num}",
+    "evidence": {
+      "missing": [
+        "{item_count}"
+      ],
+      "extra": [
+        "{item_num}"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_004",
+    "checker": "number",
+    "issue_type": "number_mismatch",
+    "severity": "major",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": "3",
+    "target_span": "5",
+    "evidence": {
+      "source_numbers": [
+        "3"
+      ],
+      "target_numbers": [
+        "5"
+      ],
+      "missing": [
+        "3"
+      ],
+      "extra": [
+        "5"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_015",
+    "checker": "number",
+    "issue_type": "number_extra",
+    "severity": "minor",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": null,
+    "target_span": "1, 2",
+    "evidence": {
+      "source_numbers": [],
+      "target_numbers": [
+        "1",
+        "2"
+      ],
+      "missing": [],
+      "extra": [
+        "1",
+        "2"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_017",
+    "checker": "terminology",
+    "issue_type": "terminology_forbidden",
+    "severity": "major",
+    "message": "术语“营地”使用了禁用译法。",
+    "source_span": "营地",
+    "target_span": "キャンプ",
+    "evidence": {
+      "source_term": "营地",
+      "approved_ja": "野営地",
+      "forbidden_ja": [
+        "キャンプ"
+      ],
+      "used_forbidden": [
+        "キャンプ"
+      ]
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_018",
+    "checker": "placeholder",
+    "issue_type": "placeholder_extra",
+    "severity": "minor",
+    "message": "源文与日语译文的 Placeholder 不一致。",
+    "source_span": null,
+    "target_span": "{player_name}",
+    "evidence": {
+      "missing": [],
+      "extra": [
+        "{player_name}"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_019",
+    "checker": "number",
+    "issue_type": "number_missing",
+    "severity": "major",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": "15",
+    "target_span": null,
+    "evidence": {
+      "source_numbers": [
+        "15"
+      ],
+      "target_numbers": [],
+      "missing": [
+        "15"
+      ],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_020",
+    "checker": "number",
+    "issue_type": "number_extra",
+    "severity": "minor",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": null,
+    "target_span": "30",
+    "evidence": {
+      "source_numbers": [],
+      "target_numbers": [
+        "30"
+      ],
+      "missing": [],
+      "extra": [
+        "30"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_021",
+    "checker": "markup",
+    "issue_type": "markup_malformed",
+    "severity": "major",
+    "message": "日语译文中存在明显损坏的技术标签。",
+    "source_span": null,
+    "target_span": "<b緊急</b>：城門が攻撃されています！",
+    "evidence": {
+      "source_tags": [
+        "<b>",
+        "</b>"
+      ],
+      "target_tags": [
+        "</b>"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_022",
+    "checker": "markup",
+    "issue_type": "markup_modified",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": "<color=red>",
+    "target_span": "<color=blue>",
+    "evidence": {
+      "source_tags": [
+        "<color=red>",
+        "</color>"
+      ],
+      "target_tags": [
+        "<color=blue>",
+        "</color>"
+      ],
+      "missing": [
+        "<color=red>"
+      ],
+      "extra": [
+        "<color=blue>"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_023",
+    "checker": "markup",
+    "issue_type": "markup_missing",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": "</b>",
+    "target_span": null,
+    "evidence": {
+      "source_tags": [
+        "<b>",
+        "</b>"
+      ],
+      "target_tags": [
+        "<b>"
+      ],
+      "missing": [
+        "</b>"
+      ],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_024",
+    "checker": "markup",
+    "issue_type": "markup_extra",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": null,
+    "target_span": "<b>, </b>",
+    "evidence": {
+      "source_tags": [],
+      "target_tags": [
+        "<b>",
+        "</b>"
+      ],
+      "missing": [],
+      "extra": [
+        "<b>",
+        "</b>"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_025",
+    "checker": "markup",
+    "issue_type": "markup_order_mismatch",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": null,
+    "target_span": null,
+    "evidence": {
+      "source_tags": [
+        "<b>",
+        "<color=red>",
+        "</color>",
+        "</b>"
+      ],
+      "target_tags": [
+        "<color=red>",
+        "<b>",
+        "</b>",
+        "</color>"
+      ],
+      "missing": [],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_026",
+    "checker": "linebreak",
+    "issue_type": "linebreak_mismatch",
+    "severity": "major",
+    "message": "必要换行在源文和日语译文中的数量不一致。",
+    "source_span": null,
+    "target_span": null,
+    "evidence": {
+      "source": {
+        "actual_newlines": 0,
+        "escaped_newlines": 1
+      },
+      "target": {
+        "actual_newlines": 0,
+        "escaped_newlines": 0
+      }
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_027",
+    "checker": "length",
+    "issue_type": "length_overflow",
+    "severity": "minor",
+    "message": "日语译文长度 21 超过限制 12。",
+    "source_span": null,
+    "target_span": "この装備を本当に破棄してもよろしいですか？",
+    "evidence": {
+      "target_length": 21,
+      "max_length": 12,
+      "overflow": 9
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_028",
+    "checker": "terminology",
+    "issue_type": "terminology_forbidden",
+    "severity": "major",
+    "message": "术语“传送门”使用了禁用译法。",
+    "source_span": "传送门",
+    "target_span": "ポータル",
+    "evidence": {
+      "source_term": "传送门",
+      "approved_ja": "転送門",
+      "forbidden_ja": [
+        "ポータル"
+      ],
+      "used_forbidden": [
+        "ポータル"
+      ]
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_029",
+    "checker": "terminology",
+    "issue_type": "terminology_not_approved",
+    "severity": "major",
+    "message": "术语“补给车”未使用批准译法“補給車”。",
+    "source_span": "补给车",
+    "target_span": null,
+    "evidence": {
+      "source_term": "补给车",
+      "approved_ja": "補給車",
+      "forbidden_ja": [
+        "補給トラック"
+      ],
+      "used_forbidden": []
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_038",
+    "checker": "placeholder",
+    "issue_type": "placeholder_missing",
+    "severity": "major",
+    "message": "源文与日语译文的 Placeholder 不一致。",
+    "source_span": "{player_name}",
+    "target_span": null,
+    "evidence": {
+      "missing": [
+        "{player_name}"
+      ],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_038",
+    "checker": "terminology",
+    "issue_type": "terminology_forbidden",
+    "severity": "major",
+    "message": "术语“传送门”使用了禁用译法。",
+    "source_span": "传送门",
+    "target_span": "ポータル",
+    "evidence": {
+      "source_term": "传送门",
+      "approved_ja": "転送門",
+      "forbidden_ja": [
+        "ポータル"
+      ],
+      "used_forbidden": [
+        "ポータル"
+      ]
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_039",
+    "checker": "number",
+    "issue_type": "number_missing",
+    "severity": "major",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": "20%",
+    "target_span": null,
+    "evidence": {
+      "source_numbers": [
+        "20%"
+      ],
+      "target_numbers": [],
+      "missing": [
+        "20%"
+      ],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_039",
+    "checker": "markup",
+    "issue_type": "markup_missing",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": "</b>",
+    "target_span": null,
+    "evidence": {
+      "source_tags": [
+        "<b>",
+        "</b>"
+      ],
+      "target_tags": [
+        "<b>"
+      ],
+      "missing": [
+        "</b>"
+      ],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_040",
+    "checker": "number",
+    "issue_type": "number_mismatch",
+    "severity": "major",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": "10",
+    "target_span": "5",
+    "evidence": {
+      "source_numbers": [
+        "10"
+      ],
+      "target_numbers": [
+        "5"
+      ],
+      "missing": [
+        "10"
+      ],
+      "extra": [
+        "5"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_041",
+    "checker": "length",
+    "issue_type": "length_overflow",
+    "severity": "minor",
+    "message": "日语译文长度 26 超过限制 16。",
+    "source_span": null,
+    "target_span": "私はこのことに対して異議というものを持っていません。",
+    "evidence": {
+      "target_length": 26,
+      "max_length": 16,
+      "overflow": 10
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_044",
+    "checker": "terminology",
+    "issue_type": "terminology_not_approved",
+    "severity": "major",
+    "message": "术语“金币”未使用批准译法“金貨”。",
+    "source_span": "金币",
+    "target_span": null,
+    "evidence": {
+      "source_term": "金币",
+      "approved_ja": "金貨",
+      "forbidden_ja": [
+        "コイン"
+      ],
+      "used_forbidden": []
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_045",
+    "checker": "placeholder",
+    "issue_type": "placeholder_extra",
+    "severity": "minor",
+    "message": "源文与日语译文的 Placeholder 不一致。",
+    "source_span": null,
+    "target_span": "{guest_name}",
+    "evidence": {
+      "missing": [],
+      "extra": [
+        "{guest_name}"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_046",
+    "checker": "terminology",
+    "issue_type": "terminology_forbidden",
+    "severity": "major",
+    "message": "术语“侦察报告”使用了禁用译法。",
+    "source_span": "侦察报告",
+    "target_span": "スカウトレポート",
+    "evidence": {
+      "source_term": "侦察报告",
+      "approved_ja": "偵察報告",
+      "forbidden_ja": [
+        "スカウトレポート"
+      ],
+      "used_forbidden": [
+        "スカウトレポート"
+      ]
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_047",
+    "checker": "linebreak",
+    "issue_type": "linebreak_mismatch",
+    "severity": "major",
+    "message": "必要换行在源文和日语译文中的数量不一致。",
+    "source_span": null,
+    "target_span": null,
+    "evidence": {
+      "source": {
+        "actual_newlines": 0,
+        "escaped_newlines": 1
+      },
+      "target": {
+        "actual_newlines": 0,
+        "escaped_newlines": 0
+      }
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_048",
+    "checker": "markup",
+    "issue_type": "markup_extra",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": null,
+    "target_span": "<b>, </b>",
+    "evidence": {
+      "source_tags": [],
+      "target_tags": [
+        "<b>",
+        "</b>"
+      ],
+      "missing": [],
+      "extra": [
+        "<b>",
+        "</b>"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_002",
+    "checker": "japanese_llm",
+    "issue_type": "omission",
+    "severity": "minor",
+    "message": "Japanese LLM evaluator detected omission.",
+    "source_span": "{player_name}",
+    "target_span": null,
+    "evidence": {
+      "reason": "The Japanese target omits the placeholder {player_name} present in the source, failing to address the player by name as intended."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_005",
+    "checker": "japanese_llm",
+    "issue_type": "omission",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected omission.",
+    "source_span": "并点亮信号火盆",
+    "target_span": null,
+    "evidence": {
+      "reason": "The Japanese target omits the instruction to 'light the signal fire basin', which is a critical part of the quest objective required to trigger reinforcements."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_006",
+    "checker": "japanese_llm",
+    "issue_type": "mistranslation",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected mistranslation.",
+    "source_span": "不要攻击",
+    "target_span": "攻撃しろ",
+    "evidence": {
+      "reason": "The source explicitly forbids attacking the supply vehicle ('Do not attack'), whereas the target commands the opposite action ('Attack'). This is a complete reversal of meaning."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_006",
+    "checker": "japanese_llm",
+    "issue_type": "keigo_mismatch",
+    "severity": "major",
+    "message": "Japanese LLM evaluator detected keigo_mismatch.",
+    "source_span": "军师向执行任务的部下说明禁令",
+    "target_span": "敵の補給車を攻撃しろ。",
+    "evidence": {
+      "reason": "The speaker is a strategist giving an order to subordinates. The target uses the direct imperative '〜しろ' (shiro), which is too blunt and rude for a superior addressing subordinates in a serious military context; it lacks the necessary authority or appropriate register expected from a strategist."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_007",
+    "checker": "japanese_llm",
+    "issue_type": "mistranslation",
+    "severity": "major",
+    "message": "Japanese LLM evaluator detected mistranslation.",
+    "source_span": "为难",
+    "target_span": "困難を感じさせる",
+    "evidence": {
+      "reason": "The source '为难' (wéinán) implies being in a dilemma, awkward, or at a loss due to conflicting pressures. The target '困難を感じさせる' translates literally to 'makes me feel difficulty/hardship,' which distorts the meaning from an emotional/social dilemma to a general sense of hardship or trouble."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_007",
+    "checker": "japanese_llm",
+    "issue_type": "keigo_mismatch",
+    "severity": "major",
+    "message": "Japanese LLM evaluator detected keigo_mismatch.",
+    "source_span": "书记官向领主陈述",
+    "target_span": "この決定は私に...",
+    "evidence": {
+      "reason": "The speaker is a clerk addressing a lord. The target uses plain form '感じさせる' (makes feel) and lacks appropriate honorifics or humble language expected when a subordinate reports to a superior in this context, violating the social hierarchy."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_008",
+    "checker": "japanese_llm",
+    "issue_type": "keigo_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected keigo_mismatch.",
+    "source_span": "请您过目",
+    "target_span": "見てくれ",
+    "evidence": {
+      "reason": "The speaker is a new recruit addressing their direct superior (Captain). The source uses polite language ('Please review'), but the target uses '見てくれ' (mite kure), which is an imperative form often used between equals or by superiors to subordinates, and can sound rude when used by a subordinate. This violates the required social hierarchy."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_008",
+    "checker": "japanese_llm",
+    "issue_type": "character_voice_mismatch",
+    "severity": "major",
+    "message": "Japanese LLM evaluator detected character_voice_mismatch.",
+    "source_span": "新兵阿岳",
+    "target_span": "見てくれ",
+    "evidence": {
+      "reason": "The character profile is a new recruit. The phrase '見てくれ' (mite kure) is aggressive and inappropriate for a respectful subordinate speaking to a superior, conflicting with the expected voice of a disciplined new soldier."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_009",
+    "checker": "japanese_llm",
+    "issue_type": "first_person_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected first_person_mismatch.",
+    "source_span": "我",
+    "target_span": "私は",
+    "evidence": {
+      "reason": "The character profile explicitly states the speaker (雷牙) 'fixedly refers to himself as「俺」' (ore). The target uses「私は」(watashi), which is a polite or formal first-person pronoun inconsistent with the established rough, boisterous persona of a young mercenary in this scene."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_010",
+    "checker": "japanese_llm",
+    "issue_type": "character_voice_mismatch",
+    "severity": "major",
+    "message": "Japanese LLM evaluator detected character_voice_mismatch.",
+    "source_span": "本小姐！",
+    "target_span": "簡単だよ。",
+    "evidence": {
+      "reason": "The character profile specifies the speaker (月铃) habitually uses sentence endings like「ですわ」to reflect her proud noble status. The target uses casual「だよ」, which contradicts this established voice and social register."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_012",
+    "checker": "japanese_llm",
+    "issue_type": "omission",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected omission.",
+    "source_span": "生命值",
+    "target_span": null,
+    "evidence": {
+      "reason": "The Japanese target omits the source term '生命值' (HP/Life Points). While the meaning is implied by the variable names, the specific UI label '生命值' present in the source is absent from the target."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_012",
+    "checker": "japanese_llm",
+    "issue_type": "omission",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected omission.",
+    "source_span": "%(current)d/%(maximum)d",
+    "target_span": null,
+    "evidence": {
+      "reason": "The source uses a slash separator ('/') between the current and maximum values. The Japanese target replaces this with distinct labels ('現在HP' and '最大HP') separated by a full-width slash, effectively omitting the direct structural representation of the ratio found in the source string."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_018",
+    "checker": "japanese_llm",
+    "issue_type": "addition",
+    "severity": "minor",
+    "message": "Japanese LLM evaluator detected addition.",
+    "source_span": null,
+    "target_span": "{player_name}",
+    "evidence": {
+      "reason": "The Japanese target inserts the placeholder '{player_name}' which is not present in the Chinese source text."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_020",
+    "checker": "japanese_llm",
+    "issue_type": "addition",
+    "severity": "minor",
+    "message": "Japanese LLM evaluator detected addition.",
+    "source_span": null,
+    "target_span": "30秒間",
+    "evidence": {
+      "reason": "The Japanese target adds the specific duration '30 seconds' which is not present in the Chinese source text."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_022",
+    "checker": "japanese_llm",
+    "issue_type": "mistranslation",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected mistranslation.",
+    "source_span": "<color=red>生命值过低</color>",
+    "target_span": "<color=blue>HPが残りわずかです</color>",
+    "evidence": {
+      "reason": "The source text explicitly indicates a critical state ('low') using red color, while the target translates to 'only a little left' (remaining) and uses blue color. This changes the severity implication and visual cue from a warning of low health to a statement about remaining health."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_023",
+    "checker": "japanese_llm",
+    "issue_type": "mistranslation",
+    "severity": "minor",
+    "message": "Japanese LLM evaluator detected mistranslation.",
+    "source_span": "按下<b>确认</b>",
+    "target_span": "<b>決定を押して</b>",
+    "evidence": {
+      "reason": "The source explicitly instructs to press the 'Confirm' button (a specific UI element). The target translates this as 'press Decision', which is semantically incorrect in Japanese game contexts where 'Decision' (決定) is not a standard button label for confirmation actions; it should be 'OK' or 'Confirm' (確認/決定ボタンを押す)."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_030",
+    "checker": "japanese_llm",
+    "issue_type": "omission",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected omission.",
+    "source_span": "取回地图后不要留下痕迹",
+    "target_span": null,
+    "evidence": {
+      "reason": "The Japanese target omits the critical instruction 'do not leave traces' (不要留下痕迹) found in the source, which is a mandatory condition for the mission objective."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_031",
+    "checker": "japanese_llm",
+    "issue_type": "addition",
+    "severity": "minor",
+    "message": "Japanese LLM evaluator detected addition.",
+    "source_span": null,
+    "target_span": "夜明け前に",
+    "evidence": {
+      "reason": "The Japanese target adds the condition 'before dawn' (夜明け前に), which is not present in the Chinese source text."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_032",
+    "checker": "japanese_llm",
+    "issue_type": "addition",
+    "severity": "major",
+    "message": "Japanese LLM evaluator detected addition.",
+    "source_span": null,
+    "target_span": "妹と一緒に",
+    "evidence": {
+      "reason": "The Japanese target adds 'with my sister' (妹と一緒に), which is not present in the Chinese source ('我会在桥边等你') nor supported by the provided context."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_033",
+    "checker": "japanese_llm",
+    "issue_type": "mistranslation",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected mistranslation.",
+    "source_span": "魔法伤害",
+    "target_span": "物理ダメージ",
+    "evidence": {
+      "reason": "The source text specifies 'magic damage' (魔法伤害), but the target translates it as 'physical damage' (物理ダメージ). This contradicts the core mechanic of the skill."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_034",
+    "checker": "japanese_llm",
+    "issue_type": "translationese",
+    "severity": "minor",
+    "message": "Japanese LLM evaluator detected translationese.",
+    "source_span": "只要...就...",
+    "target_span": "...さえすれば...",
+    "evidence": {
+      "reason": "The source uses a standard conditional structure ('As long as X happens, Y occurs'). The target uses '～さえすれば' which carries a nuance of 'even if/just by doing X, Y will happen', often implying a lower threshold or an unexpected ease. While the core meaning is preserved, this specific phrasing feels like a direct structural mapping that introduces a slight tonal shift (implying 'merely hearing the bell is enough' rather than 'the bell ringing triggers the change'), fitting the definition of unnaturalness due to source-language interference."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_035",
+    "checker": "japanese_llm",
+    "issue_type": "keigo_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected keigo_mismatch.",
+    "source_span": "客人，请稍等，我马上为您包装。",
+    "target_span": "客、待て。今包むから。",
+    "evidence": {
+      "reason": "The source depicts a shopkeeper politely asking a customer to wait ('请稍等', '为您'). The target uses direct, rude commands ('待て' - wait!, '包む' - I will wrap) which violates the required polite register for a service interaction between a shopkeeper and a customer."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_035",
+    "checker": "japanese_llm",
+    "issue_type": "mistranslation",
+    "severity": "major",
+    "message": "Japanese LLM evaluator detected mistranslation.",
+    "source_span": "我马上为您包装",
+    "target_span": "今包むから",
+    "evidence": {
+      "reason": "The source explicitly states the action is happening 'right now' or 'immediately' ('马上'). The target's '今' (now) combined with the command structure changes the nuance from a reassuring promise of immediate service to a blunt statement, losing the polite assurance intended in the source."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_036",
+    "checker": "japanese_llm",
+    "issue_type": "first_person_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected first_person_mismatch.",
+    "source_span": "我",
+    "target_span": "俺",
+    "evidence": {
+      "reason": "The character profile explicitly states the speaker (青羽) has consistently used '僕' (boku). The target uses '俺' (ore), which contradicts this established persona."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_037",
+    "checker": "japanese_llm",
+    "issue_type": "keigo_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected keigo_mismatch.",
+    "source_span": "切勿贸然开启",
+    "target_span": "ノリで開けんなよ",
+    "evidence": {
+      "reason": "The speaker is an elder sage (玄珀) addressing a junior adventurer in a solemn setting. The source uses a formal prohibition ('切勿'), but the target uses 'ノリで' (colloquial/slang for 'just because you feel like it') and '開けんなよ' (rough, informal command). This contradicts the established relationship of an elder sage speaking with dignity to a junior."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_037",
+    "checker": "japanese_llm",
+    "issue_type": "character_voice_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected character_voice_mismatch.",
+    "source_span": "此门后沉睡着旧日的灾厄",
+    "target_span": "この扉の先には昔の災厄が眠ってるから",
+    "evidence": {
+      "reason": "The source conveys a sense of ancient, heavy dread ('沉睡着', '旧日的灾厄'). The target's phrasing 'ノリで' (doing something on a whim) and the casual tone completely distort the character's solemn, warning voice appropriate for an elder sage in a sealed temple."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_039",
+    "checker": "japanese_llm",
+    "issue_type": "omission",
+    "severity": "major",
+    "message": "Japanese LLM evaluator detected omission.",
+    "source_span": "20%",
+    "target_span": null,
+    "evidence": {
+      "reason": "The Japanese target omits the specific value '20%' found in the source text, replacing it with a generic statement that shield remaining is decreasing."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_041",
+    "checker": "japanese_llm",
+    "issue_type": "keigo_mismatch",
+    "severity": "major",
+    "message": "Japanese LLM evaluator detected keigo_mismatch.",
+    "source_span": "我对此没有异议。",
+    "target_span": "私はこのことに対して異議というものを持っていません。",
+    "evidence": {
+      "reason": "The speaker is a cautious clerk addressing a lord. The target uses plain form '持っています' (or implied plain context) and lacks necessary honorifics or humble language required when speaking to a superior in a formal setting like a castle council."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_042",
+    "checker": "japanese_llm",
+    "issue_type": "first_person_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected first_person_mismatch.",
+    "source_span": "本大爷",
+    "target_span": "私は",
+    "evidence": {
+      "reason": "The source explicitly uses the arrogant self-reference '本大爷' (Ben Dazai), which is characteristic of a brash mercenary. The target uses the neutral/polite '私' (watashi) instead of the established character's preferred first-person pronoun '俺' (ore)."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_042",
+    "checker": "japanese_llm",
+    "issue_type": "character_voice_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected character_voice_mismatch.",
+    "source_span": "怎能难倒本大爷！",
+    "target_span": "には困りません。",
+    "evidence": {
+      "reason": "The source conveys a loud, arrogant tone with the rhetorical question '怎能难倒...' and exclamation. The target uses the soft, polite phrase '困りません' (won't be troubled), completely contradicting the character's established brash and confident voice."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_043",
+    "checker": "japanese_llm",
+    "issue_type": "mistranslation",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected mistranslation.",
+    "source_span": "烧毁记录",
+    "target_span": null,
+    "evidence": {
+      "reason": "The source text instructs to 'burn the records' (烧毁记录), but the target text omits this action entirely, only mentioning canceling the alarm and giving the key. This is a significant omission of a core quest objective."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_043",
+    "checker": "japanese_llm",
+    "issue_type": "mistranslation",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected mistranslation.",
+    "source_span": "红色钥匙",
+    "target_span": "青い鍵",
+    "evidence": {
+      "reason": "The source specifies a 'red key' (红色), while the target translates it as a 'blue key' (青い). This contradicts the specific item required by the quest."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_044",
+    "checker": "japanese_llm",
+    "issue_type": "mistranslation",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected mistranslation.",
+    "source_span": "金币？这种俗物也配让我弯腰去捡？",
+    "target_span": "お金ですか？拾っておきましょう。",
+    "evidence": {
+      "reason": "The source expresses strong disdain ('such a vulgar thing', 'does it deserve to make me bend down'), while the target translates this as a polite offer to pick up money ('Let's pick it up'). This completely contradicts the character's arrogant and contemptuous tone."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_044",
+    "checker": "japanese_llm",
+    "issue_type": "character_voice_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected character_voice_mismatch.",
+    "source_span": "这种俗物也配让我弯腰去捡？",
+    "target_span": "拾っておきましょう。",
+    "evidence": {
+      "reason": "The character profile specifies a proud noble girl who uses 'ですわ' and shows contempt. The target lacks the required sentence ending ('ですわ') and adopts a humble, cooperative tone ('Let's pick it up'), which is inconsistent with her established voice."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_044",
+    "checker": "japanese_llm",
+    "issue_type": "omission",
+    "severity": "major",
+    "message": "Japanese LLM evaluator detected omission.",
+    "source_span": "这种俗物也配让我弯腰去捡？",
+    "target_span": null,
+    "evidence": {
+      "reason": "The entire second clause of the source sentence, which conveys the character's arrogance and refusal to lower herself for money, is completely omitted in the target."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_045",
+    "checker": "japanese_llm",
+    "issue_type": "addition",
+    "severity": "major",
+    "message": "Japanese LLM evaluator detected addition.",
+    "source_span": null,
+    "target_span": "明日また来てください。",
+    "evidence": {
+      "reason": "The Japanese target adds the instruction 'Please come again tomorrow' which is not present in the Chinese source text."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_046",
+    "checker": "japanese_llm",
+    "issue_type": "keigo_mismatch",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected keigo_mismatch.",
+    "source_span": "陛下，侦察报告已经整理完毕。",
+    "target_span": "王様、スカウトレポートはまとめたぞ。",
+    "evidence": {
+      "reason": "The speaker is a servant reporting to the King. The target uses 'まとめたぞ' (colloquial/rough) and '王様', which lacks the necessary honorifics (e.g., 'ご報告申し上げます') required when addressing a monarch in this context."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_047",
+    "checker": "japanese_llm",
+    "issue_type": "omission",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected omission.",
+    "source_span": "撤离路线：东门\\n集合地点：古井",
+    "target_span": "撤退経路：東門",
+    "evidence": {
+      "reason": "The Japanese target omits the second line '集合地点：古井' (Gathering point: Old Well) present in the source, which is a critical piece of information for the player."
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_048",
+    "checker": "japanese_llm",
+    "issue_type": "mistranslation",
+    "severity": "critical",
+    "message": "Japanese LLM evaluator detected mistranslation.",
+    "source_span": "移动速度",
+    "target_span": "攻撃速度",
+    "evidence": {
+      "reason": "The source text states the skill reduces 'movement speed' (移動速度), but the target translates this as 'attack speed' (攻撃速度). This is a factual contradiction regarding the game mechanic."
+    },
+    "needs_human_review": true
+  }
+]

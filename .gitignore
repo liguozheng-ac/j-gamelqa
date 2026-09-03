@@ -1,0 +1,27 @@
+# Python generated files
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Local environments
+.venv/
+
+# Test and coverage artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local secrets
+.env
+.env.*
+
+# Keep formal JSON/CSV/JSONL experiment artifacts. Ignore ad-hoc folders and
+# binary report files that can be regenerated from source data.
+outputs/*/
+outputs/*.xlsx
+
+# Editor and OS noise
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

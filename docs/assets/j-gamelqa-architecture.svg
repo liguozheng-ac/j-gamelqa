@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">J-GameLQA system architecture</title>
+  <desc id="desc">Chinese source, Japanese target, and game context enter rule checkers and a context-aware language model, become unified issues, pass through hybrid routing, and reach evaluation and human review.</desc>
+  <defs>
+    <style>
+      .title { font: 700 32px Arial, sans-serif; fill: #172033; }
+      .subtitle { font: 400 16px Arial, sans-serif; fill: #5c667a; }
+      .label { font: 700 19px Arial, sans-serif; fill: #172033; }
+      .small { font: 400 14px Arial, sans-serif; fill: #5c667a; }
+      .card { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 16; }
+      .rule { fill: #eef6ff; stroke: #4f8edc; stroke-width: 2.5; rx: 18; }
+      .llm { fill: #eefbf5; stroke: #39a275; stroke-width: 2.5; rx: 18; }
+      .core { fill: #f7f2ff; stroke: #8264c7; stroke-width: 2.5; rx: 18; }
+      .result { fill: #fff8e8; stroke: #d69a2d; stroke-width: 2.5; rx: 18; }
+      .arrow { fill: none; stroke: #65738b; stroke-width: 3; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#65738b"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="760" fill="#ffffff"/>
+  <text x="600" y="52" text-anchor="middle" class="title">J-GameLQA Architecture</text>
+  <text x="600" y="82" text-anchor="middle" class="subtitle">Rule-based precision + context-aware Japanese evaluation</text>
+
+  <rect x="90" y="120" width="290" height="84" class="card"/>
+  <text x="235" y="155" text-anchor="middle" class="label">Chinese Source</text>
+  <text x="235" y="180" text-anchor="middle" class="small">原始中文游戏文本</text>
+  <rect x="455" y="120" width="290" height="84" class="card"/>
+  <text x="600" y="155" text-anchor="middle" class="label">Japanese Target</text>
+  <text x="600" y="180" text-anchor="middle" class="small">待检查的日语译文</text>
+  <rect x="820" y="120" width="290" height="84" class="card"/>
+  <text x="965" y="155" text-anchor="middle" class="label">Game Context</text>
+  <text x="965" y="180" text-anchor="middle" class="small">角色 · 关系 · 场景 · 前后文</text>
+
+  <path d="M235 204 V245 H370 V270" class="arrow"/>
+  <path d="M600 204 V245 H370 V270" class="arrow"/>
+  <path d="M600 204 V245 H830 V270" class="arrow"/>
+  <path d="M965 204 V245 H830 V270" class="arrow"/>
+
+  <rect x="170" y="272" width="400" height="120" class="rule"/>
+  <text x="370" y="315" text-anchor="middle" class="label">Rule Checkers</text>
+  <text x="370" y="345" text-anchor="middle" class="small">Placeholder · Number · Markup</text>
+  <text x="370" y="369" text-anchor="middle" class="small">Line Break · Length · Terminology</text>
+  <rect x="630" y="272" width="400" height="120" class="llm"/>
+  <text x="830" y="315" text-anchor="middle" class="label">Context-aware Japanese LLM</text>
+  <text x="830" y="345" text-anchor="middle" class="small">Meaning · Naturalness · Keigo</text>
+  <text x="830" y="369" text-anchor="middle" class="small">First Person · Character Voice</text>
+
+  <path d="M370 392 V435 H515" class="arrow"/>
+  <path d="M830 392 V435 H685" class="arrow"/>
+  <rect x="410" y="438" width="380" height="76" class="core"/>
+  <text x="600" y="472" text-anchor="middle" class="label">Unified Issue Contract</text>
+  <text x="600" y="496" text-anchor="middle" class="small">type · severity · span · evidence · checker</text>
+
+  <path d="M600 514 V552" class="arrow"/>
+  <rect x="410" y="555" width="380" height="72" class="core"/>
+  <text x="600" y="585" text-anchor="middle" class="label">Hybrid Routing</text>
+  <text x="600" y="609" text-anchor="middle" class="small">Rule-addressable → Rule · LLM-required → LLM</text>
+
+  <path d="M600 627 V660 H335 V677" class="arrow"/>
+  <path d="M600 627 V660 H865 V677" class="arrow"/>
+  <rect x="150" y="680" width="370" height="58" class="result"/>
+  <text x="335" y="715" text-anchor="middle" class="label">Evaluation &amp; Bad Cases</text>
+  <rect x="680" y="680" width="370" height="58" class="result"/>
+  <text x="865" y="715" text-anchor="middle" class="label">Human Review</text>
+</svg>

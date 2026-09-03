@@ -1,0 +1,751 @@
+{
+  "false_positives": [
+    {
+      "string_id": "DEV_002",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "minor",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "{player_name}",
+      "target_span": null,
+      "evidence": {
+        "reason": "The Japanese target omits the placeholder {player_name} present in the source, failing to address the player by name as intended."
+      },
+      "needs_human_review": true,
+      "source_zh": "勇者{player_name}，欢迎回来！",
+      "target_ja": "勇者様、お帰りなさい！",
+      "source_component": "llm"
+    },
+    {
+      "string_id": "DEV_006",
+      "checker": "japanese_llm",
+      "issue_type": "keigo_mismatch",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected keigo_mismatch.",
+      "source_span": "军师向执行任务的部下说明禁令",
+      "target_span": "敵の補給車を攻撃しろ。",
+      "evidence": {
+        "reason": "The speaker is a strategist giving an order to subordinates. The target uses the direct imperative '〜しろ' (shiro), which is too blunt and rude for a superior addressing subordinates in a serious military context; it lacks the necessary authority or appropriate register expected from a strategist."
+      },
+      "needs_human_review": true,
+      "source_zh": "不要攻击敌军的补给车。",
+      "target_ja": "敵の補給車を攻撃しろ。",
+      "source_component": "llm"
+    },
+    {
+      "string_id": "DEV_007",
+      "checker": "japanese_llm",
+      "issue_type": "keigo_mismatch",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected keigo_mismatch.",
+      "source_span": "书记官向领主陈述",
+      "target_span": "この決定は私に...",
+      "evidence": {
+        "reason": "The speaker is a clerk addressing a lord. The target uses plain form '感じさせる' (makes feel) and lacks appropriate honorifics or humble language expected when a subordinate reports to a superior in this context, violating the social hierarchy."
+      },
+      "needs_human_review": true,
+      "source_zh": "这个决定让我感到非常为难。",
+      "target_ja": "この決定は私に非常に困難を感じさせる。",
+      "source_component": "llm"
+    },
+    {
+      "string_id": "DEV_007",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "为难",
+      "target_span": "困難を感じさせる",
+      "evidence": {
+        "reason": "The source '为难' (wéinán) implies being in a dilemma, awkward, or at a loss due to conflicting pressures. The target '困難を感じさせる' translates literally to 'makes me feel difficulty/hardship,' which distorts the meaning from an emotional/social dilemma to a general sense of hardship or trouble."
+      },
+      "needs_human_review": true,
+      "source_zh": "这个决定让我感到非常为难。",
+      "target_ja": "この決定は私に非常に困難を感じさせる。",
+      "source_component": "llm"
+    },
+    {
+      "string_id": "DEV_008",
+      "checker": "japanese_llm",
+      "issue_type": "character_voice_mismatch",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected character_voice_mismatch.",
+      "source_span": "新兵阿岳",
+      "target_span": "見てくれ",
+      "evidence": {
+        "reason": "The character profile is a new recruit. The phrase '見てくれ' (mite kure) is aggressive and inappropriate for a respectful subordinate speaking to a superior, conflicting with the expected voice of a disciplined new soldier."
+      },
+      "needs_human_review": true,
+      "source_zh": "队长，侦察报告已经送到，请您过目。",
+      "target_ja": "隊長、偵察報告を持ってきた。見てくれ。",
+      "source_component": "llm"
+    },
+    {
+      "string_id": "DEV_012",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "生命值",
+      "target_span": null,
+      "evidence": {
+        "reason": "The Japanese target omits the source term '生命值' (HP/Life Points). While the meaning is implied by the variable names, the specific UI label '生命值' present in the source is absent from the target."
+      },
+      "needs_human_review": true,
+      "source_zh": "生命值：%(current)d/%(maximum)d",
+      "target_ja": "最大HP %(maximum)d／現在HP %(current)d",
+      "source_component": "llm"
+    },
+    {
+      "string_id": "DEV_015",
+      "checker": "number",
+      "issue_type": "number_extra",
+      "severity": "minor",
+      "message": "源文与日语译文中的数字、数值或百分比不一致。",
+      "source_span": null,
+      "target_span": "1, 2",
+      "evidence": {
+        "source_numbers": [],
+        "target_numbers": [
+          "1",
+          "2"
+        ],
+        "missing": [],
+        "extra": [
+          "1",
+          "2"
+        ]
+      },
+      "needs_human_review": false,
+      "source_zh": "第一目标：启动机关\\n第二目标：撤离遗迹",
+      "target_ja": "第1目標：装置を起動\\n第2目標：遺跡から脱出",
+      "source_component": "rule"
+    },
+    {
+      "string_id": "DEV_017",
+      "checker": "terminology",
+      "issue_type": "terminology_forbidden",
+      "severity": "major",
+      "message": "术语“营地”使用了禁用译法。",
+      "source_span": "营地",
+      "target_span": "キャンプ",
+      "evidence": {
+        "source_term": "营地",
+        "approved_ja": "野営地",
+        "forbidden_ja": [
+          "キャンプ"
+        ],
+        "used_forbidden": [
+          "キャンプ"
+        ]
+      },
+      "needs_human_review": true,
+      "source_zh": "营地的露营火堆今晚不会熄灭。",
+      "target_ja": "野営地のキャンプファイアは今夜も消えない。",
+      "source_component": "rule"
+    },
+    {
+      "string_id": "DEV_018",
+      "checker": "japanese_llm",
+      "issue_type": "addition",
+      "severity": "minor",
+      "message": "Japanese LLM evaluator detected addition.",
+      "source_span": null,
+      "target_span": "{player_name}",
+      "evidence": {
+        "reason": "The Japanese target inserts the placeholder '{player_name}' which is not present in the Chinese source text."
+      },
+      "needs_human_review": true,
+      "source_zh": "任务完成，奖励已发放。",
+      "target_ja": "{player_name}、任務完了。報酬を配布しました。",
+      "source_component": "llm"
+    },
+    {
+      "string_id": "DEV_020",
+      "checker": "japanese_llm",
+      "issue_type": "addition",
+      "severity": "minor",
+      "message": "Japanese LLM evaluator detected addition.",
+      "source_span": null,
+      "target_span": "30秒間",
+      "evidence": {
+        "reason": "The Japanese target adds the specific duration '30 seconds' which is not present in the Chinese source text."
+      },
+      "needs_human_review": true,
+      "source_zh": "防护结界已启动。",
+      "target_ja": "防護結界は30秒間起動します。",
+      "source_component": "llm"
+    },
+    {
+      "string_id": "DEV_022",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "<color=red>生命值过低</color>",
+      "target_span": "<color=blue>HPが残りわずかです</color>",
+      "evidence": {
+        "reason": "The source text explicitly indicates a critical state ('low') using red color, while the target translates to 'only a little left' (remaining) and uses blue color. This changes the severity implication and visual cue from a warning of low health to a statement about remaining health."
+      },
+      "needs_human_review": true,
+      "source_zh": "<color=red>生命值过低</color>",
+      "target_ja": "<color=blue>HPが残りわずかです</color>",
+      "source_component": "llm"
+    },
+    {
+      "string_id": "DEV_023",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "minor",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "按下<b>确认</b>",
+      "target_span": "<b>決定を押して</b>",
+      "evidence": {
+        "reason": "The source explicitly instructs to press the 'Confirm' button (a specific UI element). The target translates this as 'press Decision', which is semantically incorrect in Japanese game contexts where 'Decision' (決定) is not a standard button label for confirmation actions; it should be 'OK' or 'Confirm' (確認/決定ボタンを押す)."
+      },
+      "needs_human_review": true,
+      "source_zh": "按下<b>确认</b>继续。",
+      "target_ja": "<b>決定を押して続行してください。",
+      "source_component": "llm"
+    },
+    {
+      "string_id": "DEV_035",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "我马上为您包装",
+      "target_span": "今包むから",
+      "evidence": {
+        "reason": "The source explicitly states the action is happening 'right now' or 'immediately' ('马上'). The target's '今' (now) combined with the command structure changes the nuance from a reassuring promise of immediate service to a blunt statement, losing the polite assurance intended in the source."
+      },
+      "needs_human_review": true,
+      "source_zh": "客人，请稍等，我马上为您包装。",
+      "target_ja": "客、待て。今包むから。",
+      "source_component": "llm"
+    },
+    {
+      "string_id": "DEV_037",
+      "checker": "japanese_llm",
+      "issue_type": "keigo_mismatch",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected keigo_mismatch.",
+      "source_span": "切勿贸然开启",
+      "target_span": "ノリで開けんなよ",
+      "evidence": {
+        "reason": "The speaker is an elder sage (玄珀) addressing a junior adventurer in a solemn setting. The source uses a formal prohibition ('切勿'), but the target uses 'ノリで' (colloquial/slang for 'just because you feel like it') and '開けんなよ' (rough, informal command). This contradicts the established relationship of an elder sage speaking with dignity to a junior."
+      },
+      "needs_human_review": true,
+      "source_zh": "此门后沉睡着旧日的灾厄，切勿贸然开启。",
+      "target_ja": "この扉の先には昔の災厄が眠ってるから、ノリで開けんなよ。",
+      "source_component": "llm"
+    },
+    {
+      "string_id": "DEV_039",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "20%",
+      "target_span": null,
+      "evidence": {
+        "reason": "The Japanese target omits the specific value '20%' found in the source text, replacing it with a generic statement that shield remaining is decreasing."
+      },
+      "needs_human_review": true,
+      "source_zh": "<b>警告</b>：护盾还剩20%。",
+      "target_ja": "<b>警告：シールド残量が低下しています。",
+      "source_component": "llm"
+    },
+    {
+      "string_id": "DEV_041",
+      "checker": "japanese_llm",
+      "issue_type": "keigo_mismatch",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected keigo_mismatch.",
+      "source_span": "我对此没有异议。",
+      "target_span": "私はこのことに対して異議というものを持っていません。",
+      "evidence": {
+        "reason": "The speaker is a cautious clerk addressing a lord. The target uses plain form '持っています' (or implied plain context) and lacks necessary honorifics or humble language required when speaking to a superior in a formal setting like a castle council."
+      },
+      "needs_human_review": true,
+      "source_zh": "我对此没有异议。",
+      "target_ja": "私はこのことに対して異議というものを持っていません。",
+      "source_component": "llm"
+    },
+    {
+      "string_id": "DEV_044",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "金币？这种俗物也配让我弯腰去捡？",
+      "target_span": "お金ですか？拾っておきましょう。",
+      "evidence": {
+        "reason": "The source expresses strong disdain ('such a vulgar thing', 'does it deserve to make me bend down'), while the target translates this as a polite offer to pick up money ('Let's pick it up'). This completely contradicts the character's arrogant and contemptuous tone."
+      },
+      "needs_human_review": true,
+      "source_zh": "金币？这种俗物也配让我弯腰去捡？",
+      "target_ja": "お金ですか？拾っておきましょう。",
+      "source_component": "llm"
+    },
+    {
+      "string_id": "DEV_044",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "这种俗物也配让我弯腰去捡？",
+      "target_span": null,
+      "evidence": {
+        "reason": "The entire second clause of the source sentence, which conveys the character's arrogance and refusal to lower herself for money, is completely omitted in the target."
+      },
+      "needs_human_review": true,
+      "source_zh": "金币？这种俗物也配让我弯腰去捡？",
+      "target_ja": "お金ですか？拾っておきましょう。",
+      "source_component": "llm"
+    }
+  ],
+  "false_negatives": [
+    {
+      "annotation_id": "ANN_006",
+      "string_id": "DEV_007",
+      "issue_type": "translationese",
+      "severity": "minor",
+      "source_span": "感到非常为难",
+      "target_span": "私に非常に困難を感じさせる",
+      "evidence": {
+        "expected": "自然的日语判断表达",
+        "observed": "受中文使役结构影响的直译"
+      },
+      "annotation_note": "语义可理解，但日语句法明显生硬。",
+      "source_zh": "这个决定让我感到非常为难。",
+      "target_ja": "この決定は私に非常に困難を感じさせる。"
+    },
+    {
+      "annotation_id": "ANN_035",
+      "string_id": "DEV_040",
+      "issue_type": "keigo_mismatch",
+      "severity": "major",
+      "source_span": "请……下令",
+      "target_span": "命令を出せ",
+      "evidence": {
+        "expected": "部下对直属上级的礼貌请求",
+        "observed": "命令形"
+      },
+      "annotation_note": "关系和危急场景仍不支持部下命令上级。",
+      "source_zh": "队长，请在10秒内下令撤退。",
+      "target_ja": "隊長、5秒以内に撤退命令を出せ。"
+    },
+    {
+      "annotation_id": "ANN_037",
+      "string_id": "DEV_041",
+      "issue_type": "translationese",
+      "severity": "minor",
+      "source_span": "没有异议",
+      "target_span": "異議というものを持っていません",
+      "evidence": {
+        "expected": "異議はありません",
+        "observed": "中文结构展开式直译"
+      },
+      "annotation_note": "语法可理解，但表达冗长且明显不自然。",
+      "source_zh": "我对此没有异议。",
+      "target_ja": "私はこのことに対して異議というものを持っていません。"
+    },
+    {
+      "annotation_id": "ANN_040",
+      "string_id": "DEV_043",
+      "issue_type": "omission",
+      "severity": "major",
+      "source_span": "烧毁记录",
+      "target_span": "",
+      "evidence": {
+        "expected": "烧毁记录",
+        "observed": null
+      },
+      "annotation_note": "关键撤离任务步骤被漏译。",
+      "source_zh": "解除警报后烧毁记录，再把红色钥匙交给伊织。",
+      "target_ja": "警報を解除して、青い鍵を伊織に渡せ。"
+    }
+  ],
+  "paired_analysis": {
+    "fixed_by_rule": [
+      {
+        "string_id": "DEV_002",
+        "issue_type": "placeholder_missing",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_003",
+        "issue_type": "placeholder_modified",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_018",
+        "issue_type": "placeholder_extra",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_020",
+        "issue_type": "number_extra",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_022",
+        "issue_type": "markup_modified",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_023",
+        "issue_type": "markup_missing",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_024",
+        "issue_type": "markup_extra",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_025",
+        "issue_type": "markup_order_mismatch",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_026",
+        "issue_type": "linebreak_mismatch",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_038",
+        "issue_type": "placeholder_missing",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_039",
+        "issue_type": "markup_missing",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_039",
+        "issue_type": "number_missing",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_045",
+        "issue_type": "placeholder_extra",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_047",
+        "issue_type": "linebreak_mismatch",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_048",
+        "issue_type": "markup_extra",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      }
+    ],
+    "fixed_by_llm": [
+      {
+        "string_id": "DEV_005",
+        "issue_type": "omission",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_006",
+        "issue_type": "mistranslation",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_008",
+        "issue_type": "keigo_mismatch",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_009",
+        "issue_type": "first_person_mismatch",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_010",
+        "issue_type": "character_voice_mismatch",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_030",
+        "issue_type": "omission",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_031",
+        "issue_type": "addition",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_032",
+        "issue_type": "addition",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_033",
+        "issue_type": "mistranslation",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_034",
+        "issue_type": "translationese",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_035",
+        "issue_type": "keigo_mismatch",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_036",
+        "issue_type": "first_person_mismatch",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_037",
+        "issue_type": "character_voice_mismatch",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_042",
+        "issue_type": "character_voice_mismatch",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_042",
+        "issue_type": "first_person_mismatch",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_043",
+        "issue_type": "mistranslation",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_044",
+        "issue_type": "character_voice_mismatch",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_045",
+        "issue_type": "addition",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_046",
+        "issue_type": "keigo_mismatch",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_047",
+        "issue_type": "omission",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_048",
+        "issue_type": "mistranslation",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      }
+    ],
+    "hybrid_false_positives": [
+      {
+        "string_id": "DEV_002",
+        "issue_type": "omission",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_006",
+        "issue_type": "keigo_mismatch",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_007",
+        "issue_type": "keigo_mismatch",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_007",
+        "issue_type": "mistranslation",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_008",
+        "issue_type": "character_voice_mismatch",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_012",
+        "issue_type": "omission",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_015",
+        "issue_type": "number_extra",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_017",
+        "issue_type": "terminology_forbidden",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_018",
+        "issue_type": "addition",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_020",
+        "issue_type": "addition",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_022",
+        "issue_type": "mistranslation",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_023",
+        "issue_type": "mistranslation",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_035",
+        "issue_type": "mistranslation",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_037",
+        "issue_type": "keigo_mismatch",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_039",
+        "issue_type": "omission",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_041",
+        "issue_type": "keigo_mismatch",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_044",
+        "issue_type": "mistranslation",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_044",
+        "issue_type": "omission",
+        "source_component": "llm"
+      }
+    ],
+    "remaining_false_negatives": [
+      {
+        "string_id": "DEV_007",
+        "issue_type": "translationese"
+      },
+      {
+        "string_id": "DEV_040",
+        "issue_type": "keigo_mismatch"
+      },
+      {
+        "string_id": "DEV_041",
+        "issue_type": "translationese"
+      },
+      {
+        "string_id": "DEV_043",
+        "issue_type": "omission"
+      }
+    ]
+  },
+  "duplicate_predictions": [
+    {
+      "string_id": "DEV_012",
+      "issue_type": "omission",
+      "count": 2
+    },
+    {
+      "string_id": "DEV_043",
+      "issue_type": "mistranslation",
+      "count": 2
+    }
+  ],
+  "unknown_prediction_types": []
+}

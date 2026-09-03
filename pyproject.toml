@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "j-gamelqa"
+version = "1.0.0"
+description = "Hybrid rule-based and context-aware LLM evaluation for Chinese-to-Japanese game localization QA"
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = ["japanese", "game-localization", "localization-qa", "llm-evaluation"]
+dependencies = [
+  "pandas>=2.3",
+  "openpyxl>=3.1",
+]
+
+[project.scripts]
+j-gamelqa-rules = "j_gamelqa.rule_engine:main"
+j-gamelqa-evaluate = "j_gamelqa.evaluate:main"
+j-gamelqa-llm-evaluate = "j_gamelqa.llm_experiment:main"
+j-gamelqa-context-compare = "j_gamelqa.context_comparison:main"
+j-gamelqa-hybrid = "j_gamelqa.hybrid_experiment:main"
+j-gamelqa-validate-benchmark = "j_gamelqa.benchmark_freeze:main"
+j-gamelqa-prompt-snapshot = "j_gamelqa.prompt_snapshot:main"
+j-gamelqa-prompt-v2-snapshot = "j_gamelqa.prompt_v2_snapshot:main"
+j-gamelqa-prompt-v2-dev = "j_gamelqa.llm_prompt_v2_experiment:main"
+j-gamelqa-prompt-v2-analyze = "j_gamelqa.prompt_v2_analysis:main"
+j-gamelqa-prompt-v21-snapshot = "j_gamelqa.prompt_v21_snapshot:main"
+j-gamelqa-prompt-v21-dev = "j_gamelqa.llm_prompt_v21_experiment:main"
+j-gamelqa-prompt-v21-analyze = "j_gamelqa.prompt_v21_analysis:main"
+j-gamelqa-heldout-preflight = "j_gamelqa.heldout_freeze:main"
+j-gamelqa-heldout-predict = "j_gamelqa.heldout_inference:main"
+j-gamelqa-heldout-evaluate = "j_gamelqa.heldout_analysis:main"
+j-gamelqa-release-manifest = "j_gamelqa.release:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

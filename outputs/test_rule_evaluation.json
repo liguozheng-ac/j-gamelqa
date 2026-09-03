@@ -1,0 +1,891 @@
+{
+  "matching_key": [
+    "string_id",
+    "issue_type"
+  ],
+  "reference_detection_count": 66,
+  "raw_prediction_count": 38,
+  "unique_prediction_detection_count": 37,
+  "overall_micro": {
+    "tp": 33,
+    "fp": 4,
+    "fn": 33,
+    "precision": 0.8918918918918919,
+    "recall": 0.5,
+    "f1": 0.6407766990291263
+  },
+  "rule_addressable_micro": {
+    "tp": 33,
+    "fp": 4,
+    "fn": 1,
+    "precision": 0.8918918918918919,
+    "recall": 0.9705882352941176,
+    "f1": 0.9295774647887325
+  },
+  "llm_required_micro": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 32,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "per_issue_type": [
+    {
+      "issue_type": "addition",
+      "reference_count": 4,
+      "prediction_count": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 4,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "issue_type": "character_voice_mismatch",
+      "reference_count": 5,
+      "prediction_count": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "issue_type": "first_person_mismatch",
+      "reference_count": 4,
+      "prediction_count": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 4,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "issue_type": "keigo_mismatch",
+      "reference_count": 5,
+      "prediction_count": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "issue_type": "length_overflow",
+      "reference_count": 3,
+      "prediction_count": 3,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "linebreak_mismatch",
+      "reference_count": 2,
+      "prediction_count": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "markup_extra",
+      "reference_count": 2,
+      "prediction_count": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "markup_malformed",
+      "reference_count": 2,
+      "prediction_count": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    {
+      "issue_type": "markup_missing",
+      "reference_count": 3,
+      "prediction_count": 3,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "markup_modified",
+      "reference_count": 2,
+      "prediction_count": 3,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    {
+      "issue_type": "markup_order_mismatch",
+      "reference_count": 2,
+      "prediction_count": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "mistranslation",
+      "reference_count": 5,
+      "prediction_count": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "issue_type": "number_extra",
+      "reference_count": 2,
+      "prediction_count": 4,
+      "tp": 2,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "issue_type": "number_mismatch",
+      "reference_count": 3,
+      "prediction_count": 4,
+      "tp": 3,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571428571428571
+    },
+    {
+      "issue_type": "number_missing",
+      "reference_count": 2,
+      "prediction_count": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "omission",
+      "reference_count": 4,
+      "prediction_count": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 4,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "issue_type": "placeholder_extra",
+      "reference_count": 2,
+      "prediction_count": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "placeholder_missing",
+      "reference_count": 3,
+      "prediction_count": 3,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "placeholder_modified",
+      "reference_count": 2,
+      "prediction_count": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "terminology_forbidden",
+      "reference_count": 2,
+      "prediction_count": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "terminology_not_approved",
+      "reference_count": 2,
+      "prediction_count": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "translationese",
+      "reference_count": 5,
+      "prediction_count": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  ],
+  "false_positives": [
+    {
+      "string_id": "TEST_003",
+      "checker": "number",
+      "issue_type": "number_extra",
+      "severity": "minor",
+      "message": "源文与日语译文中的数字、数值或百分比不一致。",
+      "source_span": null,
+      "target_span": "2",
+      "evidence": {
+        "source_numbers": [],
+        "target_numbers": [
+          "2"
+        ],
+        "missing": [],
+        "extra": [
+          "2"
+        ]
+      },
+      "needs_human_review": false,
+      "source_zh": "连续闪避两次即可脱离锁定。",
+      "target_ja": "回避を2回続けると、ロックオンを解除できます。"
+    },
+    {
+      "string_id": "TEST_010",
+      "checker": "number",
+      "issue_type": "number_mismatch",
+      "severity": "major",
+      "message": "源文与日语译文中的数字、数值或百分比不一致。",
+      "source_span": "100%",
+      "target_span": "１００",
+      "evidence": {
+        "source_numbers": [
+          "100%"
+        ],
+        "target_numbers": [
+          "１００"
+        ],
+        "missing": [
+          "100%"
+        ],
+        "extra": [
+          "１００"
+        ]
+      },
+      "needs_human_review": false,
+      "source_zh": "护盾充能达到100%时会自动展开。",
+      "target_ja": "シールドは充填率１００％で自動展開します。"
+    },
+    {
+      "string_id": "TEST_022",
+      "checker": "number",
+      "issue_type": "number_extra",
+      "severity": "minor",
+      "message": "源文与日语译文中的数字、数值或百分比不一致。",
+      "source_span": null,
+      "target_span": "1",
+      "evidence": {
+        "source_numbers": [],
+        "target_numbers": [
+          "1"
+        ],
+        "missing": [],
+        "extra": [
+          "1"
+        ]
+      },
+      "needs_human_review": false,
+      "source_zh": "第一阶段\\n守住城门",
+      "target_ja": "第1段階：城門を守れ"
+    },
+    {
+      "string_id": "TEST_049",
+      "checker": "markup",
+      "issue_type": "markup_modified",
+      "severity": "major",
+      "message": "源文与日语译文中的技术标签不一致。",
+      "source_span": "</b>",
+      "target_span": "<b>",
+      "evidence": {
+        "source_tags": [
+          "<b>",
+          "</b>"
+        ],
+        "target_tags": [
+          "<b>",
+          "<b>"
+        ],
+        "missing": [
+          "</b>"
+        ],
+        "extra": [
+          "<b>"
+        ]
+      },
+      "needs_human_review": false,
+      "source_zh": "<b>请您立即离开这里。</b>",
+      "target_ja": "<b>今すぐここを出ろ。<b>"
+    }
+  ],
+  "false_negatives": [
+    {
+      "annotation_id": "TANN_021",
+      "string_id": "TEST_031",
+      "issue_type": "omission",
+      "severity": "critical",
+      "source_span": "先关闭蒸汽阀门",
+      "target_span": "",
+      "evidence": {
+        "expected": "先关闭阀门再点火",
+        "observed": "只保留点火操作"
+      },
+      "annotation_note": "遗漏前置操作会改变教程执行顺序并带来危险。",
+      "source_zh": "先关闭蒸汽阀门，再点燃炉芯。",
+      "target_ja": "炉心に火をつけてください。"
+    },
+    {
+      "annotation_id": "TANN_022",
+      "string_id": "TEST_032",
+      "issue_type": "omission",
+      "severity": "major",
+      "source_span": "只能在满月之夜",
+      "target_span": "月夜に使える",
+      "evidence": {
+        "expected": "仅限满月",
+        "observed": "普通月夜可用"
+      },
+      "annotation_note": "满月限定条件和排他性没有保留。",
+      "source_zh": "这把钥匙只能在满月之夜使用。",
+      "target_ja": "この鍵は月夜に使える。"
+    },
+    {
+      "annotation_id": "TANN_023",
+      "string_id": "TEST_033",
+      "issue_type": "addition",
+      "severity": "major",
+      "source_span": "",
+      "target_span": "封を開けずに",
+      "evidence": {
+        "expected": null,
+        "observed": "不得拆封"
+      },
+      "annotation_note": "源文没有要求保持信件密封。",
+      "source_zh": "把信交给码头的船长。",
+      "target_ja": "封を開けずに港の船長へ手紙を渡せ。"
+    },
+    {
+      "annotation_id": "TANN_024",
+      "string_id": "TEST_034",
+      "issue_type": "addition",
+      "severity": "minor",
+      "source_span": "",
+      "target_span": "秘密の",
+      "evidence": {
+        "expected": null,
+        "observed": "秘密通道"
+      },
+      "annotation_note": "译文给通道增加了“秘密”属性。",
+      "source_zh": "击败守门人后，通道会开启。",
+      "target_ja": "門番を倒すと、秘密の通路が開く。"
+    },
+    {
+      "annotation_id": "TANN_025",
+      "string_id": "TEST_035",
+      "issue_type": "mistranslation",
+      "severity": "critical",
+      "source_span": "井",
+      "target_span": "塔",
+      "evidence": {
+        "expected": "井",
+        "observed": "塔"
+      },
+      "annotation_note": "警告对象从井变成塔。",
+      "source_zh": "不要靠近那口井。",
+      "target_ja": "あの塔に近づくな。"
+    },
+    {
+      "annotation_id": "TANN_026",
+      "string_id": "TEST_036",
+      "issue_type": "mistranslation",
+      "severity": "critical",
+      "source_span": "降低移动速度",
+      "target_span": "移動速度を上げる",
+      "evidence": {
+        "expected": "降低",
+        "observed": "提高"
+      },
+      "annotation_note": "药水效果方向被翻成相反含义。",
+      "source_zh": "这种药水会降低移动速度。",
+      "target_ja": "この薬は移動速度を上げる。"
+    },
+    {
+      "annotation_id": "TANN_027",
+      "string_id": "TEST_037",
+      "issue_type": "translationese",
+      "severity": "minor",
+      "source_span": "持赞成的态度",
+      "target_span": "賛成という態度を持っています",
+      "evidence": {
+        "expected": "自然表达赞成",
+        "observed": "机械保留“持有态度”结构"
+      },
+      "annotation_note": "语义可理解，但日语明显照搬中文名词结构。",
+      "source_zh": "对于这项提案，我持赞成的态度。",
+      "target_ja": "この提案に対して、私は賛成という態度を持っています。"
+    },
+    {
+      "annotation_id": "TANN_028",
+      "string_id": "TEST_038",
+      "issue_type": "translationese",
+      "severity": "minor",
+      "source_span": "确认安全之后，我们才进入大厅",
+      "target_span": "安全を確認した後において、私たちはようやく広間へ入ることを行った",
+      "evidence": {
+        "expected": "安全を確認してから広間に入った",
+        "observed": "冗长的“において／行った”结构"
+      },
+      "annotation_note": "意思基本正确，但句法冗长且受中文结构影响。",
+      "source_zh": "确认安全之后，我们才进入大厅。",
+      "target_ja": "安全を確認した後において、私たちはようやく広間へ入ることを行った。"
+    },
+    {
+      "annotation_id": "TANN_029",
+      "string_id": "TEST_039",
+      "issue_type": "keigo_mismatch",
+      "severity": "major",
+      "source_span": "老师，请您看看",
+      "target_span": "先生、これ、見てくれる？",
+      "evidence": {
+        "relationship": "student_to_strict_teacher",
+        "observed_register": "casual request"
+      },
+      "annotation_note": "正式审阅场景中学生对导师使用随意请求不合适。",
+      "source_zh": "老师，请您看看这份研究记录。",
+      "target_ja": "先生、これ、見てくれる？"
+    },
+    {
+      "annotation_id": "TANN_030",
+      "string_id": "TEST_040",
+      "issue_type": "keigo_mismatch",
+      "severity": "critical",
+      "source_span": "阁下，请稍候",
+      "target_span": "そこで待ってろ",
+      "evidence": {
+        "relationship": "servant_to_noble",
+        "observed_register": "rough command"
+      },
+      "annotation_note": "侍从对重视礼仪的主人使用粗暴命令体。",
+      "source_zh": "阁下，请在会客室稍候。",
+      "target_ja": "そこで待ってろ。"
+    },
+    {
+      "annotation_id": "TANN_031",
+      "string_id": "TEST_041",
+      "issue_type": "first_person_mismatch",
+      "severity": "major",
+      "source_span": "我",
+      "target_span": "私",
+      "evidence": {
+        "established_first_person": "俺",
+        "observed": "私"
+      },
+      "annotation_note": "老兵已经明确固定使用“俺”，译文改成“私”。",
+      "source_zh": "我会守住这里，你们撤退。",
+      "target_ja": "私はここを守る。お前たちは退け。"
+    },
+    {
+      "annotation_id": "TANN_032",
+      "string_id": "TEST_042",
+      "issue_type": "first_person_mismatch",
+      "severity": "major",
+      "source_span": "我",
+      "target_span": "あたし",
+      "evidence": {
+        "established_first_person": "わたくし",
+        "observed": "あたし"
+      },
+      "annotation_note": "贵族角色固定自称与目标不一致。",
+      "source_zh": "我绝不会让家族蒙羞。",
+      "target_ja": "あたしは決して家名を汚しません。"
+    },
+    {
+      "annotation_id": "TANN_033",
+      "string_id": "TEST_043",
+      "issue_type": "character_voice_mismatch",
+      "severity": "major",
+      "source_span": "星辰已经给出了答案",
+      "target_span": "マジ最高じゃん",
+      "evidence": {
+        "established_voice": "calm concise elder",
+        "observed": "excited youth slang"
+      },
+      "annotation_note": "年轻人俚语与沉静贤者的一贯语言风格冲突。",
+      "source_zh": "星辰已经给出了答案。",
+      "target_ja": "星が答え教えてくれたって、マジ最高じゃん！"
+    },
+    {
+      "annotation_id": "TANN_034",
+      "string_id": "TEST_044",
+      "issue_type": "character_voice_mismatch",
+      "severity": "major",
+      "source_span": "请站到我身后",
+      "target_span": "さっさと後ろに下がれ",
+      "evidence": {
+        "established_voice": "timid and gentle",
+        "observed": "aggressive imperative"
+      },
+      "annotation_note": "粗暴命令体不符合治疗师温和胆小的设定。",
+      "source_zh": "请站到我身后，我会为你治疗。",
+      "target_ja": "さっさと後ろに下がれ。治してやる。"
+    },
+    {
+      "annotation_id": "TANN_036",
+      "string_id": "TEST_045",
+      "issue_type": "omission",
+      "severity": "major",
+      "source_span": "别碰那盏灯",
+      "target_span": "",
+      "evidence": {
+        "expected": "保留禁止触碰灯的警告",
+        "observed": null
+      },
+      "annotation_note": "译文遗漏与封印安全有关的警告。",
+      "source_zh": "把{artifact_name}放回祭坛，别碰那盏灯。",
+      "target_ja": "{item_name}を祭壇に戻してください。"
+    },
+    {
+      "annotation_id": "TANN_038",
+      "string_id": "TEST_046",
+      "issue_type": "addition",
+      "severity": "major",
+      "source_span": "",
+      "target_span": "も受け取れます",
+      "evidence": {
+        "expected": null,
+        "observed": "还可以领取额外奖励"
+      },
+      "annotation_note": "译文无依据新增奖励信息。",
+      "source_zh": "任务已完成。",
+      "target_ja": "任務完了！{bonus}も受け取れます。"
+    },
+    {
+      "annotation_id": "TANN_040",
+      "string_id": "TEST_047",
+      "issue_type": "mistranslation",
+      "severity": "critical",
+      "source_span": "火焰攻击",
+      "target_span": "氷属性の攻撃",
+      "evidence": {
+        "expected": "火属性",
+        "observed": "冰属性"
+      },
+      "annotation_note": "防护属性被翻成相反元素。",
+      "source_zh": "护符可抵挡3次火焰攻击。",
+      "target_ja": "護符は氷属性の攻撃を防ぐ。"
+    },
+    {
+      "annotation_id": "TANN_042",
+      "string_id": "TEST_048",
+      "issue_type": "translationese",
+      "severity": "minor",
+      "source_span": "没有意见",
+      "target_span": "意見を持っていません",
+      "evidence": {
+        "expected": "異議はありません",
+        "observed": "意見を持っていません"
+      },
+      "annotation_note": "意义大致正确，但机械使用“持有意见”结构。",
+      "source_zh": "我们对这项安排没有意见。",
+      "target_ja": "私たちはこの手配に対して1つの意見も持っていません。"
+    },
+    {
+      "annotation_id": "TANN_044",
+      "string_id": "TEST_049",
+      "issue_type": "keigo_mismatch",
+      "severity": "critical",
+      "source_span": "请您立即离开",
+      "target_span": "今すぐここを出ろ",
+      "evidence": {
+        "relationship": "servant_to_noble",
+        "observed_register": "rough command"
+      },
+      "annotation_note": "紧急并不取消该角色始终使用敬语的设定。",
+      "source_zh": "<b>请您立即离开这里。</b>",
+      "target_ja": "<b>今すぐここを出ろ。<b>"
+    },
+    {
+      "annotation_id": "TANN_043",
+      "string_id": "TEST_049",
+      "issue_type": "markup_malformed",
+      "severity": "major",
+      "source_span": "</b>",
+      "target_span": "<b>",
+      "evidence": {
+        "expected": "closing </b>",
+        "observed": "second opening <b>"
+      },
+      "annotation_note": "目标末尾把闭标签写成开标签。",
+      "source_zh": "<b>请您立即离开这里。</b>",
+      "target_ja": "<b>今すぐここを出ろ。<b>"
+    },
+    {
+      "annotation_id": "TANN_046",
+      "string_id": "TEST_050",
+      "issue_type": "first_person_mismatch",
+      "severity": "major",
+      "source_span": "我",
+      "target_span": "僕",
+      "evidence": {
+        "established_first_person": "俺",
+        "observed": "僕"
+      },
+      "annotation_note": "佣兵凯固定使用“俺”。",
+      "source_zh": "<color=blue>我来掩护，你先走。</color>",
+      "target_ja": "<color=red>僕が援護する。先に行け。</color>"
+    },
+    {
+      "annotation_id": "TANN_048",
+      "string_id": "TEST_051",
+      "issue_type": "character_voice_mismatch",
+      "severity": "major",
+      "source_span": "命中了",
+      "target_span": "やったー！超最高じゃん！",
+      "evidence": {
+        "established_voice": "reserved and terse",
+        "observed": "highly excited slang"
+      },
+      "annotation_note": "夸张欢呼与寡言弓手的稳定语气不符。",
+      "source_zh": "命中了。",
+      "target_ja": "<shake>やったー！超最高じゃん！</shake>"
+    },
+    {
+      "annotation_id": "TANN_050",
+      "string_id": "TEST_052",
+      "issue_type": "omission",
+      "severity": "critical",
+      "source_span": "先拉下左侧拉杆",
+      "target_span": "",
+      "evidence": {
+        "expected": "先操作左侧拉杆",
+        "observed": null
+      },
+      "annotation_note": "译文只保留第二步，会导致机关操作失败。",
+      "source_zh": "<b><i>先拉下左侧拉杆，再按下中央按钮。</i></b>",
+      "target_ja": "<i><b>中央のボタンを押す。</i></b>"
+    },
+    {
+      "annotation_id": "TANN_052",
+      "string_id": "TEST_053",
+      "issue_type": "addition",
+      "severity": "major",
+      "source_span": "",
+      "target_span": "必ず",
+      "evidence": {
+        "expected": "预计抵达",
+        "observed": "保证一定抵达"
+      },
+      "annotation_note": "道路尚有风险，译文无依据增加绝对确定性。",
+      "source_zh": "补给车将在黎明前抵达。",
+      "target_ja": "補給トラックは夜明け前に必ず到着する。"
+    },
+    {
+      "annotation_id": "TANN_054",
+      "string_id": "TEST_054",
+      "issue_type": "mistranslation",
+      "severity": "critical",
+      "source_span": "返回营地",
+      "target_span": "王都に戻れる",
+      "evidence": {
+        "expected": "返回野营地",
+        "observed": "返回王都"
+      },
+      "annotation_note": "目的地从营地变成王都。",
+      "source_zh": "穿过传送门即可返回营地。",
+      "target_ja": "ゲートを抜ければ王都に戻れる。"
+    },
+    {
+      "annotation_id": "TANN_056",
+      "string_id": "TEST_055",
+      "issue_type": "keigo_mismatch",
+      "severity": "major",
+      "source_span": "老师",
+      "target_span": "感じさせる",
+      "evidence": {
+        "relationship": "student_to_teacher",
+        "observed_register": "plain sentence ending"
+      },
+      "annotation_note": "正式答辩中学生对导师没有使用礼貌句尾。",
+      "source_zh": "老师，这个结论让我有些难以接受。",
+      "target_ja": "先生、この結論は私に少し受け入れ難さを感じさせる。"
+    },
+    {
+      "annotation_id": "TANN_055",
+      "string_id": "TEST_055",
+      "issue_type": "translationese",
+      "severity": "minor",
+      "source_span": "让我有些难以接受",
+      "target_span": "私に少し受け入れ難さを感じさせる",
+      "evidence": {
+        "expected": "少し受け入れがたく感じます",
+        "observed": "中文使役结构直译"
+      },
+      "annotation_note": "语义基本成立，但日语结构明显受中文影响。",
+      "source_zh": "老师，这个结论让我有些难以接受。",
+      "target_ja": "先生、この結論は私に少し受け入れ難さを感じさせる。"
+    },
+    {
+      "annotation_id": "TANN_058",
+      "string_id": "TEST_056",
+      "issue_type": "character_voice_mismatch",
+      "severity": "major",
+      "source_span": "这件事就交给我吧",
+      "target_span": "任せろぜ",
+      "evidence": {
+        "established_voice": "modest and curious",
+        "observed": "boastful rough style"
+      },
+      "annotation_note": "自大粗犷的表达不符合谦逊人设。",
+      "source_zh": "这件事就交给我吧！",
+      "target_ja": "俺様に任せろぜ！"
+    },
+    {
+      "annotation_id": "TANN_057",
+      "string_id": "TEST_056",
+      "issue_type": "first_person_mismatch",
+      "severity": "major",
+      "source_span": "我",
+      "target_span": "俺様",
+      "evidence": {
+        "established_first_person": "僕",
+        "observed": "俺様"
+      },
+      "annotation_note": "小王子的固定第一人称被改变。",
+      "source_zh": "这件事就交给我吧！",
+      "target_ja": "俺様に任せろぜ！"
+    },
+    {
+      "annotation_id": "TANN_060",
+      "string_id": "TEST_057",
+      "issue_type": "keigo_mismatch",
+      "severity": "major",
+      "source_span": "请您确认",
+      "target_span": "確認してくれ",
+      "evidence": {
+        "relationship": "apprentice_to_respected_mentor",
+        "observed_register": "rough request"
+      },
+      "annotation_note": "见习者对尊敬导师使用随意命令式请求。",
+      "source_zh": "老师，{device_name}已经修好了，请您确认。",
+      "target_ja": "先生、修理したぞ。確認してくれ。"
+    },
+    {
+      "annotation_id": "TANN_062",
+      "string_id": "TEST_058",
+      "issue_type": "mistranslation",
+      "severity": "critical",
+      "source_span": "单个敌人",
+      "target_span": "敵全体",
+      "evidence": {
+        "expected": "single target",
+        "observed": "all enemies"
+      },
+      "annotation_note": "技能作用范围从单体变为全体。",
+      "source_zh": "消耗40点魔力，对单个敌人造成雷电伤害。",
+      "target_ja": "魔力を25消費し、敵全体に雷属性ダメージを与える。"
+    },
+    {
+      "annotation_id": "TANN_064",
+      "string_id": "TEST_059",
+      "issue_type": "character_voice_mismatch",
+      "severity": "major",
+      "source_span": "找到了！快来看看！",
+      "target_span": "発見した。確認を求む。",
+      "evidence": {
+        "established_voice": "cheerful mascot ending in なの",
+        "observed": "dry formal report"
+      },
+      "annotation_note": "冷淡报告体与活泼吉祥物语气冲突。",
+      "source_zh": "<b>宝箱找到了！快来看看！</b>",
+      "target_ja": "宝箱を発見した。確認を求む。"
+    },
+    {
+      "annotation_id": "TANN_066",
+      "string_id": "TEST_060",
+      "issue_type": "translationese",
+      "severity": "minor",
+      "source_span": "现在无法更换队伍成员",
+      "target_span": "現在においてパーティーメンバーを変更することはできません",
+      "evidence": {
+        "expected": "現在は編成を変更できません",
+        "observed": "冗长的“において／することはできません”"
+      },
+      "annotation_note": "意思正确但表达机械冗长。",
+      "source_zh": "现在无法更换队伍成员。",
+      "target_ja": "現在においてパーティーメンバーを変更することはできません。"
+    }
+  ],
+  "duplicate_predictions": [
+    {
+      "string_id": "TEST_054",
+      "issue_type": "terminology_not_approved",
+      "count": 2
+    }
+  ],
+  "unknown_prediction_types": [],
+  "unknown_prediction_occurrences": [],
+  "context_sensitive_subset": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 14,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "benchmark_version": "v1",
+  "frozen_on": "2026-09-03",
+  "development": {
+    "files": [
+      "data/dev.csv",
+      "data/dev_annotations.csv"
+    ],
+    "samples": 48,
+    "reference_detections": 51,
+    "purpose": "prompt and system development",
+    "status": "development"
+  },
+  "held_out_test": {
+    "files": [
+      "data/test.csv",
+      "data/test_annotations.csv"
+    ],
+    "samples": 60,
+    "reference_detections": 66,
+    "clean_samples": 10,
+    "single_issue_samples": 34,
+    "multi_issue_samples": 16,
+    "rule_references": 34,
+    "llm_required_references": 32,
+    "context_sensitive_references": 14,
+    "purpose": "final evaluation only",
+    "status": "frozen_held_out",
+    "clean_ids": [
+      "TEST_001",
+      "TEST_002",
+      "TEST_003",
+      "TEST_004",
+      "TEST_005",
+      "TEST_006",
+      "TEST_007",
+      "TEST_008",
+      "TEST_009",
+      "TEST_010"
+    ],
+    "hard_negative_ids": [
+      "TEST_001",
+      "TEST_002",
+      "TEST_003",
+      "TEST_004",
+      "TEST_005",
+      "TEST_006",
+      "TEST_007",
+      "TEST_008",
+      "TEST_009",
+      "TEST_010"
+    ],
+    "multi_issue_ids": [
+      "TEST_045",
+      "TEST_046",
+      "TEST_047",
+      "TEST_048",
+      "TEST_049",
+      "TEST_050",
+      "TEST_051",
+      "TEST_052",
+      "TEST_053",
+      "TEST_054",
+      "TEST_055",
+      "TEST_056",
+      "TEST_057",
+      "TEST_058",
+      "TEST_059",
+      "TEST_060"
+    ],
+    "context_sensitive_ids": [
+      "TEST_001",
+      "TEST_002",
+      "TEST_006",
+      "TEST_007",
+      "TEST_039",
+      "TEST_040",
+      "TEST_041",
+      "TEST_042",
+      "TEST_043",
+      "TEST_044",
+      "TEST_049",
+      "TEST_050",
+      "TEST_051",
+      "TEST_055",
+      "TEST_056",
+      "TEST_057",
+      "TEST_059"
+    ],
+    "sha256": {
+      "test.csv": "2EB9565F7334DEB6EC552578ECDB7F7A697DA097F08DBED14F12BAFCCED2E785",
+      "test_annotations.csv": "0C92B3E65779E3DAE06B0E1D9569CFCFC494BEA10A4DE1CBB22837F303E9821B"
+    }
+  },
+  "policies": [
+    "The held-out synthetic test set is reserved for final evaluation and must not be used for prompt tuning.",
+    "Do not select few-shot examples from the held-out test set.",
+    "Do not inspect test predictions or metrics while developing prompts or rules.",
+    "Detection matching uses (string_id, issue_type); severity and spans are not scored in v1."
+  ]
+}

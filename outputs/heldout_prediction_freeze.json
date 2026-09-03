@@ -1,0 +1,96 @@
+{
+  "freeze_id": "heldout_prediction_freeze_v1",
+  "created_at_utc": "2026-09-03T17:46:26.690484+00:00",
+  "annotations_loaded": false,
+  "status": "all_predictions_frozen_before_evaluation",
+  "artifact_sha256": {
+    "rule_predictions": "1E0E0D3ECC852D0B8D7ABC20CDF711ED0159E7C4F81053199A7FF1296FE46B3B",
+    "prompt_v1_config": "0579B106FDB6CEC67294E7664A6BB4848667E7204FD95EB7565980F49A692E70",
+    "prompt_v1_raw": "E343EDF49AFC0886B10BE8F9F1C36216B51CB118B6CD4F220A4DEA40CC756E16",
+    "prompt_v1_predictions": "DAF8A32BECBCF2245A3227C25A818483E2A37EC3A612E810D2E876F8A3C920C2",
+    "prompt_v21_config": "20E6B8116D5D1421BF3FF2FCF03A053ACB5BCA441CAE8321C75E3AB48203182E",
+    "prompt_v21_raw": "4D5E72246D7D0929AE61068D64A7E220D8E6C2C90393C59DFB760A8CC047DCEF",
+    "prompt_v21_predictions": "5657073754E1AE27A679057CE8248A84A723BE59058264FFAA5926485BAA05F8"
+  },
+  "protocol": {
+    "prompt_v1": {
+      "raw_records": 60,
+      "provider_failures": 0,
+      "raw_prediction_count": 79,
+      "protocol_metrics": {
+        "total_requests": 60,
+        "successful_provider_calls": 60,
+        "provider_failures": 0,
+        "provider_failure_details": [],
+        "protocol_successful_responses": 60,
+        "parse_failures": 0,
+        "schema_failures": 0,
+        "validation_failures": 0,
+        "unknown_issue_types": [],
+        "unknown_issue_type_count": 0,
+        "duplicate_predictions": [
+          {
+            "string_id": "TEST_001",
+            "issue_type": "mistranslation",
+            "count": 2
+          },
+          {
+            "string_id": "TEST_018",
+            "issue_type": "mistranslation",
+            "count": 2
+          },
+          {
+            "string_id": "TEST_054",
+            "issue_type": "mistranslation",
+            "count": 2
+          }
+        ],
+        "duplicate_prediction_key_count": 3,
+        "protocol_success_rate": 1.0,
+        "protocol_success_rate_denominator": "successful_provider_calls",
+        "raw_prediction_count": 79,
+        "unique_prediction_detection_count": 76,
+        "mean_latency_seconds": 2.500566526663412,
+        "median_latency_seconds": 2.035173300013412,
+        "thinking_content_responses": 0
+      }
+    },
+    "prompt_v21": {
+      "raw_records": 60,
+      "provider_failures": 0,
+      "raw_prediction_count": 80,
+      "protocol_metrics": {
+        "total_requests": 60,
+        "successful_provider_calls": 60,
+        "provider_failures": 0,
+        "provider_failure_details": [],
+        "protocol_successful_responses": 60,
+        "parse_failures": 0,
+        "schema_failures": 0,
+        "validation_failures": 0,
+        "unknown_issue_types": [],
+        "unknown_issue_type_count": 0,
+        "duplicate_predictions": [
+          {
+            "string_id": "TEST_009",
+            "issue_type": "omission",
+            "count": 3
+          },
+          {
+            "string_id": "TEST_054",
+            "issue_type": "mistranslation",
+            "count": 2
+          }
+        ],
+        "duplicate_prediction_key_count": 2,
+        "protocol_success_rate": 1.0,
+        "protocol_success_rate_denominator": "successful_provider_calls",
+        "raw_prediction_count": 80,
+        "unique_prediction_detection_count": 77,
+        "mean_latency_seconds": 2.100743531664678,
+        "median_latency_seconds": 1.845239849993959,
+        "thinking_content_responses": 0
+      }
+    }
+  }
+}

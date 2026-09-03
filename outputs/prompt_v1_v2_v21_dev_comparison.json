@@ -1,0 +1,524 @@
+{
+  "dataset": "frozen 48-item Development Set",
+  "versions": {
+    "v1": "qwen35_9b_with_context_v1",
+    "v2": "qwen35_9b_with_context_prompt_v2_dev_v1",
+    "v2.1": "qwen35_9b_with_context_prompt_v21_dev_v1"
+  },
+  "scopes": {
+    "overall": {
+      "v1": {
+        "tp": 34,
+        "fp": 18,
+        "fn": 17,
+        "precision": 0.6538461538461539,
+        "recall": 0.6666666666666666,
+        "f1": 0.6601941747572816
+      },
+      "v2": {
+        "tp": 32,
+        "fp": 17,
+        "fn": 19,
+        "precision": 0.6530612244897959,
+        "recall": 0.6274509803921569,
+        "f1": 0.64
+      },
+      "v2.1": {
+        "tp": 34,
+        "fp": 16,
+        "fn": 17,
+        "precision": 0.68,
+        "recall": 0.6666666666666666,
+        "f1": 0.6732673267326733
+      }
+    },
+    "llm_required": {
+      "v1": {
+        "tp": 23,
+        "fp": 15,
+        "fn": 2,
+        "precision": 0.6052631578947368,
+        "recall": 0.92,
+        "f1": 0.7301587301587301
+      },
+      "v2": {
+        "tp": 21,
+        "fp": 16,
+        "fn": 4,
+        "precision": 0.5675675675675675,
+        "recall": 0.84,
+        "f1": 0.6774193548387097
+      },
+      "v2.1": {
+        "tp": 23,
+        "fp": 13,
+        "fn": 2,
+        "precision": 0.6388888888888888,
+        "recall": 0.92,
+        "f1": 0.7540983606557377
+      }
+    },
+    "context_sensitive": {
+      "v1": {
+        "tp": 11,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.8461538461538461,
+        "recall": 1.0,
+        "f1": 0.9166666666666666
+      },
+      "v2": {
+        "tp": 10,
+        "fp": 5,
+        "fn": 1,
+        "precision": 0.6666666666666666,
+        "recall": 0.9090909090909091,
+        "f1": 0.7692307692307692
+      },
+      "v2.1": {
+        "tp": 11,
+        "fp": 4,
+        "fn": 0,
+        "precision": 0.7333333333333333,
+        "recall": 1.0,
+        "f1": 0.846153846153846
+      }
+    }
+  },
+  "focus_per_issue": {
+    "mistranslation": {
+      "v1": {
+        "issue_type": "mistranslation",
+        "reference_count": 4,
+        "prediction_count": 11,
+        "tp": 4,
+        "fp": 7,
+        "fn": 0,
+        "precision": 0.36363636363636365,
+        "recall": 1.0,
+        "f1": 0.5333333333333333
+      },
+      "v2": {
+        "issue_type": "mistranslation",
+        "reference_count": 4,
+        "prediction_count": 9,
+        "tp": 4,
+        "fp": 5,
+        "fn": 0,
+        "precision": 0.4444444444444444,
+        "recall": 1.0,
+        "f1": 0.6153846153846153
+      },
+      "v2.1": {
+        "issue_type": "mistranslation",
+        "reference_count": 4,
+        "prediction_count": 7,
+        "tp": 4,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.5714285714285714,
+        "recall": 1.0,
+        "f1": 0.7272727272727273
+      }
+    },
+    "translationese": {
+      "v1": {
+        "issue_type": "translationese",
+        "reference_count": 3,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5
+      },
+      "v2": {
+        "issue_type": "translationese",
+        "reference_count": 3,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5
+      },
+      "v2.1": {
+        "issue_type": "translationese",
+        "reference_count": 3,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8
+      }
+    },
+    "keigo_mismatch": {
+      "v1": {
+        "issue_type": "keigo_mismatch",
+        "reference_count": 4,
+        "prediction_count": 5,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888888888888889
+      },
+      "v2": {
+        "issue_type": "keigo_mismatch",
+        "reference_count": 4,
+        "prediction_count": 7,
+        "tp": 3,
+        "fp": 4,
+        "fn": 1,
+        "precision": 0.42857142857142855,
+        "recall": 0.75,
+        "f1": 0.5454545454545454
+      },
+      "v2.1": {
+        "issue_type": "keigo_mismatch",
+        "reference_count": 4,
+        "prediction_count": 6,
+        "tp": 4,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8
+      }
+    },
+    "first_person_mismatch": {
+      "v1": {
+        "issue_type": "first_person_mismatch",
+        "reference_count": 3,
+        "prediction_count": 3,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "v2": {
+        "issue_type": "first_person_mismatch",
+        "reference_count": 3,
+        "prediction_count": 3,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "v2.1": {
+        "issue_type": "first_person_mismatch",
+        "reference_count": 3,
+        "prediction_count": 3,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "character_voice_mismatch": {
+      "v1": {
+        "issue_type": "character_voice_mismatch",
+        "reference_count": 4,
+        "prediction_count": 5,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888888888888889
+      },
+      "v2": {
+        "issue_type": "character_voice_mismatch",
+        "reference_count": 4,
+        "prediction_count": 5,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888888888888889
+      },
+      "v2.1": {
+        "issue_type": "character_voice_mismatch",
+        "reference_count": 4,
+        "prediction_count": 6,
+        "tp": 4,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8
+      }
+    }
+  },
+  "pairwise": {
+    "v1_to_v2.1": {
+      "resolved_false_positives": [
+        {
+          "string_id": "DEV_006",
+          "issue_type": "omission",
+          "v1_status": "false_positive",
+          "v2_status": "not_predicted"
+        },
+        {
+          "string_id": "DEV_007",
+          "issue_type": "keigo_mismatch",
+          "v1_status": "false_positive",
+          "v2_status": "not_predicted"
+        },
+        {
+          "string_id": "DEV_023",
+          "issue_type": "mistranslation",
+          "v1_status": "false_positive",
+          "v2_status": "not_predicted"
+        },
+        {
+          "string_id": "DEV_034",
+          "issue_type": "mistranslation",
+          "v1_status": "false_positive",
+          "v2_status": "not_predicted"
+        },
+        {
+          "string_id": "DEV_035",
+          "issue_type": "mistranslation",
+          "v1_status": "false_positive",
+          "v2_status": "not_predicted"
+        },
+        {
+          "string_id": "DEV_037",
+          "issue_type": "mistranslation",
+          "v1_status": "false_positive",
+          "v2_status": "not_predicted"
+        },
+        {
+          "string_id": "DEV_043",
+          "issue_type": "number_mismatch",
+          "v1_status": "false_positive",
+          "v2_status": "not_predicted"
+        }
+      ],
+      "new_false_positives": [
+        {
+          "string_id": "DEV_002",
+          "issue_type": "omission",
+          "v1_status": "not_predicted",
+          "v2_status": "false_positive"
+        },
+        {
+          "string_id": "DEV_035",
+          "issue_type": "character_voice_mismatch",
+          "v1_status": "not_predicted",
+          "v2_status": "false_positive"
+        },
+        {
+          "string_id": "DEV_037",
+          "issue_type": "keigo_mismatch",
+          "v1_status": "not_predicted",
+          "v2_status": "false_positive"
+        },
+        {
+          "string_id": "DEV_041",
+          "issue_type": "keigo_mismatch",
+          "v1_status": "not_predicted",
+          "v2_status": "false_positive"
+        },
+        {
+          "string_id": "DEV_045",
+          "issue_type": "placeholder_missing",
+          "v1_status": "not_predicted",
+          "v2_status": "false_positive"
+        }
+      ],
+      "false_negative_to_true_positive": [
+        {
+          "string_id": "DEV_007",
+          "issue_type": "translationese",
+          "v1_status": "false_negative",
+          "v2_status": "true_positive"
+        },
+        {
+          "string_id": "DEV_034",
+          "issue_type": "translationese",
+          "v1_status": "false_negative",
+          "v2_status": "true_positive"
+        }
+      ],
+      "true_positive_to_false_negative": [
+        {
+          "string_id": "DEV_041",
+          "issue_type": "translationese",
+          "v1_status": "true_positive",
+          "v2_status": "false_negative"
+        },
+        {
+          "string_id": "DEV_043",
+          "issue_type": "omission",
+          "v1_status": "true_positive",
+          "v2_status": "false_negative"
+        }
+      ],
+      "type_changes": [
+        {
+          "string_id": "DEV_007",
+          "removed_types": [
+            "keigo_mismatch"
+          ],
+          "added_types": [
+            "translationese"
+          ]
+        },
+        {
+          "string_id": "DEV_034",
+          "removed_types": [
+            "mistranslation"
+          ],
+          "added_types": [
+            "translationese"
+          ]
+        },
+        {
+          "string_id": "DEV_035",
+          "removed_types": [
+            "mistranslation"
+          ],
+          "added_types": [
+            "character_voice_mismatch"
+          ]
+        },
+        {
+          "string_id": "DEV_037",
+          "removed_types": [
+            "mistranslation"
+          ],
+          "added_types": [
+            "keigo_mismatch"
+          ]
+        },
+        {
+          "string_id": "DEV_041",
+          "removed_types": [
+            "translationese"
+          ],
+          "added_types": [
+            "keigo_mismatch"
+          ]
+        }
+      ]
+    },
+    "v2_to_v2.1": {
+      "resolved_false_positives": [
+        {
+          "string_id": "DEV_006",
+          "issue_type": "keigo_mismatch",
+          "v1_status": "false_positive",
+          "v2_status": "not_predicted"
+        },
+        {
+          "string_id": "DEV_007",
+          "issue_type": "keigo_mismatch",
+          "v1_status": "false_positive",
+          "v2_status": "not_predicted"
+        },
+        {
+          "string_id": "DEV_023",
+          "issue_type": "mistranslation",
+          "v1_status": "false_positive",
+          "v2_status": "not_predicted"
+        },
+        {
+          "string_id": "DEV_035",
+          "issue_type": "mistranslation",
+          "v1_status": "false_positive",
+          "v2_status": "not_predicted"
+        },
+        {
+          "string_id": "DEV_044",
+          "issue_type": "omission",
+          "v1_status": "false_positive",
+          "v2_status": "not_predicted"
+        }
+      ],
+      "new_false_positives": [
+        {
+          "string_id": "DEV_016",
+          "issue_type": "length_overflow",
+          "v1_status": "not_predicted",
+          "v2_status": "false_positive"
+        },
+        {
+          "string_id": "DEV_023",
+          "issue_type": "omission",
+          "v1_status": "not_predicted",
+          "v2_status": "false_positive"
+        },
+        {
+          "string_id": "DEV_035",
+          "issue_type": "character_voice_mismatch",
+          "v1_status": "not_predicted",
+          "v2_status": "false_positive"
+        },
+        {
+          "string_id": "DEV_045",
+          "issue_type": "placeholder_missing",
+          "v1_status": "not_predicted",
+          "v2_status": "false_positive"
+        }
+      ],
+      "false_negative_to_true_positive": [
+        {
+          "string_id": "DEV_007",
+          "issue_type": "translationese",
+          "v1_status": "false_negative",
+          "v2_status": "true_positive"
+        },
+        {
+          "string_id": "DEV_040",
+          "issue_type": "keigo_mismatch",
+          "v1_status": "false_negative",
+          "v2_status": "true_positive"
+        }
+      ],
+      "true_positive_to_false_negative": [],
+      "type_changes": [
+        {
+          "string_id": "DEV_007",
+          "removed_types": [
+            "keigo_mismatch"
+          ],
+          "added_types": [
+            "translationese"
+          ]
+        },
+        {
+          "string_id": "DEV_023",
+          "removed_types": [
+            "mistranslation"
+          ],
+          "added_types": [
+            "omission"
+          ]
+        },
+        {
+          "string_id": "DEV_035",
+          "removed_types": [
+            "mistranslation"
+          ],
+          "added_types": [
+            "character_voice_mismatch"
+          ]
+        }
+      ]
+    }
+  }
+}

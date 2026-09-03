@@ -1,0 +1,1756 @@
+{
+  "methods": {
+    "rule_only": {
+      "overall": {
+        "tp": 26,
+        "fp": 2,
+        "fn": 25,
+        "precision": 0.9285714285714286,
+        "recall": 0.5098039215686274,
+        "f1": 0.6582278481012658
+      },
+      "rule_addressable": {
+        "tp": 26,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.9285714285714286,
+        "recall": 1.0,
+        "f1": 0.962962962962963
+      },
+      "llm_required": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 25,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "context_sensitive": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 11,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "llm_no_context": {
+      "overall": {
+        "tp": 25,
+        "fp": 17,
+        "fn": 26,
+        "precision": 0.5952380952380952,
+        "recall": 0.49019607843137253,
+        "f1": 0.5376344086021505
+      },
+      "rule_addressable": {
+        "tp": 12,
+        "fp": 2,
+        "fn": 14,
+        "precision": 0.8571428571428571,
+        "recall": 0.46153846153846156,
+        "f1": 0.6
+      },
+      "llm_required": {
+        "tp": 13,
+        "fp": 15,
+        "fn": 12,
+        "precision": 0.4642857142857143,
+        "recall": 0.52,
+        "f1": 0.49056603773584906
+      },
+      "context_sensitive": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 9,
+        "precision": 0.6666666666666666,
+        "recall": 0.18181818181818182,
+        "f1": 0.28571428571428575
+      }
+    },
+    "llm_with_context": {
+      "overall": {
+        "tp": 34,
+        "fp": 18,
+        "fn": 17,
+        "precision": 0.6538461538461539,
+        "recall": 0.6666666666666666,
+        "f1": 0.6601941747572816
+      },
+      "rule_addressable": {
+        "tp": 11,
+        "fp": 3,
+        "fn": 15,
+        "precision": 0.7857142857142857,
+        "recall": 0.4230769230769231,
+        "f1": 0.55
+      },
+      "llm_required": {
+        "tp": 23,
+        "fp": 15,
+        "fn": 2,
+        "precision": 0.6052631578947368,
+        "recall": 0.92,
+        "f1": 0.7301587301587301
+      },
+      "context_sensitive": {
+        "tp": 11,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.8461538461538461,
+        "recall": 1.0,
+        "f1": 0.9166666666666666
+      }
+    },
+    "hybrid": {
+      "overall": {
+        "tp": 49,
+        "fp": 17,
+        "fn": 2,
+        "precision": 0.7424242424242424,
+        "recall": 0.9607843137254902,
+        "f1": 0.8376068376068376
+      },
+      "rule_addressable": {
+        "tp": 26,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.9285714285714286,
+        "recall": 1.0,
+        "f1": 0.962962962962963
+      },
+      "llm_required": {
+        "tp": 23,
+        "fp": 15,
+        "fn": 2,
+        "precision": 0.6052631578947368,
+        "recall": 0.92,
+        "f1": 0.7301587301587301
+      },
+      "context_sensitive": {
+        "tp": 11,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.8461538461538461,
+        "recall": 1.0,
+        "f1": 0.9166666666666666
+      }
+    }
+  },
+  "overall": {
+    "rule_only": {
+      "tp": 26,
+      "fp": 2,
+      "fn": 25,
+      "precision": 0.9285714285714286,
+      "recall": 0.5098039215686274,
+      "f1": 0.6582278481012658
+    },
+    "llm_no_context": {
+      "tp": 25,
+      "fp": 17,
+      "fn": 26,
+      "precision": 0.5952380952380952,
+      "recall": 0.49019607843137253,
+      "f1": 0.5376344086021505
+    },
+    "llm_with_context": {
+      "tp": 34,
+      "fp": 18,
+      "fn": 17,
+      "precision": 0.6538461538461539,
+      "recall": 0.6666666666666666,
+      "f1": 0.6601941747572816
+    },
+    "hybrid": {
+      "tp": 49,
+      "fp": 17,
+      "fn": 2,
+      "precision": 0.7424242424242424,
+      "recall": 0.9607843137254902,
+      "f1": 0.8376068376068376
+    }
+  },
+  "rule_addressable": {
+    "rule_only": {
+      "tp": 26,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.9285714285714286,
+      "recall": 1.0,
+      "f1": 0.962962962962963
+    },
+    "llm_no_context": {
+      "tp": 12,
+      "fp": 2,
+      "fn": 14,
+      "precision": 0.8571428571428571,
+      "recall": 0.46153846153846156,
+      "f1": 0.6
+    },
+    "llm_with_context": {
+      "tp": 11,
+      "fp": 3,
+      "fn": 15,
+      "precision": 0.7857142857142857,
+      "recall": 0.4230769230769231,
+      "f1": 0.55
+    },
+    "hybrid": {
+      "tp": 26,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.9285714285714286,
+      "recall": 1.0,
+      "f1": 0.962962962962963
+    }
+  },
+  "llm_required": {
+    "rule_only": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 25,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "llm_no_context": {
+      "tp": 13,
+      "fp": 15,
+      "fn": 12,
+      "precision": 0.4642857142857143,
+      "recall": 0.52,
+      "f1": 0.49056603773584906
+    },
+    "llm_with_context": {
+      "tp": 23,
+      "fp": 15,
+      "fn": 2,
+      "precision": 0.6052631578947368,
+      "recall": 0.92,
+      "f1": 0.7301587301587301
+    },
+    "hybrid": {
+      "tp": 23,
+      "fp": 15,
+      "fn": 2,
+      "precision": 0.6052631578947368,
+      "recall": 0.92,
+      "f1": 0.7301587301587301
+    }
+  },
+  "context_sensitive": {
+    "rule_only": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 11,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "llm_no_context": {
+      "tp": 2,
+      "fp": 1,
+      "fn": 9,
+      "precision": 0.6666666666666666,
+      "recall": 0.18181818181818182,
+      "f1": 0.28571428571428575
+    },
+    "llm_with_context": {
+      "tp": 11,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.8461538461538461,
+      "recall": 1.0,
+      "f1": 0.9166666666666666
+    },
+    "hybrid": {
+      "tp": 11,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.8461538461538461,
+      "recall": 1.0,
+      "f1": 0.9166666666666666
+    }
+  },
+  "per_issue": [
+    {
+      "issue_type": "addition",
+      "rule_only": {
+        "issue_type": "addition",
+        "reference_count": 3,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "llm_no_context": {
+        "issue_type": "addition",
+        "reference_count": 3,
+        "prediction_count": 5,
+        "tp": 3,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.7499999999999999
+      },
+      "llm_with_context": {
+        "issue_type": "addition",
+        "reference_count": 3,
+        "prediction_count": 5,
+        "tp": 3,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.7499999999999999
+      },
+      "hybrid": {
+        "issue_type": "addition",
+        "reference_count": 3,
+        "prediction_count": 5,
+        "tp": 3,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.7499999999999999
+      }
+    },
+    {
+      "issue_type": "character_voice_mismatch",
+      "rule_only": {
+        "issue_type": "character_voice_mismatch",
+        "reference_count": 4,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "llm_no_context": {
+        "issue_type": "character_voice_mismatch",
+        "reference_count": 4,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "llm_with_context": {
+        "issue_type": "character_voice_mismatch",
+        "reference_count": 4,
+        "prediction_count": 5,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888888888888889
+      },
+      "hybrid": {
+        "issue_type": "character_voice_mismatch",
+        "reference_count": 4,
+        "prediction_count": 5,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888888888888889
+      }
+    },
+    {
+      "issue_type": "first_person_mismatch",
+      "rule_only": {
+        "issue_type": "first_person_mismatch",
+        "reference_count": 3,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "llm_no_context": {
+        "issue_type": "first_person_mismatch",
+        "reference_count": 3,
+        "prediction_count": 2,
+        "tp": 1,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.5,
+        "recall": 0.3333333333333333,
+        "f1": 0.4
+      },
+      "llm_with_context": {
+        "issue_type": "first_person_mismatch",
+        "reference_count": 3,
+        "prediction_count": 3,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "hybrid": {
+        "issue_type": "first_person_mismatch",
+        "reference_count": 3,
+        "prediction_count": 3,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "issue_type": "keigo_mismatch",
+      "rule_only": {
+        "issue_type": "keigo_mismatch",
+        "reference_count": 4,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "llm_no_context": {
+        "issue_type": "keigo_mismatch",
+        "reference_count": 4,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.25,
+        "f1": 0.4
+      },
+      "llm_with_context": {
+        "issue_type": "keigo_mismatch",
+        "reference_count": 4,
+        "prediction_count": 5,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888888888888889
+      },
+      "hybrid": {
+        "issue_type": "keigo_mismatch",
+        "reference_count": 4,
+        "prediction_count": 5,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888888888888889
+      }
+    },
+    {
+      "issue_type": "length_overflow",
+      "rule_only": {
+        "issue_type": "length_overflow",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "llm_no_context": {
+        "issue_type": "length_overflow",
+        "reference_count": 2,
+        "prediction_count": 3,
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8
+      },
+      "llm_with_context": {
+        "issue_type": "length_overflow",
+        "reference_count": 2,
+        "prediction_count": 3,
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8
+      },
+      "hybrid": {
+        "issue_type": "length_overflow",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "issue_type": "linebreak_mismatch",
+      "rule_only": {
+        "issue_type": "linebreak_mismatch",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "llm_no_context": {
+        "issue_type": "linebreak_mismatch",
+        "reference_count": 2,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "llm_with_context": {
+        "issue_type": "linebreak_mismatch",
+        "reference_count": 2,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "hybrid": {
+        "issue_type": "linebreak_mismatch",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "issue_type": "markup_extra",
+      "rule_only": {
+        "issue_type": "markup_extra",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "llm_no_context": {
+        "issue_type": "markup_extra",
+        "reference_count": 2,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "llm_with_context": {
+        "issue_type": "markup_extra",
+        "reference_count": 2,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "hybrid": {
+        "issue_type": "markup_extra",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "issue_type": "markup_malformed",
+      "rule_only": {
+        "issue_type": "markup_malformed",
+        "reference_count": 1,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "llm_no_context": {
+        "issue_type": "markup_malformed",
+        "reference_count": 1,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "llm_with_context": {
+        "issue_type": "markup_malformed",
+        "reference_count": 1,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "hybrid": {
+        "issue_type": "markup_malformed",
+        "reference_count": 1,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "issue_type": "markup_missing",
+      "rule_only": {
+        "issue_type": "markup_missing",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "llm_no_context": {
+        "issue_type": "markup_missing",
+        "reference_count": 2,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "llm_with_context": {
+        "issue_type": "markup_missing",
+        "reference_count": 2,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "hybrid": {
+        "issue_type": "markup_missing",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "issue_type": "markup_modified",
+      "rule_only": {
+        "issue_type": "markup_modified",
+        "reference_count": 1,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "llm_no_context": {
+        "issue_type": "markup_modified",
+        "reference_count": 1,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "llm_with_context": {
+        "issue_type": "markup_modified",
+        "reference_count": 1,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "hybrid": {
+        "issue_type": "markup_modified",
+        "reference_count": 1,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "issue_type": "markup_order_mismatch",
+      "rule_only": {
+        "issue_type": "markup_order_mismatch",
+        "reference_count": 1,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "llm_no_context": {
+        "issue_type": "markup_order_mismatch",
+        "reference_count": 1,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "llm_with_context": {
+        "issue_type": "markup_order_mismatch",
+        "reference_count": 1,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "hybrid": {
+        "issue_type": "markup_order_mismatch",
+        "reference_count": 1,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "issue_type": "mistranslation",
+      "rule_only": {
+        "issue_type": "mistranslation",
+        "reference_count": 4,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "llm_no_context": {
+        "issue_type": "mistranslation",
+        "reference_count": 4,
+        "prediction_count": 12,
+        "tp": 4,
+        "fp": 8,
+        "fn": 0,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5
+      },
+      "llm_with_context": {
+        "issue_type": "mistranslation",
+        "reference_count": 4,
+        "prediction_count": 11,
+        "tp": 4,
+        "fp": 7,
+        "fn": 0,
+        "precision": 0.36363636363636365,
+        "recall": 1.0,
+        "f1": 0.5333333333333333
+      },
+      "hybrid": {
+        "issue_type": "mistranslation",
+        "reference_count": 4,
+        "prediction_count": 11,
+        "tp": 4,
+        "fp": 7,
+        "fn": 0,
+        "precision": 0.36363636363636365,
+        "recall": 1.0,
+        "f1": 0.5333333333333333
+      }
+    },
+    {
+      "issue_type": "number_extra",
+      "rule_only": {
+        "issue_type": "number_extra",
+        "reference_count": 1,
+        "prediction_count": 2,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666
+      },
+      "llm_no_context": {
+        "issue_type": "number_extra",
+        "reference_count": 1,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "llm_with_context": {
+        "issue_type": "number_extra",
+        "reference_count": 1,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "hybrid": {
+        "issue_type": "number_extra",
+        "reference_count": 1,
+        "prediction_count": 2,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666
+      }
+    },
+    {
+      "issue_type": "number_mismatch",
+      "rule_only": {
+        "issue_type": "number_mismatch",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "llm_no_context": {
+        "issue_type": "number_mismatch",
+        "reference_count": 2,
+        "prediction_count": 3,
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8
+      },
+      "llm_with_context": {
+        "issue_type": "number_mismatch",
+        "reference_count": 2,
+        "prediction_count": 4,
+        "tp": 2,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666
+      },
+      "hybrid": {
+        "issue_type": "number_mismatch",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "issue_type": "number_missing",
+      "rule_only": {
+        "issue_type": "number_missing",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "llm_no_context": {
+        "issue_type": "number_missing",
+        "reference_count": 2,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666
+      },
+      "llm_with_context": {
+        "issue_type": "number_missing",
+        "reference_count": 2,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666
+      },
+      "hybrid": {
+        "issue_type": "number_missing",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "issue_type": "omission",
+      "rule_only": {
+        "issue_type": "omission",
+        "reference_count": 4,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "llm_no_context": {
+        "issue_type": "omission",
+        "reference_count": 4,
+        "prediction_count": 7,
+        "tp": 3,
+        "fp": 4,
+        "fn": 1,
+        "precision": 0.42857142857142855,
+        "recall": 0.75,
+        "f1": 0.5454545454545454
+      },
+      "llm_with_context": {
+        "issue_type": "omission",
+        "reference_count": 4,
+        "prediction_count": 8,
+        "tp": 4,
+        "fp": 4,
+        "fn": 0,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666
+      },
+      "hybrid": {
+        "issue_type": "omission",
+        "reference_count": 4,
+        "prediction_count": 8,
+        "tp": 4,
+        "fp": 4,
+        "fn": 0,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666
+      }
+    },
+    {
+      "issue_type": "placeholder_extra",
+      "rule_only": {
+        "issue_type": "placeholder_extra",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "llm_no_context": {
+        "issue_type": "placeholder_extra",
+        "reference_count": 2,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "llm_with_context": {
+        "issue_type": "placeholder_extra",
+        "reference_count": 2,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "hybrid": {
+        "issue_type": "placeholder_extra",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "issue_type": "placeholder_missing",
+      "rule_only": {
+        "issue_type": "placeholder_missing",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "llm_no_context": {
+        "issue_type": "placeholder_missing",
+        "reference_count": 2,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "llm_with_context": {
+        "issue_type": "placeholder_missing",
+        "reference_count": 2,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "hybrid": {
+        "issue_type": "placeholder_missing",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "issue_type": "placeholder_modified",
+      "rule_only": {
+        "issue_type": "placeholder_modified",
+        "reference_count": 1,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "llm_no_context": {
+        "issue_type": "placeholder_modified",
+        "reference_count": 1,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "llm_with_context": {
+        "issue_type": "placeholder_modified",
+        "reference_count": 1,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "hybrid": {
+        "issue_type": "placeholder_modified",
+        "reference_count": 1,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "issue_type": "terminology_forbidden",
+      "rule_only": {
+        "issue_type": "terminology_forbidden",
+        "reference_count": 3,
+        "prediction_count": 4,
+        "tp": 3,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571
+      },
+      "llm_no_context": {
+        "issue_type": "terminology_forbidden",
+        "reference_count": 3,
+        "prediction_count": 3,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "llm_with_context": {
+        "issue_type": "terminology_forbidden",
+        "reference_count": 3,
+        "prediction_count": 3,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "hybrid": {
+        "issue_type": "terminology_forbidden",
+        "reference_count": 3,
+        "prediction_count": 4,
+        "tp": 3,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571
+      }
+    },
+    {
+      "issue_type": "terminology_not_approved",
+      "rule_only": {
+        "issue_type": "terminology_not_approved",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "llm_no_context": {
+        "issue_type": "terminology_not_approved",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "llm_with_context": {
+        "issue_type": "terminology_not_approved",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "hybrid": {
+        "issue_type": "terminology_not_approved",
+        "reference_count": 2,
+        "prediction_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "issue_type": "translationese",
+      "rule_only": {
+        "issue_type": "translationese",
+        "reference_count": 3,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "llm_no_context": {
+        "issue_type": "translationese",
+        "reference_count": 3,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5
+      },
+      "llm_with_context": {
+        "issue_type": "translationese",
+        "reference_count": 3,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5
+      },
+      "hybrid": {
+        "issue_type": "translationese",
+        "reference_count": 3,
+        "prediction_count": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5
+      }
+    }
+  ],
+  "pairwise": {
+    "hybrid_vs_rule": {
+      "overall": {
+        "tp": 23,
+        "fp": 15,
+        "fn": -23,
+        "precision": -0.18614718614718617,
+        "recall": 0.4509803921568628,
+        "f1": 0.17937898950557185
+      },
+      "rule_addressable": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "llm_required": {
+        "tp": 23,
+        "fp": 15,
+        "fn": -23,
+        "precision": 0.6052631578947368,
+        "recall": 0.92,
+        "f1": 0.7301587301587301
+      },
+      "context_sensitive": {
+        "tp": 11,
+        "fp": 2,
+        "fn": -11,
+        "precision": 0.8461538461538461,
+        "recall": 1.0,
+        "f1": 0.9166666666666666
+      }
+    },
+    "hybrid_vs_llm_with_context": {
+      "overall": {
+        "tp": 15,
+        "fp": -1,
+        "fn": -15,
+        "precision": 0.08857808857808858,
+        "recall": 0.2941176470588236,
+        "f1": 0.17741266284955604
+      },
+      "rule_addressable": {
+        "tp": 15,
+        "fp": -1,
+        "fn": -15,
+        "precision": 0.1428571428571429,
+        "recall": 0.5769230769230769,
+        "f1": 0.412962962962963
+      },
+      "llm_required": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "context_sensitive": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    }
+  },
+  "experiment": {
+    "experiment_id": "rule_qwen35_context_hybrid_v1",
+    "hybrid_policy": "all_rule_predictions__plus_llm_required_from_with_context_llm",
+    "provider_calls": 0
+  },
+  "paired_bad_cases": {
+    "fixed_by_rule": [
+      {
+        "string_id": "DEV_002",
+        "issue_type": "placeholder_missing",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_003",
+        "issue_type": "placeholder_modified",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_018",
+        "issue_type": "placeholder_extra",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_020",
+        "issue_type": "number_extra",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_022",
+        "issue_type": "markup_modified",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_023",
+        "issue_type": "markup_missing",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_024",
+        "issue_type": "markup_extra",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_025",
+        "issue_type": "markup_order_mismatch",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_026",
+        "issue_type": "linebreak_mismatch",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_038",
+        "issue_type": "placeholder_missing",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_039",
+        "issue_type": "markup_missing",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_039",
+        "issue_type": "number_missing",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_045",
+        "issue_type": "placeholder_extra",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_047",
+        "issue_type": "linebreak_mismatch",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_048",
+        "issue_type": "markup_extra",
+        "llm_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "rule"
+      }
+    ],
+    "fixed_by_llm": [
+      {
+        "string_id": "DEV_005",
+        "issue_type": "omission",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_006",
+        "issue_type": "mistranslation",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_008",
+        "issue_type": "keigo_mismatch",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_009",
+        "issue_type": "first_person_mismatch",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_010",
+        "issue_type": "character_voice_mismatch",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_030",
+        "issue_type": "omission",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_031",
+        "issue_type": "addition",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_032",
+        "issue_type": "addition",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_033",
+        "issue_type": "mistranslation",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_035",
+        "issue_type": "keigo_mismatch",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_036",
+        "issue_type": "first_person_mismatch",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_037",
+        "issue_type": "character_voice_mismatch",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_040",
+        "issue_type": "keigo_mismatch",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_041",
+        "issue_type": "translationese",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_042",
+        "issue_type": "character_voice_mismatch",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_042",
+        "issue_type": "first_person_mismatch",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_043",
+        "issue_type": "mistranslation",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_043",
+        "issue_type": "omission",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_044",
+        "issue_type": "character_voice_mismatch",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_045",
+        "issue_type": "addition",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_046",
+        "issue_type": "keigo_mismatch",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_047",
+        "issue_type": "omission",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_048",
+        "issue_type": "mistranslation",
+        "rule_status": "false_negative",
+        "hybrid_status": "true_positive",
+        "source_component": "llm"
+      }
+    ],
+    "hybrid_false_positives": [
+      {
+        "string_id": "DEV_006",
+        "issue_type": "omission",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_007",
+        "issue_type": "keigo_mismatch",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_007",
+        "issue_type": "mistranslation",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_008",
+        "issue_type": "character_voice_mismatch",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_012",
+        "issue_type": "omission",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_015",
+        "issue_type": "number_extra",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_017",
+        "issue_type": "terminology_forbidden",
+        "source_component": "rule"
+      },
+      {
+        "string_id": "DEV_018",
+        "issue_type": "addition",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_020",
+        "issue_type": "addition",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_022",
+        "issue_type": "mistranslation",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_023",
+        "issue_type": "mistranslation",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_023",
+        "issue_type": "omission",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_034",
+        "issue_type": "mistranslation",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_035",
+        "issue_type": "mistranslation",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_037",
+        "issue_type": "mistranslation",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_039",
+        "issue_type": "omission",
+        "source_component": "llm"
+      },
+      {
+        "string_id": "DEV_044",
+        "issue_type": "mistranslation",
+        "source_component": "llm"
+      }
+    ],
+    "remaining_false_negatives": [
+      {
+        "string_id": "DEV_007",
+        "issue_type": "translationese"
+      },
+      {
+        "string_id": "DEV_034",
+        "issue_type": "translationese"
+      }
+    ]
+  }
+}

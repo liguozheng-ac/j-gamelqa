@@ -1,0 +1,5 @@
+string_id,source_zh,target_ja,string_type,speaker,addressee,scene,relationship,context_before,context_after,max_length
+DEMO_001,远星信标已校准。,遠星ビーコンの調整が完了しました。,system_message,system,player,observatory,system_to_player,,,40
+DEMO_002,导航员{navigator}，请返回舰桥。,航法士、ブリッジへ戻ってください。,notification,system,navigator,starship,system_to_crew,跃迁准备即将开始。,全员将在舰桥集合。,40
+DEMO_003,装备星辉护盾。,スターバリアを装備する。,tutorial,instructor,player,training_room,teacher_to_student,防御训练现在开始。,护盾可抵挡一次冲击。,30
+DEMO_004,<b>警告</b>：舱门将在30秒后关闭。,<b>警告</b>：ハッチは30秒後に閉まります。,warning,system,crew,hangar,system_to_crew,,,45

@@ -1,0 +1,1102 @@
+{
+  "matching_key": [
+    "string_id",
+    "issue_type"
+  ],
+  "reference_detection_count": 66,
+  "raw_prediction_count": 103,
+  "unique_prediction_detection_count": 99,
+  "overall_micro": {
+    "tp": 58,
+    "fp": 41,
+    "fn": 8,
+    "precision": 0.5858585858585859,
+    "recall": 0.8787878787878788,
+    "f1": 0.7030303030303031
+  },
+  "rule_addressable_micro": {
+    "tp": 33,
+    "fp": 4,
+    "fn": 1,
+    "precision": 0.8918918918918919,
+    "recall": 0.9705882352941176,
+    "f1": 0.9295774647887325
+  },
+  "llm_required_micro": {
+    "tp": 25,
+    "fp": 37,
+    "fn": 7,
+    "precision": 0.4032258064516129,
+    "recall": 0.78125,
+    "f1": 0.5319148936170212
+  },
+  "per_issue_type": [
+    {
+      "issue_type": "addition",
+      "reference_count": 4,
+      "prediction_count": 4,
+      "tp": 2,
+      "fp": 2,
+      "fn": 2,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    {
+      "issue_type": "character_voice_mismatch",
+      "reference_count": 5,
+      "prediction_count": 7,
+      "tp": 5,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.7142857142857143,
+      "recall": 1.0,
+      "f1": 0.8333333333333333
+    },
+    {
+      "issue_type": "first_person_mismatch",
+      "reference_count": 4,
+      "prediction_count": 5,
+      "tp": 4,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.888888888888889
+    },
+    {
+      "issue_type": "keigo_mismatch",
+      "reference_count": 5,
+      "prediction_count": 9,
+      "tp": 4,
+      "fp": 5,
+      "fn": 1,
+      "precision": 0.4444444444444444,
+      "recall": 0.8,
+      "f1": 0.5714285714285714
+    },
+    {
+      "issue_type": "length_overflow",
+      "reference_count": 3,
+      "prediction_count": 3,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "linebreak_mismatch",
+      "reference_count": 2,
+      "prediction_count": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "markup_extra",
+      "reference_count": 2,
+      "prediction_count": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "markup_malformed",
+      "reference_count": 2,
+      "prediction_count": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    {
+      "issue_type": "markup_missing",
+      "reference_count": 3,
+      "prediction_count": 3,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "markup_modified",
+      "reference_count": 2,
+      "prediction_count": 3,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    {
+      "issue_type": "markup_order_mismatch",
+      "reference_count": 2,
+      "prediction_count": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "mistranslation",
+      "reference_count": 5,
+      "prediction_count": 15,
+      "tp": 4,
+      "fp": 11,
+      "fn": 1,
+      "precision": 0.26666666666666666,
+      "recall": 0.8,
+      "f1": 0.4
+    },
+    {
+      "issue_type": "number_extra",
+      "reference_count": 2,
+      "prediction_count": 4,
+      "tp": 2,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "issue_type": "number_mismatch",
+      "reference_count": 3,
+      "prediction_count": 4,
+      "tp": 3,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571428571428571
+    },
+    {
+      "issue_type": "number_missing",
+      "reference_count": 2,
+      "prediction_count": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "omission",
+      "reference_count": 4,
+      "prediction_count": 19,
+      "tp": 4,
+      "fp": 15,
+      "fn": 0,
+      "precision": 0.21052631578947367,
+      "recall": 1.0,
+      "f1": 0.34782608695652173
+    },
+    {
+      "issue_type": "placeholder_extra",
+      "reference_count": 2,
+      "prediction_count": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "placeholder_missing",
+      "reference_count": 3,
+      "prediction_count": 3,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "placeholder_modified",
+      "reference_count": 2,
+      "prediction_count": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "terminology_forbidden",
+      "reference_count": 2,
+      "prediction_count": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "terminology_not_approved",
+      "reference_count": 2,
+      "prediction_count": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "issue_type": "translationese",
+      "reference_count": 5,
+      "prediction_count": 3,
+      "tp": 2,
+      "fp": 1,
+      "fn": 3,
+      "precision": 0.6666666666666666,
+      "recall": 0.4,
+      "f1": 0.5
+    }
+  ],
+  "false_positives": [
+    {
+      "string_id": "TEST_001",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "还愣着干什么，快跟上！",
+      "target_span": "何ぼさっとしてんだ、さっさと来い！",
+      "evidence": {
+        "reason": "The source text is a command to stop hesitating and follow, but the target translates 'hesitating' as 'boso' (staring blankly) which changes the meaning from inaction to a specific facial expression."
+      },
+      "needs_human_review": true,
+      "source_zh": "还愣着干什么，快跟上！",
+      "target_ja": "何ぼさっとしてんだ、さっさと来い！"
+    },
+    {
+      "string_id": "TEST_001",
+      "checker": "japanese_llm",
+      "issue_type": "translationese",
+      "severity": "minor",
+      "message": "Japanese LLM evaluator detected translationese.",
+      "source_span": "还愣着干什么，快跟上！",
+      "target_span": "何ぼさっとしてんだ、さっさと来い！",
+      "evidence": {
+        "reason": "The Japanese sentence structure and vocabulary are overly literal translations of the Chinese phrasing rather than natural spoken Japanese for a battle scene."
+      },
+      "needs_human_review": true,
+      "source_zh": "还愣着干什么，快跟上！",
+      "target_ja": "何ぼさっとしてんだ、さっさと来い！"
+    },
+    {
+      "string_id": "TEST_002",
+      "checker": "japanese_llm",
+      "issue_type": "keigo_mismatch",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected keigo_mismatch.",
+      "source_span": "老师，你还是老样子啊。",
+      "target_span": "先生、相変わらずだな。",
+      "evidence": {
+        "reason": "The source context explicitly states the teacher asked the speaker to drop formalities and speak like a friend, but the target uses '先生' (formal title) and 'だ' (neutral/formal ending) instead of casual forms like 'せんせい' and 'だね', contradicting the established friendly relationship."
+      },
+      "needs_human_review": true,
+      "source_zh": "老师，你还是老样子啊。",
+      "target_ja": "先生、相変わらずだな。"
+    },
+    {
+      "string_id": "TEST_003",
+      "checker": "number",
+      "issue_type": "number_extra",
+      "severity": "minor",
+      "message": "源文与日语译文中的数字、数值或百分比不一致。",
+      "source_span": null,
+      "target_span": "2",
+      "evidence": {
+        "source_numbers": [],
+        "target_numbers": [
+          "2"
+        ],
+        "missing": [],
+        "extra": [
+          "2"
+        ]
+      },
+      "needs_human_review": false,
+      "source_zh": "连续闪避两次即可脱离锁定。",
+      "target_ja": "回避を2回続けると、ロックオンを解除できます。"
+    },
+    {
+      "string_id": "TEST_006",
+      "checker": "japanese_llm",
+      "issue_type": "keigo_mismatch",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected keigo_mismatch.",
+      "source_span": null,
+      "target_span": "顔を上げよ",
+      "evidence": {
+        "reason": "The speaker is a deity addressing a pilgrim in a temple, requiring solemn command form, but the target uses casual 'yo' instead of appropriate honorifics or formal commands."
+      },
+      "needs_human_review": true,
+      "source_zh": "无需低头，抬起脸来。",
+      "target_ja": "頭を垂れる必要はない。顔を上げよ。"
+    },
+    {
+      "string_id": "TEST_007",
+      "checker": "japanese_llm",
+      "issue_type": "character_voice_mismatch",
+      "severity": "minor",
+      "message": "Japanese LLM evaluator detected character_voice_mismatch.",
+      "source_span": "姐，我把你的护符放桌上了。",
+      "target_span": "姉ちゃん、護符なら机に置いといたよ。",
+      "evidence": {
+        "reason": "The use of '姉ちゃん' and the sentence-ending 'よ' is overly cute or distant for a close brother-sister relationship in a casual home setting, where a more natural term like '姉' or 'サラ' with plain form endings would be expected."
+      },
+      "needs_human_review": true,
+      "source_zh": "姐，我把你的护符放桌上了。",
+      "target_ja": "姉ちゃん、護符なら机に置いといたよ。"
+    },
+    {
+      "string_id": "TEST_008",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "已自动送往",
+      "target_span": "送りました",
+      "evidence": {
+        "reason": "The source indicates an automatic action ('already sent'), while the target uses a polite past tense form that implies the system performed the action as a deliberate choice rather than an automatic process."
+      },
+      "needs_human_review": true,
+      "source_zh": "由于背包已满，获得的道具已自动送往仓库。",
+      "target_ja": "所持品がいっぱいのため、獲得アイテムを倉庫へ送りました。"
+    },
+    {
+      "string_id": "TEST_009",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "minor",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "士兵们",
+      "target_span": null,
+      "evidence": {
+        "reason": "The target omits the explicit subject 'soldiers' (兵士たち) which is present in the source text."
+      },
+      "needs_human_review": true,
+      "source_zh": "雨停后，士兵们拆掉帐篷，沿着尚未干透的山路继续前进。",
+      "target_ja": "雨が上がった。兵士たちは天幕を畳み、まだぬかるむ山道を進んだ。"
+    },
+    {
+      "string_id": "TEST_010",
+      "checker": "number",
+      "issue_type": "number_mismatch",
+      "severity": "major",
+      "message": "源文与日语译文中的数字、数值或百分比不一致。",
+      "source_span": "100%",
+      "target_span": "１００",
+      "evidence": {
+        "source_numbers": [
+          "100%"
+        ],
+        "target_numbers": [
+          "１００"
+        ],
+        "missing": [
+          "100%"
+        ],
+        "extra": [
+          "１００"
+        ]
+      },
+      "needs_human_review": false,
+      "source_zh": "护盾充能达到100%时会自动展开。",
+      "target_ja": "シールドは充填率１００％で自動展開します。"
+    },
+    {
+      "string_id": "TEST_011",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "minor",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "{captain}",
+      "target_span": "隊長",
+      "evidence": {
+        "reason": "The Japanese target replaces the dynamic placeholder {captain} with a hardcoded term 隊長，which may not match the specific character name intended by the game logic."
+      },
+      "needs_human_review": true,
+      "source_zh": "向{captain}提交报告。",
+      "target_ja": "隊長に報告書を提出してください。"
+    },
+    {
+      "string_id": "TEST_012",
+      "checker": "japanese_llm",
+      "issue_type": "first_person_mismatch",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected first_person_mismatch.",
+      "source_span": "{player_name}",
+      "target_span": "{player}",
+      "evidence": {
+        "reason": "The source uses a specific placeholder for the player's name while the target uses a generic pronoun, failing to preserve the intended variable reference."
+      },
+      "needs_human_review": true,
+      "source_zh": "{player_name}获得了古代钥匙。",
+      "target_ja": "{player}は古代の鍵を手に入れた。"
+    },
+    {
+      "string_id": "TEST_013",
+      "checker": "japanese_llm",
+      "issue_type": "addition",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected addition.",
+      "source_span": null,
+      "target_span": ":{reward}",
+      "evidence": {
+        "reason": "The Japanese target adds a colon and the placeholder {reward} which are not present in the Chinese source text."
+      },
+      "needs_human_review": true,
+      "source_zh": "任务已更新。",
+      "target_ja": "クエストが更新されました：{reward}"
+    },
+    {
+      "string_id": "TEST_015",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "12",
+      "target_span": null,
+      "evidence": {
+        "reason": "The Japanese target omits the specific quantity '12' required by the source text."
+      },
+      "needs_human_review": true,
+      "source_zh": "收集12块星砂碎片。",
+      "target_ja": "星砂の欠片を集める。"
+    },
+    {
+      "string_id": "TEST_016",
+      "checker": "japanese_llm",
+      "issue_type": "addition",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected addition.",
+      "source_span": null,
+      "target_span": "金貨300枚",
+      "evidence": {
+        "reason": "The Japanese target adds a reward of 300 gold coins which is not mentioned in the Chinese source text."
+      },
+      "needs_human_review": true,
+      "source_zh": "完成委托后获得经验值。",
+      "target_ja": "依頼を達成すると経験値と金貨300枚を獲得する。"
+    },
+    {
+      "string_id": "TEST_017",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "<color=gold>传说</color>",
+      "target_span": "<color=gold伝説</color>",
+      "evidence": {
+        "reason": "The source text wraps the Chinese characters for 'legendary' in a color tag, while the target incorrectly includes the Japanese katakana reading inside the same tag instead of wrapping only the translation."
+      },
+      "needs_human_review": true,
+      "source_zh": "<color=gold>传说</color>品质的装备。",
+      "target_ja": "<color=gold伝説</color>品質の装備。"
+    },
+    {
+      "string_id": "TEST_018",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "<icon=sun>",
+      "target_span": "<icon=moon>",
+      "evidence": {
+        "reason": "The target icon is a moon while the source explicitly specifies a sun icon."
+      },
+      "needs_human_review": true,
+      "source_zh": "获得<icon=sun>太阳徽记。",
+      "target_ja": "<icon=moon>太陽の徽章を獲得した。"
+    },
+    {
+      "string_id": "TEST_020",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "minor",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "保持安静，继续前进。",
+      "target_span": "<i>静かに先へ進め。</i>",
+      "evidence": {
+        "reason": "The Japanese target omits the instruction to 'keep quiet' found in the source text."
+      },
+      "needs_human_review": true,
+      "source_zh": "保持安静，继续前进。",
+      "target_ja": "<i>静かに先へ進め。</i>"
+    },
+    {
+      "string_id": "TEST_022",
+      "checker": "number",
+      "issue_type": "number_extra",
+      "severity": "minor",
+      "message": "源文与日语译文中的数字、数值或百分比不一致。",
+      "source_span": null,
+      "target_span": "1",
+      "evidence": {
+        "source_numbers": [],
+        "target_numbers": [
+          "1"
+        ],
+        "missing": [],
+        "extra": [
+          "1"
+        ]
+      },
+      "needs_human_review": false,
+      "source_zh": "第一阶段\\n守住城门",
+      "target_ja": "第1段階：城門を守れ"
+    },
+    {
+      "string_id": "TEST_022",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "minor",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "\n",
+      "target_span": null,
+      "evidence": {
+        "reason": "The Japanese target omits the line break present in the source text between the stage number and the objective."
+      },
+      "needs_human_review": true,
+      "source_zh": "第一阶段\\n守住城门",
+      "target_ja": "第1段階：城門を守れ"
+    },
+    {
+      "string_id": "TEST_025",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "要",
+      "target_span": null,
+      "evidence": {
+        "reason": "The source indicates a price requirement ('要') which is omitted in the target, changing the meaning from 'costs' to simply 'is'."
+      },
+      "needs_human_review": true,
+      "source_zh": "这瓶药水要50枚金币。",
+      "target_ja": "この薬はゴールド50枚だ。"
+    },
+    {
+      "string_id": "TEST_026",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "%(ally)s",
+      "target_span": null,
+      "evidence": {
+        "reason": "The Japanese target omits the placeholder %(ally)s which refers to the specific ally whose HP was restored."
+      },
+      "needs_human_review": true,
+      "source_zh": "已为%(ally)s恢复生命值。",
+      "target_ja": "HPを回復しました。"
+    },
+    {
+      "string_id": "TEST_031",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "先关闭蒸汽阀门，再点燃炉芯。",
+      "target_span": "炉心に火をつけてください。",
+      "evidence": {
+        "reason": "The target translates only the second action of the sequence, contradicting the source's instruction to perform both actions in a specific order."
+      },
+      "needs_human_review": true,
+      "source_zh": "先关闭蒸汽阀门，再点燃炉芯。",
+      "target_ja": "炉心に火をつけてください。"
+    },
+    {
+      "string_id": "TEST_033",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "把信交给码头的船长。",
+      "target_span": "封を開けずに港の船長へ手紙を渡せ。",
+      "evidence": {
+        "reason": "The source instructs to deliver the letter, while the target adds an unsupported instruction not to open the envelope."
+      },
+      "needs_human_review": true,
+      "source_zh": "把信交给码头的船长。",
+      "target_ja": "封を開けずに港の船長へ手紙を渡せ。"
+    },
+    {
+      "string_id": "TEST_034",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "minor",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "击败守门人后，通道会开启。",
+      "target_span": "秘密の通路が開く",
+      "evidence": {
+        "reason": "The source specifies 'the channel' (通道) while the target adds 'secret' (秘密), which is not present in the source text."
+      },
+      "needs_human_review": true,
+      "source_zh": "击败守门人后，通道会开启。",
+      "target_ja": "門番を倒すと、秘密の通路が開く。"
+    },
+    {
+      "string_id": "TEST_037",
+      "checker": "japanese_llm",
+      "issue_type": "keigo_mismatch",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected keigo_mismatch.",
+      "source_span": "对于这项提案，我持赞成的态度。",
+      "target_span": "この提案に対して、私は賛成という態度を持っています。",
+      "evidence": {
+        "reason": "The speaker is a parliamentary clerk addressing fellow councilors in a formal setting, requiring honorifics like おります or 存じます instead of the plain form 持っています."
+      },
+      "needs_human_review": true,
+      "source_zh": "对于这项提案，我持赞成的态度。",
+      "target_ja": "この提案に対して、私は賛成という態度を持っています。"
+    },
+    {
+      "string_id": "TEST_039",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "请您看看这份研究记录",
+      "target_span": "これ、見てくれる？",
+      "evidence": {
+        "reason": "The target omits the specific object 'research record' which is present in the source text."
+      },
+      "needs_human_review": true,
+      "source_zh": "老师，请您看看这份研究记录。",
+      "target_ja": "先生、これ、見てくれる？"
+    },
+    {
+      "string_id": "TEST_040",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "请在会客室稍候",
+      "target_span": null,
+      "evidence": {
+        "reason": "The target omits the specific instruction to wait in the reception room, changing the meaning from a polite request to a vague command."
+      },
+      "needs_human_review": true,
+      "source_zh": "阁下，请在会客室稍候。",
+      "target_ja": "そこで待ってろ。"
+    },
+    {
+      "string_id": "TEST_041",
+      "checker": "japanese_llm",
+      "issue_type": "character_voice_mismatch",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected character_voice_mismatch.",
+      "source_span": "你们撤退",
+      "target_span": "お前たちは退け",
+      "evidence": {
+        "reason": "The speaker is a veteran addressing new recruits with a harsh tone, yet the target uses 'ore-tachi' (お前たち) which is grammatically correct but lacks the specific aggressive nuance expected for a veteran commanding newbies in this context compared to standard military commands."
+      },
+      "needs_human_review": true,
+      "source_zh": "我会守住这里，你们撤退。",
+      "target_ja": "私はここを守る。お前たちは退け。"
+    },
+    {
+      "string_id": "TEST_042",
+      "checker": "japanese_llm",
+      "issue_type": "keigo_mismatch",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected keigo_mismatch.",
+      "source_span": "绝不会让...蒙羞",
+      "target_span": "...汚しません",
+      "evidence": {
+        "reason": "The speaker is a noble addressing vassals and must use humble language, but the target uses plain form 'shimasen' instead of 'itashimasen'."
+      },
+      "needs_human_review": true,
+      "source_zh": "我绝不会让家族蒙羞。",
+      "target_ja": "あたしは決して家名を汚しません。"
+    },
+    {
+      "string_id": "TEST_043",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "星辰已经给出了答案。",
+      "target_span": "星が答え教えてくれたって、マジ最高じゃん！",
+      "evidence": {
+        "reason": "The source states the sage has provided an answer, while the target adds a subjective evaluation ('it's amazing') and implies the sage taught the answer directly rather than simply providing it."
+      },
+      "needs_human_review": true,
+      "source_zh": "星辰已经给出了答案。",
+      "target_ja": "星が答え教えてくれたって、マジ最高じゃん！"
+    },
+    {
+      "string_id": "TEST_044",
+      "checker": "japanese_llm",
+      "issue_type": "keigo_mismatch",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected keigo_mismatch.",
+      "source_span": "请站到我身后，我会为你治疗。",
+      "target_span": "さっさと後ろに下がれ。治してやる。",
+      "evidence": {
+        "reason": "The source implies a polite request for an injured companion, while the target uses blunt and rude language inappropriate for a healer speaking to a wounded ally in this context."
+      },
+      "needs_human_review": true,
+      "source_zh": "请站到我身后，我会为你治疗。",
+      "target_ja": "さっさと後ろに下がれ。治してやる。"
+    },
+    {
+      "string_id": "TEST_045",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "{artifact_name}",
+      "target_span": "{item_name}",
+      "evidence": {
+        "reason": "The placeholder for the artifact name is changed from {artifact_name} to {item_name}, altering the variable identifier."
+      },
+      "needs_human_review": true,
+      "source_zh": "把{artifact_name}放回祭坛，别碰那盏灯。",
+      "target_ja": "{item_name}を祭壇に戻してください。"
+    },
+    {
+      "string_id": "TEST_047",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "3 次",
+      "target_span": null,
+      "evidence": {
+        "reason": "The source indicates a limit of three uses, which is completely missing from the target."
+      },
+      "needs_human_review": true,
+      "source_zh": "护符可抵挡3次火焰攻击。",
+      "target_ja": "護符は氷属性の攻撃を防ぐ。"
+    },
+    {
+      "string_id": "TEST_048",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "minor",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "没有意见",
+      "target_span": "1 つの意見も持っていません",
+      "evidence": {
+        "reason": "The source expresses a neutral lack of objection, while the target adds an explicit emphasis ('not even one opinion') that alters the tone from simple acceptance to strong insistence."
+      },
+      "needs_human_review": true,
+      "source_zh": "我们对这项安排没有意见。",
+      "target_ja": "私たちはこの手配に対して1つの意見も持っていません。"
+    },
+    {
+      "string_id": "TEST_049",
+      "checker": "markup",
+      "issue_type": "markup_modified",
+      "severity": "major",
+      "message": "源文与日语译文中的技术标签不一致。",
+      "source_span": "</b>",
+      "target_span": "<b>",
+      "evidence": {
+        "source_tags": [
+          "<b>",
+          "</b>"
+        ],
+        "target_tags": [
+          "<b>",
+          "<b>"
+        ],
+        "missing": [
+          "</b>"
+        ],
+        "extra": [
+          "<b>"
+        ]
+      },
+      "needs_human_review": false,
+      "source_zh": "<b>请您立即离开这里。</b>",
+      "target_ja": "<b>今すぐここを出ろ。<b>"
+    },
+    {
+      "string_id": "TEST_051",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "命中了。",
+      "target_span": "<shake>やったー！超最高じゃん！</shake>",
+      "evidence": {
+        "reason": "The target adds excessive emotional reaction and exclamations that contradict the speaker's established profile of being extremely taciturn."
+      },
+      "needs_human_review": true,
+      "source_zh": "命中了。",
+      "target_ja": "<shake>やったー！超最高じゃん！</shake>"
+    },
+    {
+      "string_id": "TEST_052",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "先拉下左侧拉杆，再按下中央按钮。",
+      "target_span": "中央のボタンを押す。",
+      "evidence": {
+        "reason": "The target translates only the second step of a two-step process, failing to convey the complete meaning of the source sentence."
+      },
+      "needs_human_review": true,
+      "source_zh": "<b><i>先拉下左侧拉杆，再按下中央按钮。</i></b>",
+      "target_ja": "<i><b>中央のボタンを押す。</i></b>"
+    },
+    {
+      "string_id": "TEST_057",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "请您确认",
+      "target_span": "確認してくれ",
+      "evidence": {
+        "reason": "The request to confirm is translated as a rough command rather than a polite request appropriate for the scene."
+      },
+      "needs_human_review": true,
+      "source_zh": "老师，{device_name}已经修好了，请您确认。",
+      "target_ja": "先生、修理したぞ。確認してくれ。"
+    },
+    {
+      "string_id": "TEST_057",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "{device_name}已经修好了",
+      "target_span": "修理したぞ",
+      "evidence": {
+        "reason": "The specific device name placeholder is missing from the Japanese translation."
+      },
+      "needs_human_review": true,
+      "source_zh": "老师，{device_name}已经修好了，请您确认。",
+      "target_ja": "先生、修理したぞ。確認してくれ。"
+    },
+    {
+      "string_id": "TEST_058",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "单个敌人",
+      "target_span": null,
+      "evidence": {
+        "reason": "The source limits the effect to a single enemy whereas the target applies it to all enemies."
+      },
+      "needs_human_review": true,
+      "source_zh": "消耗40点魔力，对单个敌人造成雷电伤害。",
+      "target_ja": "魔力を25消費し、敵全体に雷属性ダメージを与える。"
+    },
+    {
+      "string_id": "TEST_059",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "minor",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "快来看看！",
+      "target_span": null,
+      "evidence": {
+        "reason": "The urgent call to action 'come check it out' is missing from the target translation."
+      },
+      "needs_human_review": true,
+      "source_zh": "<b>宝箱找到了！快来看看！</b>",
+      "target_ja": "宝箱を発見した。確認を求む。"
+    }
+  ],
+  "false_negatives": [
+    {
+      "annotation_id": "TANN_023",
+      "string_id": "TEST_033",
+      "issue_type": "addition",
+      "severity": "major",
+      "source_span": "",
+      "target_span": "封を開けずに",
+      "evidence": {
+        "expected": null,
+        "observed": "不得拆封"
+      },
+      "annotation_note": "源文没有要求保持信件密封。",
+      "source_zh": "把信交给码头的船长。",
+      "target_ja": "封を開けずに港の船長へ手紙を渡せ。"
+    },
+    {
+      "annotation_id": "TANN_024",
+      "string_id": "TEST_034",
+      "issue_type": "addition",
+      "severity": "minor",
+      "source_span": "",
+      "target_span": "秘密の",
+      "evidence": {
+        "expected": null,
+        "observed": "秘密通道"
+      },
+      "annotation_note": "译文给通道增加了“秘密”属性。",
+      "source_zh": "击败守门人后，通道会开启。",
+      "target_ja": "門番を倒すと、秘密の通路が開く。"
+    },
+    {
+      "annotation_id": "TANN_027",
+      "string_id": "TEST_037",
+      "issue_type": "translationese",
+      "severity": "minor",
+      "source_span": "持赞成的态度",
+      "target_span": "賛成という態度を持っています",
+      "evidence": {
+        "expected": "自然表达赞成",
+        "observed": "机械保留“持有态度”结构"
+      },
+      "annotation_note": "语义可理解，但日语明显照搬中文名词结构。",
+      "source_zh": "对于这项提案，我持赞成的态度。",
+      "target_ja": "この提案に対して、私は賛成という態度を持っています。"
+    },
+    {
+      "annotation_id": "TANN_042",
+      "string_id": "TEST_048",
+      "issue_type": "translationese",
+      "severity": "minor",
+      "source_span": "没有意见",
+      "target_span": "意見を持っていません",
+      "evidence": {
+        "expected": "異議はありません",
+        "observed": "意見を持っていません"
+      },
+      "annotation_note": "意义大致正确，但机械使用“持有意见”结构。",
+      "source_zh": "我们对这项安排没有意见。",
+      "target_ja": "私たちはこの手配に対して1つの意見も持っていません。"
+    },
+    {
+      "annotation_id": "TANN_043",
+      "string_id": "TEST_049",
+      "issue_type": "markup_malformed",
+      "severity": "major",
+      "source_span": "</b>",
+      "target_span": "<b>",
+      "evidence": {
+        "expected": "closing </b>",
+        "observed": "second opening <b>"
+      },
+      "annotation_note": "目标末尾把闭标签写成开标签。",
+      "source_zh": "<b>请您立即离开这里。</b>",
+      "target_ja": "<b>今すぐここを出ろ。<b>"
+    },
+    {
+      "annotation_id": "TANN_056",
+      "string_id": "TEST_055",
+      "issue_type": "keigo_mismatch",
+      "severity": "major",
+      "source_span": "老师",
+      "target_span": "感じさせる",
+      "evidence": {
+        "relationship": "student_to_teacher",
+        "observed_register": "plain sentence ending"
+      },
+      "annotation_note": "正式答辩中学生对导师没有使用礼貌句尾。",
+      "source_zh": "老师，这个结论让我有些难以接受。",
+      "target_ja": "先生、この結論は私に少し受け入れ難さを感じさせる。"
+    },
+    {
+      "annotation_id": "TANN_062",
+      "string_id": "TEST_058",
+      "issue_type": "mistranslation",
+      "severity": "critical",
+      "source_span": "单个敌人",
+      "target_span": "敵全体",
+      "evidence": {
+        "expected": "single target",
+        "observed": "all enemies"
+      },
+      "annotation_note": "技能作用范围从单体变为全体。",
+      "source_zh": "消耗40点魔力，对单个敌人造成雷电伤害。",
+      "target_ja": "魔力を25消費し、敵全体に雷属性ダメージを与える。"
+    },
+    {
+      "annotation_id": "TANN_066",
+      "string_id": "TEST_060",
+      "issue_type": "translationese",
+      "severity": "minor",
+      "source_span": "现在无法更换队伍成员",
+      "target_span": "現在においてパーティーメンバーを変更することはできません",
+      "evidence": {
+        "expected": "現在は編成を変更できません",
+        "observed": "冗长的“において／することはできません”"
+      },
+      "annotation_note": "意思正确但表达机械冗长。",
+      "source_zh": "现在无法更换队伍成员。",
+      "target_ja": "現在においてパーティーメンバーを変更することはできません。"
+    }
+  ],
+  "duplicate_predictions": [
+    {
+      "string_id": "TEST_009",
+      "issue_type": "omission",
+      "count": 3
+    },
+    {
+      "string_id": "TEST_054",
+      "issue_type": "mistranslation",
+      "count": 2
+    },
+    {
+      "string_id": "TEST_054",
+      "issue_type": "terminology_not_approved",
+      "count": 2
+    }
+  ],
+  "unknown_prediction_types": [],
+  "unknown_prediction_occurrences": [],
+  "context_sensitive_subset": {
+    "tp": 13,
+    "fp": 8,
+    "fn": 1,
+    "precision": 0.6190476190476191,
+    "recall": 0.9285714285714286,
+    "f1": 0.742857142857143
+  },
+  "merge_diagnostics": {
+    "policy": "all_rule_predictions__plus_llm_required_predictions",
+    "excluded_llm_predictions": 15,
+    "duplicate_predictions": [
+      {
+        "string_id": "TEST_009",
+        "issue_type": "omission",
+        "count": 3
+      },
+      {
+        "string_id": "TEST_054",
+        "issue_type": "mistranslation",
+        "count": 2
+      },
+      {
+        "string_id": "TEST_054",
+        "issue_type": "terminology_not_approved",
+        "count": 2
+      }
+    ]
+  }
+}

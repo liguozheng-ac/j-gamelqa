@@ -1,0 +1,696 @@
+{
+  "false_positives": [
+    {
+      "string_id": "DEV_003",
+      "checker": "japanese_llm",
+      "issue_type": "number_mismatch",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected number_mismatch.",
+      "source_span": "{item_count}",
+      "target_span": "{item_num}",
+      "evidence": {
+        "reason": "The source uses the placeholder '{item_count}' while the target incorrectly uses a different placeholder '{item_num}', which will result in a runtime error or missing data."
+      },
+      "needs_human_review": true,
+      "source_zh": "获得{item_count}枚金币。",
+      "target_ja": "{item_num}枚の金貨を獲得しました。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_003\",\n  \"issues\": [\n    {\n      \"issue_type\": \"number_mismatch\",\n      \"severity\": \"critical\",\n      \"source_span\": \"{item_count}\",\n      \"target_span\": \"{item_num}\",\n      \"evidence\": \"The source uses the placeholder '{item_count}' while the target incorrectly uses a different placeholder '{item_num}', which will result in a runtime error or missing data.\"\n    }\n  ]\n}"
+    },
+    {
+      "string_id": "DEV_006",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "不要攻击",
+      "target_span": null,
+      "evidence": {
+        "reason": "The negative imperative 'Do not' is missing from the translation, changing the instruction from a ban to an order."
+      },
+      "needs_human_review": true,
+      "source_zh": "不要攻击敌军的补给车。",
+      "target_ja": "敵の補給車を攻撃しろ。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_006\",\n  \"issues\": [\n    {\n      \"issue_type\": \"mistranslation\",\n      \"severity\": \"critical\",\n      \"source_span\": \"不要攻击\",\n      \"target_span\": \"攻撃しろ\",\n      \"evidence\": \"The source text is a prohibition ('Do not attack'), but the target translates it as a command to attack ('Attack'). This completely reverses the intended meaning.\"\n    },\n    {\n      \"issue_type\": \"omission\",\n      \"severity\": \"critical\",\n      \"source_span\": \"不要攻击\",\n      \"target_span\": \"\",\n      \"evidence\": \"The negative imperative 'Do not' is missing from the translation, changing the instruction from a ban to an order.\"\n    }\n  ]\n}"
+    },
+    {
+      "string_id": "DEV_007",
+      "checker": "japanese_llm",
+      "issue_type": "keigo_mismatch",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected keigo_mismatch.",
+      "source_span": "书记官向领主陈述",
+      "target_span": "この決定は私に...",
+      "evidence": {
+        "reason": "The speaker is a clerk addressing a lord. The target uses plain form '感じさせる' (saru) which is inappropriate for a subordinate speaking to a superior in a formal setting like a castle council. It should use humble or polite forms (e.g., '困っております'). Additionally, '私に' is slightly awkward; '私にとって' or passive/humble constructions are more natural for expressing personal predicament to a lord."
+      },
+      "needs_human_review": true,
+      "source_zh": "这个决定让我感到非常为难。",
+      "target_ja": "この決定は私に非常に困難を感じさせる。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_007\",\n  \"issues\": [\n    {\n      \"issue_type\": \"mistranslation\",\n      \"severity\": \"major\",\n      \"source_span\": \"为难\",\n      \"target_span\": \"困難を感じさせる\",\n      \"evidence\": \"The source '为难' implies being in a difficult position or dilemma (embarrassment/hesitation), whereas the target '困難を感じさせる' literally translates to 'makes me feel difficulty'. The nuance of social awkwardness or being caught between conflicting demands is lost, replaced by a generic sense of hardship.\"\n    },\n    {\n      \"issue_type\": \"keigo_mismatch\",\n      \"severity\": \"critical\",\n      \"source_span\": \"书记官向领主陈述\",\n      \"target_span\": \"この決定は私に...\",\n      \"evidence\": \"The speaker is a clerk addressing a lord. The target uses plain form '感じさせる' (saru) which is inappropriate for a subordinate speaking to a superior in a formal setting like a castle council. It should use humble or polite forms (e.g., '困っております'). Additionally, '私に' is slightly awkward; '私にとって' or passive/humble constructions are more natural for expressing personal predicament to a lord.\"\n    }\n  ]\n}"
+    },
+    {
+      "string_id": "DEV_007",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "为难",
+      "target_span": "困難を感じさせる",
+      "evidence": {
+        "reason": "The source '为难' implies being in a difficult position or dilemma (embarrassment/hesitation), whereas the target '困難を感じさせる' literally translates to 'makes me feel difficulty'. The nuance of social awkwardness or being caught between conflicting demands is lost, replaced by a generic sense of hardship."
+      },
+      "needs_human_review": true,
+      "source_zh": "这个决定让我感到非常为难。",
+      "target_ja": "この決定は私に非常に困難を感じさせる。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_007\",\n  \"issues\": [\n    {\n      \"issue_type\": \"mistranslation\",\n      \"severity\": \"major\",\n      \"source_span\": \"为难\",\n      \"target_span\": \"困難を感じさせる\",\n      \"evidence\": \"The source '为难' implies being in a difficult position or dilemma (embarrassment/hesitation), whereas the target '困難を感じさせる' literally translates to 'makes me feel difficulty'. The nuance of social awkwardness or being caught between conflicting demands is lost, replaced by a generic sense of hardship.\"\n    },\n    {\n      \"issue_type\": \"keigo_mismatch\",\n      \"severity\": \"critical\",\n      \"source_span\": \"书记官向领主陈述\",\n      \"target_span\": \"この決定は私に...\",\n      \"evidence\": \"The speaker is a clerk addressing a lord. The target uses plain form '感じさせる' (saru) which is inappropriate for a subordinate speaking to a superior in a formal setting like a castle council. It should use humble or polite forms (e.g., '困っております'). Additionally, '私に' is slightly awkward; '私にとって' or passive/humble constructions are more natural for expressing personal predicament to a lord.\"\n    }\n  ]\n}"
+    },
+    {
+      "string_id": "DEV_008",
+      "checker": "japanese_llm",
+      "issue_type": "character_voice_mismatch",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected character_voice_mismatch.",
+      "source_span": "队长，侦察报告已经送到，请您过目。",
+      "target_span": "隊長、偵察報告を持ってきた。見てくれ。",
+      "evidence": {
+        "reason": "The tone of the target is too blunt and aggressive for a new recruit speaking to their superior. The phrase '見てくれ' (Look at this!) sounds rude and commanding, conflicting with the expected voice of a respectful subordinate."
+      },
+      "needs_human_review": true,
+      "source_zh": "队长，侦察报告已经送到，请您过目。",
+      "target_ja": "隊長、偵察報告を持ってきた。見てくれ。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_008\",\n  \"issues\": [\n    {\n      \"issue_type\": \"keigo_mismatch\",\n      \"severity\": \"critical\",\n      \"source_span\": \"请您过目\",\n      \"target_span\": \"見てくれ\",\n      \"evidence\": \"The speaker is a new recruit addressing their direct superior (Captain). The source uses polite language ('Please review'), but the target uses '見てくれ' (mite kure), which is an imperative/commanding form often used by superiors to subordinates or between equals, making it highly inappropriate and disrespectful in this context.\"\n    },\n    {\n      \"issue_type\": \"character_voice_mismatch\",\n      \"severity\": \"major\",\n      \"source_span\": \"队长，侦察报告已经送到，请您过目。\",\n      \"target_span\": \"隊長、偵察報告を持ってきた。見てくれ。\",\n      \"evidence\": \"The tone of the target is too blunt and aggressive for a new recruit speaking to their superior. The phrase '見てくれ' (Look at this!) sounds rude and commanding, conflicting with the expected voice of a respectful subordinate.\"\n    }\n  ]\n}"
+    },
+    {
+      "string_id": "DEV_012",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "生命值",
+      "target_span": null,
+      "evidence": {
+        "reason": "The Japanese target omits the source term '生命值' (Life Points/Health), replacing it with '最大HP' and '現在HP'. While the meaning is preserved, the specific UI label '生命值' is missing from the translation."
+      },
+      "needs_human_review": true,
+      "source_zh": "生命值：%(current)d/%(maximum)d",
+      "target_ja": "最大HP %(maximum)d／現在HP %(current)d",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_012\",\n  \"issues\": [\n    {\n      \"issue_type\": \"omission\",\n      \"severity\": \"critical\",\n      \"source_span\": \"生命值\",\n      \"target_span\": \"\",\n      \"evidence\": \"The Japanese target omits the source term '生命值' (Life Points/Health), replacing it with '最大HP' and '現在HP'. While the meaning is preserved, the specific UI label '生命值' is missing from the translation.\"\n    },\n    {\n      \"issue_type\": \"omission\",\n      \"severity\": \"critical\",\n      \"source_span\": \"%(current)d/%(maximum)d\",\n      \"target_span\": \"\",\n      \"evidence\": \"The source uses a specific format string with placeholders for current and maximum values separated by a slash. The target restructures this into two separate labeled fields ('最大HP...／現在HP...'), altering the data structure and potentially breaking UI layout expectations associated with the original single-line format.\"\n    }\n  ]\n}"
+    },
+    {
+      "string_id": "DEV_016",
+      "checker": "japanese_llm",
+      "issue_type": "length_overflow",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected length_overflow.",
+      "source_span": "要更换装备吗？",
+      "target_span": "装備を変更しますか？",
+      "evidence": {
+        "reason": "The Japanese target contains 12 characters (including punctuation), which exceeds the supplied maximum length of 10."
+      },
+      "needs_human_review": true,
+      "source_zh": "要更换装备吗？",
+      "target_ja": "装備を変更しますか？",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_016\",\n  \"issues\": [\n    {\n      \"issue_type\": \"length_overflow\",\n      \"severity\": \"critical\",\n      \"source_span\": \"要更换装备吗？\",\n      \"target_span\": \"装備を変更しますか？\",\n      \"evidence\": \"The Japanese target contains 12 characters (including punctuation), which exceeds the supplied maximum length of 10.\"\n    }\n  ]\n}"
+    },
+    {
+      "string_id": "DEV_018",
+      "checker": "japanese_llm",
+      "issue_type": "addition",
+      "severity": "minor",
+      "message": "Japanese LLM evaluator detected addition.",
+      "source_span": null,
+      "target_span": "{player_name}",
+      "evidence": {
+        "reason": "The Japanese target inserts the placeholder '{player_name}' which is not present in the Chinese source text."
+      },
+      "needs_human_review": true,
+      "source_zh": "任务完成，奖励已发放。",
+      "target_ja": "{player_name}、任務完了。報酬を配布しました。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_018\",\n  \"issues\": [\n    {\n      \"issue_type\": \"addition\",\n      \"severity\": \"minor\",\n      \"source_span\": \"\",\n      \"target_span\": \"{player_name}\",\n      \"evidence\": \"The Japanese target inserts the placeholder '{player_name}' which is not present in the Chinese source text.\"\n    }\n  ]\n}"
+    },
+    {
+      "string_id": "DEV_020",
+      "checker": "japanese_llm",
+      "issue_type": "addition",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected addition.",
+      "source_span": null,
+      "target_span": "30秒間",
+      "evidence": {
+        "reason": "The Japanese target adds a specific duration ('for 30 seconds') which is not present in the Chinese source text."
+      },
+      "needs_human_review": true,
+      "source_zh": "防护结界已启动。",
+      "target_ja": "防護結界は30秒間起動します。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_020\",\n  \"issues\": [\n    {\n      \"issue_type\": \"addition\",\n      \"severity\": \"major\",\n      \"source_span\": \"\",\n      \"target_span\": \"30秒間\",\n      \"evidence\": \"The Japanese target adds a specific duration ('for 30 seconds') which is not present in the Chinese source text.\"\n    }\n  ]\n}"
+    },
+    {
+      "string_id": "DEV_022",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "<color=red>生命值过低</color>",
+      "target_span": "<color=blue>HPが残りわずかです</color>",
+      "evidence": {
+        "reason": "The source text explicitly indicates a critical state ('low HP') using red color coding, while the target translates to 'HP is running low' (a warning) and incorrectly uses blue color coding. This contradicts the UI logic where red signifies danger/criticality."
+      },
+      "needs_human_review": true,
+      "source_zh": "<color=red>生命值过低</color>",
+      "target_ja": "<color=blue>HPが残りわずかです</color>",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_022\",\n  \"issues\": [\n    {\n      \"issue_type\": \"mistranslation\",\n      \"severity\": \"critical\",\n      \"source_span\": \"<color=red>生命值过低</color>\",\n      \"target_span\": \"<color=blue>HPが残りわずかです</color>\",\n      \"evidence\": \"The source text explicitly indicates a critical state ('low HP') using red color coding, while the target translates to 'HP is running low' (a warning) and incorrectly uses blue color coding. This contradicts the UI logic where red signifies danger/criticality.\"\n    }\n  ]\n}"
+    },
+    {
+      "string_id": "DEV_023",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "minor",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "确认",
+      "target_span": "決定",
+      "evidence": {
+        "reason": "'Confirm' (UI button) is mistranslated as 'Decision'. In Japanese UI contexts, the button is typically labeled '確定' (Kakunin), whereas '決定' (Kettei) usually refers to a decision or determination, not the standard confirmation action."
+      },
+      "needs_human_review": true,
+      "source_zh": "按下<b>确认</b>继续。",
+      "target_ja": "<b>決定を押して続行してください。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_023\",\n  \"issues\": [\n    {\n      \"issue_type\": \"omission\",\n      \"severity\": \"minor\",\n      \"source_span\": \"按下<b>确认</b>\",\n      \"target_span\": \"<b>決定を押して続行してください。\",\n      \"evidence\": \"The source explicitly instructs to press the 'Confirm' button ('按下<b>确认</b>'). The target translates this as 'Press <b>Decision</b>' ('<b>決定</b>'), omitting the specific instruction to press the button and replacing the UI term 'Confirm' with a less precise noun 'Decision', which changes the meaning from an action on a specific button to a general command.\"\n    },\n    {\n      \"issue_type\": \"mistranslation\",\n      \"severity\": \"minor\",\n      \"source_span\": \"确认\",\n      \"target_span\": \"決定\",\n      \"evidence\": \"'Confirm' (UI button) is mistranslated as 'Decision'. In Japanese UI contexts, the button is typically labeled '確定' (Kakunin), whereas '決定' (Kettei) usually refers to a decision or determination, not the standard confirmation action.\"\n    }\n  ]\n}"
+    },
+    {
+      "string_id": "DEV_023",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "minor",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "按下<b>确认</b>",
+      "target_span": "<b>決定を押して続行してください。",
+      "evidence": {
+        "reason": "The source explicitly instructs to press the 'Confirm' button ('按下<b>确认</b>'). The target translates this as 'Press <b>Decision</b>' ('<b>決定</b>'), omitting the specific instruction to press the button and replacing the UI term 'Confirm' with a less precise noun 'Decision', which changes the meaning from an action on a specific button to a general command."
+      },
+      "needs_human_review": true,
+      "source_zh": "按下<b>确认</b>继续。",
+      "target_ja": "<b>決定を押して続行してください。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_023\",\n  \"issues\": [\n    {\n      \"issue_type\": \"omission\",\n      \"severity\": \"minor\",\n      \"source_span\": \"按下<b>确认</b>\",\n      \"target_span\": \"<b>決定を押して続行してください。\",\n      \"evidence\": \"The source explicitly instructs to press the 'Confirm' button ('按下<b>确认</b>'). The target translates this as 'Press <b>Decision</b>' ('<b>決定</b>'), omitting the specific instruction to press the button and replacing the UI term 'Confirm' with a less precise noun 'Decision', which changes the meaning from an action on a specific button to a general command.\"\n    },\n    {\n      \"issue_type\": \"mistranslation\",\n      \"severity\": \"minor\",\n      \"source_span\": \"确认\",\n      \"target_span\": \"決定\",\n      \"evidence\": \"'Confirm' (UI button) is mistranslated as 'Decision'. In Japanese UI contexts, the button is typically labeled '確定' (Kakunin), whereas '決定' (Kettei) usually refers to a decision or determination, not the standard confirmation action.\"\n    }\n  ]\n}"
+    },
+    {
+      "string_id": "DEV_034",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "只要...就...",
+      "target_span": "...さえすれば...",
+      "evidence": {
+        "reason": "The source uses a conditional structure '只要...就...' (as long as... then...) indicating a specific condition triggers an action. The target uses '～さえすれば' which implies 'even if/just by doing X, Y happens', often carrying a nuance of 'even the slightest action is sufficient'. While semantically close in this context, 'さえ' adds a slight emphasis on the minimal sufficiency not explicitly present in the neutral Chinese conditional. However, a more significant issue is the potential for unnatural phrasing. A more natural Japanese translation for '只要钟声响起，守卫就会换班' would be '鐘の音が鳴れば、衛兵は交代する。' or '鐘が鳴れば衛兵は交代します。'. The use of 'さえ' here feels slightly forced or like a direct calque from the Chinese logic rather than natural Japanese flow, potentially falling under 'translationese' if strict adherence to naturalness is required, but 'mistranslation' is safer as it alters the nuance of the condition from a simple trigger to a 'minimal threshold' trigger. Let's re-evaluate: Is 'さえ' wrong? Not strictly wrong, but does it change meaning? '只要' = 'if/when'. '～さえすれば' = 'even if... then'. The source says 'If the bell rings, guards change'. The target says 'Even if the bell rings (or just by making the bell ring), guards change'. The nuance is slightly different. Given the strict rules, 'mistranslation' fits best for altering the logical connector's nuance."
+      },
+      "needs_human_review": true,
+      "source_zh": "只要钟声响起，守卫就会换班。",
+      "target_ja": "鐘の音が鳴るさえすれば、衛兵は交代する。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_034\",\n  \"issues\": [\n    {\n      \"issue_type\": \"mistranslation\",\n      \"severity\": \"major\",\n      \"source_span\": \"只要...就...\",\n      \"target_span\": \"...さえすれば...\",\n      \"evidence\": \"The source uses a conditional structure '只要...就...' (as long as... then...) indicating a specific condition triggers an action. The target uses '～さえすれば' which implies 'even if/just by doing X, Y happens', often carrying a nuance of 'even the slightest action is sufficient'. While semantically close in this context, 'さえ' adds a slight emphasis on the minimal sufficiency not explicitly present in the neutral Chinese conditional. However, a more significant issue is the potential for unnatural phrasing. A more natural Japanese translation for '只要钟声响起，守卫就会换班' would be '鐘の音が鳴れば、衛兵は交代する。' or '鐘が鳴れば衛兵は交代します。'. The use of 'さえ' here feels slightly forced or like a direct calque from the Chinese logic rather than natural Japanese flow, potentially falling under 'translationese' if strict adherence to naturalness is required, but 'mistranslation' is safer as it alters the nuance of the condition from a simple trigger to a 'minimal threshold' trigger. Let's re-evaluate: Is 'さえ' wrong? Not strictly wrong, but does it change meaning? '只要' = 'if/when'. '～さえすれば' = 'even if... then'. The source says 'If the bell rings, guards change'. The target says 'Even if the bell rings (or just by making the bell ring), guards change'. The nuance is slightly different. Given the strict rules, 'mistranslation' fits best for altering the logical connector's nuance.\"\n    }\n  ]\n}"
+    },
+    {
+      "string_id": "DEV_035",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "客人，请稍等，我马上为您包装。",
+      "target_span": "客、待て。今包むから。",
+      "evidence": {
+        "reason": "The source text is a polite service dialogue ('Please wait', 'I will pack it for you'). The target uses extremely rude and archaic language ('客' instead of 'お客様', '待て' which is an imperative command rather than a request, '今包むから' which sounds abrupt). This creates a severe tone mismatch with the character role (shop assistant) and the relationship (staff to customer)."
+      },
+      "needs_human_review": true,
+      "source_zh": "客人，请稍等，我马上为您包装。",
+      "target_ja": "客、待て。今包むから。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_035\",\n  \"issues\": [\n    {\n      \"issue_type\": \"mistranslation\",\n      \"severity\": \"critical\",\n      \"source_span\": \"客人，请稍等，我马上为您包装。\",\n      \"target_span\": \"客、待て。今包むから。\",\n      \"evidence\": \"The source text is a polite service dialogue ('Please wait', 'I will pack it for you'). The target uses extremely rude and archaic language ('客' instead of 'お客様', '待て' which is an imperative command rather than a request, '今包むから' which sounds abrupt). This creates a severe tone mismatch with the character role (shop assistant) and the relationship (staff to customer).\"\n    },\n    {\n      \"issue_type\": \"keigo_mismatch\",\n      \"severity\": \"critical\",\n      \"source_span\": \"客人，请稍等，我马上为您包装。\",\n      \"target_span\": \"客、待て。今包むから。\",\n      \"evidence\": \"The source requires polite honorifics (Keigo) for a shop assistant speaking to a customer. The target uses plain, rude forms ('待て' is a command, '包む' is plain form), which is inappropriate for the scene and relationship.\"\n    }\n  ]\n}"
+    },
+    {
+      "string_id": "DEV_037",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "切勿贸然开启",
+      "target_span": "ノリで開けんなよ",
+      "evidence": {
+        "reason": "The source means 'Do not open it rashly' (a warning). The target translates this as 'Open it on impulse/just do it' (an encouragement to act recklessly), reversing the intended meaning."
+      },
+      "needs_human_review": true,
+      "source_zh": "此门后沉睡着旧日的灾厄，切勿贸然开启。",
+      "target_ja": "この扉の先には昔の災厄が眠ってるから、ノリで開けんなよ。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_037\",\n  \"issues\": [\n    {\n      \"issue_type\": \"character_voice_mismatch\",\n      \"severity\": \"critical\",\n      \"source_span\": \"切勿贸然开启\",\n      \"target_span\": \"ノリで開けんなよ\",\n      \"evidence\": \"The speaker is an elderly sage (玄珀) with a refined, solemn tone addressing a junior adventurer. The source text uses formal warning language ('切勿'). The target uses extremely casual slang ('ノリで' - just go for it / on impulse) and rough imperative grammar ('開けんなよ'), which completely contradicts the established character profile of a dignified elder.\"\n    },\n    {\n      \"issue_type\": \"mistranslation\",\n      \"severity\": \"critical\",\n      \"source_span\": \"切勿贸然开启\",\n      \"target_span\": \"ノリで開けんなよ\",\n      \"evidence\": \"The source means 'Do not open it rashly' (a warning). The target translates this as 'Open it on impulse/just do it' (an encouragement to act recklessly), reversing the intended meaning.\"\n    }\n  ]\n}"
+    },
+    {
+      "string_id": "DEV_039",
+      "checker": "japanese_llm",
+      "issue_type": "omission",
+      "severity": "major",
+      "message": "Japanese LLM evaluator detected omission.",
+      "source_span": "20%",
+      "target_span": null,
+      "evidence": {
+        "reason": "The Japanese target omits the specific value '20%' present in the source text, which is critical for a battle UI warning indicating remaining shield health."
+      },
+      "needs_human_review": true,
+      "source_zh": "<b>警告</b>：护盾还剩20%。",
+      "target_ja": "<b>警告：シールド残量が低下しています。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_039\",\n  \"issues\": [\n    {\n      \"issue_type\": \"omission\",\n      \"severity\": \"major\",\n      \"source_span\": \"20%\",\n      \"target_span\": \"\",\n      \"evidence\": \"The Japanese target omits the specific value '20%' present in the source text, which is critical for a battle UI warning indicating remaining shield health.\"\n    }\n  ]\n}"
+    },
+    {
+      "string_id": "DEV_043",
+      "checker": "japanese_llm",
+      "issue_type": "number_mismatch",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected number_mismatch.",
+      "source_span": "红色钥匙",
+      "target_span": "青い鍵",
+      "evidence": {
+        "reason": "The source specifies a 'red key' (红色), while the target translates it as a 'blue key' (青い)."
+      },
+      "needs_human_review": true,
+      "source_zh": "解除警报后烧毁记录，再把红色钥匙交给伊织。",
+      "target_ja": "警報を解除して、青い鍵を伊織に渡せ。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_043\",\n  \"issues\": [\n    {\n      \"issue_type\": \"mistranslation\",\n      \"severity\": \"critical\",\n      \"source_span\": \"烧毁记录\",\n      \"target_span\": \"\",\n      \"evidence\": \"The source text instructs to 'burn the records' (烧毁记录), but the target text omits this action entirely and instead mentions a 'blue key' (青い鍵) which is not present in the source.\"\n    },\n    {\n      \"issue_type\": \"number_mismatch\",\n      \"severity\": \"critical\",\n      \"source_span\": \"红色钥匙\",\n      \"target_span\": \"青い鍵\",\n      \"evidence\": \"The source specifies a 'red key' (红色), while the target translates it as a 'blue key' (青い).\"\n    },\n    {\n      \"issue_type\": \"omission\",\n      \"severity\": \"critical\",\n      \"source_span\": \"再把红色钥匙交给伊织\",\n      \"target_span\": \"再把红色钥匙交给伊织\",\n      \"evidence\": \"The instruction to 'burn the records' is completely missing from the target translation.\"\n    }\n  ]\n}"
+    },
+    {
+      "string_id": "DEV_044",
+      "checker": "japanese_llm",
+      "issue_type": "mistranslation",
+      "severity": "critical",
+      "message": "Japanese LLM evaluator detected mistranslation.",
+      "source_span": "金币？这种俗物也配让我弯腰去捡？",
+      "target_span": "お金ですか？拾っておきましょう。",
+      "evidence": {
+        "reason": "The source expresses contempt and refusal ('such a vulgar thing', 'does it deserve to make me bend down'), while the target translates to a polite acceptance ('Shall I pick it up?'). This completely contradicts the character's arrogant voice and the scene context."
+      },
+      "needs_human_review": true,
+      "source_zh": "金币？这种俗物也配让我弯腰去捡？",
+      "target_ja": "お金ですか？拾っておきましょう。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_044\",\n  \"issues\": [\n    {\n      \"issue_type\": \"mistranslation\",\n      \"severity\": \"critical\",\n      \"source_span\": \"金币？这种俗物也配让我弯腰去捡？\",\n      \"target_span\": \"お金ですか？拾っておきましょう。\",\n      \"evidence\": \"The source expresses contempt and refusal ('such a vulgar thing', 'does it deserve to make me bend down'), while the target translates to a polite acceptance ('Shall I pick it up?'). This completely contradicts the character's arrogant voice and the scene context.\"\n    },\n    {\n      \"issue_type\": \"terminology_not_approved\",\n      \"severity\": \"major\",\n      \"source_span\": \"金币\",\n      \"target_span\": \"お金\",\n      \"evidence\": \"The source term '金币' is glossed as '金貨', but the target uses the generic 'お金'. While 'コイン' is forbidden, the approved term '金貨' was not used.\"\n    },\n    {\n      \"issue_type\": \"character_voice_mismatch\",\n      \"severity\": \"critical\",\n      \"source_span\": \"这种俗物也配让我弯腰去捡？\",\n      \"target_span\": \"拾っておきましょう。\",\n      \"evidence\": \"The character profile specifies a proud noble girl who uses 'ですわ' and looks down on money. The target lacks the arrogant tone, the specific sentence ending 'ですわ', and instead uses a humble/polite suggestion 'おきましょう', which contradicts her established voice.\"\n    }\n  ]\n}"
+    }
+  ],
+  "false_negatives": [
+    {
+      "annotation_id": "ANN_001",
+      "string_id": "DEV_002",
+      "issue_type": "placeholder_missing",
+      "severity": "major",
+      "source_span": "{player_name}",
+      "target_span": "",
+      "evidence": {
+        "expected": [
+          "{player_name}"
+        ],
+        "observed": []
+      },
+      "annotation_note": "源文变量在译文中消失。",
+      "source_zh": "勇者{player_name}，欢迎回来！",
+      "target_ja": "勇者様、お帰りなさい！",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_002\",\n  \"issues\": []\n}"
+    },
+    {
+      "annotation_id": "ANN_002",
+      "string_id": "DEV_003",
+      "issue_type": "placeholder_modified",
+      "severity": "major",
+      "source_span": "{item_count}",
+      "target_span": "{item_num}",
+      "evidence": {
+        "expected": [
+          "{item_count}"
+        ],
+        "observed": [
+          "{item_num}"
+        ]
+      },
+      "annotation_note": "变量名称被改写。",
+      "source_zh": "获得{item_count}枚金币。",
+      "target_ja": "{item_num}枚の金貨を獲得しました。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_003\",\n  \"issues\": [\n    {\n      \"issue_type\": \"number_mismatch\",\n      \"severity\": \"critical\",\n      \"source_span\": \"{item_count}\",\n      \"target_span\": \"{item_num}\",\n      \"evidence\": \"The source uses the placeholder '{item_count}' while the target incorrectly uses a different placeholder '{item_num}', which will result in a runtime error or missing data.\"\n    }\n  ]\n}"
+    },
+    {
+      "annotation_id": "ANN_006",
+      "string_id": "DEV_007",
+      "issue_type": "translationese",
+      "severity": "minor",
+      "source_span": "感到非常为难",
+      "target_span": "私に非常に困難を感じさせる",
+      "evidence": {
+        "expected": "自然的日语判断表达",
+        "observed": "受中文使役结构影响的直译"
+      },
+      "annotation_note": "语义可理解，但日语句法明显生硬。",
+      "source_zh": "这个决定让我感到非常为难。",
+      "target_ja": "この決定は私に非常に困難を感じさせる。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_007\",\n  \"issues\": [\n    {\n      \"issue_type\": \"mistranslation\",\n      \"severity\": \"major\",\n      \"source_span\": \"为难\",\n      \"target_span\": \"困難を感じさせる\",\n      \"evidence\": \"The source '为难' implies being in a difficult position or dilemma (embarrassment/hesitation), whereas the target '困難を感じさせる' literally translates to 'makes me feel difficulty'. The nuance of social awkwardness or being caught between conflicting demands is lost, replaced by a generic sense of hardship.\"\n    },\n    {\n      \"issue_type\": \"keigo_mismatch\",\n      \"severity\": \"critical\",\n      \"source_span\": \"书记官向领主陈述\",\n      \"target_span\": \"この決定は私に...\",\n      \"evidence\": \"The speaker is a clerk addressing a lord. The target uses plain form '感じさせる' (saru) which is inappropriate for a subordinate speaking to a superior in a formal setting like a castle council. It should use humble or polite forms (e.g., '困っております'). Additionally, '私に' is slightly awkward; '私にとって' or passive/humble constructions are more natural for expressing personal predicament to a lord.\"\n    }\n  ]\n}"
+    },
+    {
+      "annotation_id": "ANN_010",
+      "string_id": "DEV_018",
+      "issue_type": "placeholder_extra",
+      "severity": "minor",
+      "source_span": "",
+      "target_span": "{player_name}",
+      "evidence": {
+        "expected": [],
+        "observed": [
+          "{player_name}"
+        ]
+      },
+      "annotation_note": "源文没有变量，译文无依据新增变量。",
+      "source_zh": "任务完成，奖励已发放。",
+      "target_ja": "{player_name}、任務完了。報酬を配布しました。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_018\",\n  \"issues\": [\n    {\n      \"issue_type\": \"addition\",\n      \"severity\": \"minor\",\n      \"source_span\": \"\",\n      \"target_span\": \"{player_name}\",\n      \"evidence\": \"The Japanese target inserts the placeholder '{player_name}' which is not present in the Chinese source text.\"\n    }\n  ]\n}"
+    },
+    {
+      "annotation_id": "ANN_012",
+      "string_id": "DEV_020",
+      "issue_type": "number_extra",
+      "severity": "minor",
+      "source_span": "",
+      "target_span": "30",
+      "evidence": {
+        "expected": [],
+        "observed": [
+          "30"
+        ]
+      },
+      "annotation_note": "源文未提供持续时间，译文新增 30 秒。",
+      "source_zh": "防护结界已启动。",
+      "target_ja": "防護結界は30秒間起動します。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_020\",\n  \"issues\": [\n    {\n      \"issue_type\": \"addition\",\n      \"severity\": \"major\",\n      \"source_span\": \"\",\n      \"target_span\": \"30秒間\",\n      \"evidence\": \"The Japanese target adds a specific duration ('for 30 seconds') which is not present in the Chinese source text.\"\n    }\n  ]\n}"
+    },
+    {
+      "annotation_id": "ANN_014",
+      "string_id": "DEV_022",
+      "issue_type": "markup_modified",
+      "severity": "major",
+      "source_span": "<color=red>",
+      "target_span": "<color=blue>",
+      "evidence": {
+        "expected": [
+          "<color=red>",
+          "</color>"
+        ],
+        "observed": [
+          "<color=blue>",
+          "</color>"
+        ]
+      },
+      "annotation_note": "颜色属性被改写。",
+      "source_zh": "<color=red>生命值过低</color>",
+      "target_ja": "<color=blue>HPが残りわずかです</color>",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_022\",\n  \"issues\": [\n    {\n      \"issue_type\": \"mistranslation\",\n      \"severity\": \"critical\",\n      \"source_span\": \"<color=red>生命值过低</color>\",\n      \"target_span\": \"<color=blue>HPが残りわずかです</color>\",\n      \"evidence\": \"The source text explicitly indicates a critical state ('low HP') using red color coding, while the target translates to 'HP is running low' (a warning) and incorrectly uses blue color coding. This contradicts the UI logic where red signifies danger/criticality.\"\n    }\n  ]\n}"
+    },
+    {
+      "annotation_id": "ANN_015",
+      "string_id": "DEV_023",
+      "issue_type": "markup_missing",
+      "severity": "major",
+      "source_span": "</b>",
+      "target_span": "",
+      "evidence": {
+        "expected": [
+          "<b>",
+          "</b>"
+        ],
+        "observed": [
+          "<b>"
+        ]
+      },
+      "annotation_note": "译文缺少粗体结束标签。",
+      "source_zh": "按下<b>确认</b>继续。",
+      "target_ja": "<b>決定を押して続行してください。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_023\",\n  \"issues\": [\n    {\n      \"issue_type\": \"omission\",\n      \"severity\": \"minor\",\n      \"source_span\": \"按下<b>确认</b>\",\n      \"target_span\": \"<b>決定を押して続行してください。\",\n      \"evidence\": \"The source explicitly instructs to press the 'Confirm' button ('按下<b>确认</b>'). The target translates this as 'Press <b>Decision</b>' ('<b>決定</b>'), omitting the specific instruction to press the button and replacing the UI term 'Confirm' with a less precise noun 'Decision', which changes the meaning from an action on a specific button to a general command.\"\n    },\n    {\n      \"issue_type\": \"mistranslation\",\n      \"severity\": \"minor\",\n      \"source_span\": \"确认\",\n      \"target_span\": \"決定\",\n      \"evidence\": \"'Confirm' (UI button) is mistranslated as 'Decision'. In Japanese UI contexts, the button is typically labeled '確定' (Kakunin), whereas '決定' (Kettei) usually refers to a decision or determination, not the standard confirmation action.\"\n    }\n  ]\n}"
+    },
+    {
+      "annotation_id": "ANN_016",
+      "string_id": "DEV_024",
+      "issue_type": "markup_extra",
+      "severity": "major",
+      "source_span": "",
+      "target_span": "<b>, </b>",
+      "evidence": {
+        "expected": [],
+        "observed": [
+          "<b>",
+          "</b>"
+        ]
+      },
+      "annotation_note": "译文无依据新增粗体标签。",
+      "source_zh": "稀有物品已获得。",
+      "target_ja": "<b>レアアイテムを入手しました。</b>",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_024\",\n  \"issues\": []\n}"
+    },
+    {
+      "annotation_id": "ANN_017",
+      "string_id": "DEV_025",
+      "issue_type": "markup_order_mismatch",
+      "severity": "major",
+      "source_span": "<b><color=red>...</color></b>",
+      "target_span": "<color=red><b>...</b></color>",
+      "evidence": {
+        "expected": [
+          "<b>",
+          "<color=red>",
+          "</color>",
+          "</b>"
+        ],
+        "observed": [
+          "<color=red>",
+          "<b>",
+          "</b>",
+          "</color>"
+        ]
+      },
+      "annotation_note": "标签集合相同，但嵌套顺序发生变化。",
+      "source_zh": "<b><color=red>首领来袭</color></b>",
+      "target_ja": "<color=red><b>ボス襲来</b></color>",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_025\",\n  \"issues\": []\n}"
+    },
+    {
+      "annotation_id": "ANN_018",
+      "string_id": "DEV_026",
+      "issue_type": "linebreak_mismatch",
+      "severity": "major",
+      "source_span": "\\\\n",
+      "target_span": "",
+      "evidence": {
+        "expected": {
+          "actual_newlines": 0,
+          "escaped_newlines": 1
+        },
+        "observed": {
+          "actual_newlines": 0,
+          "escaped_newlines": 0
+        }
+      },
+      "annotation_note": "任务分段所需的字面量换行标记消失。",
+      "source_zh": "第一阶段完成。\\n准备进入第二阶段。",
+      "target_ja": "第一段階が完了しました。第二段階へ進みます。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_026\",\n  \"issues\": []\n}"
+    },
+    {
+      "annotation_id": "ANN_026",
+      "string_id": "DEV_034",
+      "issue_type": "translationese",
+      "severity": "minor",
+      "source_span": "只要……就……",
+      "target_span": "～さえすれば",
+      "evidence": {
+        "expected": "鐘が鳴ると、衛兵が交代する",
+        "observed": "鐘の音が鳴るさえすれば"
+      },
+      "annotation_note": "机械套用中文条件句结构，日语搭配不自然。",
+      "source_zh": "只要钟声响起，守卫就会换班。",
+      "target_ja": "鐘の音が鳴るさえすれば、衛兵は交代する。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_034\",\n  \"issues\": [\n    {\n      \"issue_type\": \"mistranslation\",\n      \"severity\": \"major\",\n      \"source_span\": \"只要...就...\",\n      \"target_span\": \"...さえすれば...\",\n      \"evidence\": \"The source uses a conditional structure '只要...就...' (as long as... then...) indicating a specific condition triggers an action. The target uses '～さえすれば' which implies 'even if/just by doing X, Y happens', often carrying a nuance of 'even the slightest action is sufficient'. While semantically close in this context, 'さえ' adds a slight emphasis on the minimal sufficiency not explicitly present in the neutral Chinese conditional. However, a more significant issue is the potential for unnatural phrasing. A more natural Japanese translation for '只要钟声响起，守卫就会换班' would be '鐘の音が鳴れば、衛兵は交代する。' or '鐘が鳴れば衛兵は交代します。'. The use of 'さえ' here feels slightly forced or like a direct calque from the Chinese logic rather than natural Japanese flow, potentially falling under 'translationese' if strict adherence to naturalness is required, but 'mistranslation' is safer as it alters the nuance of the condition from a simple trigger to a 'minimal threshold' trigger. Let's re-evaluate: Is 'さえ' wrong? Not strictly wrong, but does it change meaning? '只要' = 'if/when'. '～さえすれば' = 'even if... then'. The source says 'If the bell rings, guards change'. The target says 'Even if the bell rings (or just by making the bell ring), guards change'. The nuance is slightly different. Given the strict rules, 'mistranslation' fits best for altering the logical connector's nuance.\"\n    }\n  ]\n}"
+    },
+    {
+      "annotation_id": "ANN_030",
+      "string_id": "DEV_038",
+      "issue_type": "placeholder_missing",
+      "severity": "major",
+      "source_span": "{player_name}",
+      "target_span": "",
+      "evidence": {
+        "expected": [
+          "{player_name}"
+        ],
+        "observed": []
+      },
+      "annotation_note": "玩家名变量消失。",
+      "source_zh": "{player_name}，传送门将在这里开启。",
+      "target_ja": "勇者よ、ポータルはここに開きます。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_038\",\n  \"issues\": [\n    {\n      \"issue_type\": \"terminology_forbidden\",\n      \"severity\": \"critical\",\n      \"source_span\": \"传送门\",\n      \"target_span\": \"ポータル\",\n      \"evidence\": \"The glossary explicitly forbids 'ポータル' for the source term '传送门', requiring '転送門' instead.\"\n    }\n  ]\n}"
+    },
+    {
+      "annotation_id": "ANN_033",
+      "string_id": "DEV_039",
+      "issue_type": "markup_missing",
+      "severity": "major",
+      "source_span": "</b>",
+      "target_span": "",
+      "evidence": {
+        "expected": [
+          "<b>",
+          "</b>"
+        ],
+        "observed": [
+          "<b>"
+        ]
+      },
+      "annotation_note": "粗体结束标签缺失。",
+      "source_zh": "<b>警告</b>：护盾还剩20%。",
+      "target_ja": "<b>警告：シールド残量が低下しています。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_039\",\n  \"issues\": [\n    {\n      \"issue_type\": \"omission\",\n      \"severity\": \"major\",\n      \"source_span\": \"20%\",\n      \"target_span\": \"\",\n      \"evidence\": \"The Japanese target omits the specific value '20%' present in the source text, which is critical for a battle UI warning indicating remaining shield health.\"\n    }\n  ]\n}"
+    },
+    {
+      "annotation_id": "ANN_032",
+      "string_id": "DEV_039",
+      "issue_type": "number_missing",
+      "severity": "major",
+      "source_span": "20%",
+      "target_span": "",
+      "evidence": {
+        "expected": [
+          "20%"
+        ],
+        "observed": []
+      },
+      "annotation_note": "护盾剩余比例消失。",
+      "source_zh": "<b>警告</b>：护盾还剩20%。",
+      "target_ja": "<b>警告：シールド残量が低下しています。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_039\",\n  \"issues\": [\n    {\n      \"issue_type\": \"omission\",\n      \"severity\": \"major\",\n      \"source_span\": \"20%\",\n      \"target_span\": \"\",\n      \"evidence\": \"The Japanese target omits the specific value '20%' present in the source text, which is critical for a battle UI warning indicating remaining shield health.\"\n    }\n  ]\n}"
+    },
+    {
+      "annotation_id": "ANN_044",
+      "string_id": "DEV_045",
+      "issue_type": "placeholder_extra",
+      "severity": "minor",
+      "source_span": "",
+      "target_span": "{guest_name}",
+      "evidence": {
+        "expected": [],
+        "observed": [
+          "{guest_name}"
+        ]
+      },
+      "annotation_note": "系统译文新增未定义变量。",
+      "source_zh": "访客登记完毕。",
+      "target_ja": "訪問者{guest_name}の登録が完了しました。明日また来てください。",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_045\",\n  \"issues\": [\n    {\n      \"issue_type\": \"addition\",\n      \"severity\": \"major\",\n      \"source_span\": \"\",\n      \"target_span\": \"明日また来てください。\",\n      \"evidence\": \"The Japanese target adds the sentence 'Please come again tomorrow,' which is not present in the Chinese source text.\"\n    }\n  ]\n}"
+    },
+    {
+      "annotation_id": "ANN_048",
+      "string_id": "DEV_047",
+      "issue_type": "linebreak_mismatch",
+      "severity": "major",
+      "source_span": "\\\\n",
+      "target_span": "",
+      "evidence": {
+        "expected": {
+          "actual_newlines": 0,
+          "escaped_newlines": 1
+        },
+        "observed": {
+          "actual_newlines": 0,
+          "escaped_newlines": 0
+        }
+      },
+      "annotation_note": "两项任务信息被压成一项。",
+      "source_zh": "撤离路线：东门\\n集合地点：古井",
+      "target_ja": "撤退経路：東門",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_047\",\n  \"issues\": [\n    {\n      \"issue_type\": \"omission\",\n      \"severity\": \"major\",\n      \"source_span\": \"集合地点：古井\",\n      \"target_span\": \"\",\n      \"evidence\": \"The Japanese target omits the second line of the source text ('集合地点：古井'), which corresponds to the 'context_after' information about reassembling at the old well.\"\n    }\n  ]\n}"
+    },
+    {
+      "annotation_id": "ANN_050",
+      "string_id": "DEV_048",
+      "issue_type": "markup_extra",
+      "severity": "major",
+      "source_span": "",
+      "target_span": "<b>, </b>",
+      "evidence": {
+        "expected": [],
+        "observed": [
+          "<b>",
+          "</b>"
+        ]
+      },
+      "annotation_note": "译文无依据新增粗体标签。",
+      "source_zh": "寒冰箭会降低敌人的移动速度。",
+      "target_ja": "<b>氷の矢は敵の攻撃速度を低下させる。</b>",
+      "provider_status": "success",
+      "protocol_status": "success",
+      "raw_response": "{\n  \"string_id\": \"DEV_048\",\n  \"issues\": [\n    {\n      \"issue_type\": \"mistranslation\",\n      \"severity\": \"critical\",\n      \"source_span\": \"移动速度\",\n      \"target_span\": \"攻撃速度\",\n      \"evidence\": \"The source text states the skill reduces 'movement speed' (移動速度), but the target translates it as 'attack speed' (攻撃速度). This is a significant functional error that changes the game mechanic described.\"\n    }\n  ]\n}"
+    }
+  ]
+}

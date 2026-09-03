@@ -1,0 +1,771 @@
+[
+  {
+    "string_id": "TEST_003",
+    "checker": "number",
+    "issue_type": "number_extra",
+    "severity": "minor",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": null,
+    "target_span": "2",
+    "evidence": {
+      "source_numbers": [],
+      "target_numbers": [
+        "2"
+      ],
+      "missing": [],
+      "extra": [
+        "2"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_010",
+    "checker": "number",
+    "issue_type": "number_mismatch",
+    "severity": "major",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": "100%",
+    "target_span": "１００",
+    "evidence": {
+      "source_numbers": [
+        "100%"
+      ],
+      "target_numbers": [
+        "１００"
+      ],
+      "missing": [
+        "100%"
+      ],
+      "extra": [
+        "１００"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_011",
+    "checker": "placeholder",
+    "issue_type": "placeholder_missing",
+    "severity": "major",
+    "message": "源文与日语译文的 Placeholder 不一致。",
+    "source_span": "{captain}",
+    "target_span": null,
+    "evidence": {
+      "missing": [
+        "{captain}"
+      ],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_012",
+    "checker": "placeholder",
+    "issue_type": "placeholder_modified",
+    "severity": "major",
+    "message": "源文与日语译文的 Placeholder 不一致。",
+    "source_span": "{player_name}",
+    "target_span": "{player}",
+    "evidence": {
+      "missing": [
+        "{player_name}"
+      ],
+      "extra": [
+        "{player}"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_013",
+    "checker": "placeholder",
+    "issue_type": "placeholder_extra",
+    "severity": "minor",
+    "message": "源文与日语译文的 Placeholder 不一致。",
+    "source_span": null,
+    "target_span": "{reward}",
+    "evidence": {
+      "missing": [],
+      "extra": [
+        "{reward}"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_014",
+    "checker": "number",
+    "issue_type": "number_mismatch",
+    "severity": "major",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": "25%",
+    "target_span": "20",
+    "evidence": {
+      "source_numbers": [
+        "25%"
+      ],
+      "target_numbers": [
+        "20"
+      ],
+      "missing": [
+        "25%"
+      ],
+      "extra": [
+        "20"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_015",
+    "checker": "number",
+    "issue_type": "number_missing",
+    "severity": "major",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": "12",
+    "target_span": null,
+    "evidence": {
+      "source_numbers": [
+        "12"
+      ],
+      "target_numbers": [],
+      "missing": [
+        "12"
+      ],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_016",
+    "checker": "number",
+    "issue_type": "number_extra",
+    "severity": "minor",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": null,
+    "target_span": "300",
+    "evidence": {
+      "source_numbers": [],
+      "target_numbers": [
+        "300"
+      ],
+      "missing": [],
+      "extra": [
+        "300"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_017",
+    "checker": "markup",
+    "issue_type": "markup_malformed",
+    "severity": "major",
+    "message": "日语译文中存在明显损坏的技术标签。",
+    "source_span": null,
+    "target_span": "<color=gold伝説</color>品質の装備。",
+    "evidence": {
+      "source_tags": [
+        "<color=gold>",
+        "</color>"
+      ],
+      "target_tags": [
+        "</color>"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_018",
+    "checker": "markup",
+    "issue_type": "markup_modified",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": "<icon=sun>",
+    "target_span": "<icon=moon>",
+    "evidence": {
+      "source_tags": [
+        "<icon=sun>"
+      ],
+      "target_tags": [
+        "<icon=moon>"
+      ],
+      "missing": [
+        "<icon=sun>"
+      ],
+      "extra": [
+        "<icon=moon>"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_019",
+    "checker": "markup",
+    "issue_type": "markup_missing",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": "<b>",
+    "target_span": null,
+    "evidence": {
+      "source_tags": [
+        "<b>",
+        "</b>"
+      ],
+      "target_tags": [
+        "</b>"
+      ],
+      "missing": [
+        "<b>"
+      ],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_020",
+    "checker": "markup",
+    "issue_type": "markup_extra",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": null,
+    "target_span": "<i>, </i>",
+    "evidence": {
+      "source_tags": [],
+      "target_tags": [
+        "<i>",
+        "</i>"
+      ],
+      "missing": [],
+      "extra": [
+        "<i>",
+        "</i>"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_021",
+    "checker": "markup",
+    "issue_type": "markup_order_mismatch",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": null,
+    "target_span": null,
+    "evidence": {
+      "source_tags": [
+        "<b>",
+        "<color=red>",
+        "</color>",
+        "</b>"
+      ],
+      "target_tags": [
+        "<color=red>",
+        "<b>",
+        "</color>",
+        "</b>"
+      ],
+      "missing": [],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_022",
+    "checker": "number",
+    "issue_type": "number_extra",
+    "severity": "minor",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": null,
+    "target_span": "1",
+    "evidence": {
+      "source_numbers": [],
+      "target_numbers": [
+        "1"
+      ],
+      "missing": [],
+      "extra": [
+        "1"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_022",
+    "checker": "linebreak",
+    "issue_type": "linebreak_mismatch",
+    "severity": "major",
+    "message": "必要换行在源文和日语译文中的数量不一致。",
+    "source_span": null,
+    "target_span": null,
+    "evidence": {
+      "source": {
+        "actual_newlines": 0,
+        "escaped_newlines": 1
+      },
+      "target": {
+        "actual_newlines": 0,
+        "escaped_newlines": 0
+      }
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_023",
+    "checker": "length",
+    "issue_type": "length_overflow",
+    "severity": "minor",
+    "message": "日语译文长度 18 超过限制 12。",
+    "source_span": null,
+    "target_span": "装備の強化処理が正常に完了しました。",
+    "evidence": {
+      "target_length": 18,
+      "max_length": 12,
+      "overflow": 6
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_024",
+    "checker": "terminology",
+    "issue_type": "terminology_forbidden",
+    "severity": "major",
+    "message": "术语“营地”使用了禁用译法。",
+    "source_span": "营地",
+    "target_span": "キャンプ",
+    "evidence": {
+      "source_term": "营地",
+      "approved_ja": "野営地",
+      "forbidden_ja": [
+        "キャンプ"
+      ],
+      "used_forbidden": [
+        "キャンプ"
+      ]
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "TEST_025",
+    "checker": "terminology",
+    "issue_type": "terminology_not_approved",
+    "severity": "major",
+    "message": "术语“金币”未使用批准译法“金貨”。",
+    "source_span": "金币",
+    "target_span": null,
+    "evidence": {
+      "source_term": "金币",
+      "approved_ja": "金貨",
+      "forbidden_ja": [
+        "コイン"
+      ],
+      "used_forbidden": []
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "TEST_026",
+    "checker": "placeholder",
+    "issue_type": "placeholder_missing",
+    "severity": "major",
+    "message": "源文与日语译文的 Placeholder 不一致。",
+    "source_span": "%(ally)s",
+    "target_span": null,
+    "evidence": {
+      "missing": [
+        "%(ally)s"
+      ],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_027",
+    "checker": "number",
+    "issue_type": "number_mismatch",
+    "severity": "major",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": "3.5%",
+    "target_span": "5.3",
+    "evidence": {
+      "source_numbers": [
+        "3.5%"
+      ],
+      "target_numbers": [
+        "5.3"
+      ],
+      "missing": [
+        "3.5%"
+      ],
+      "extra": [
+        "5.3"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_028",
+    "checker": "markup",
+    "issue_type": "markup_missing",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": "<color=blue>, </color>",
+    "target_span": null,
+    "evidence": {
+      "source_tags": [
+        "<color=blue>",
+        "</color>"
+      ],
+      "target_tags": [],
+      "missing": [
+        "<color=blue>",
+        "</color>"
+      ],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_029",
+    "checker": "linebreak",
+    "issue_type": "linebreak_mismatch",
+    "severity": "major",
+    "message": "必要换行在源文和日语译文中的数量不一致。",
+    "source_span": null,
+    "target_span": null,
+    "evidence": {
+      "source": {
+        "actual_newlines": 0,
+        "escaped_newlines": 2
+      },
+      "target": {
+        "actual_newlines": 0,
+        "escaped_newlines": 1
+      }
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_030",
+    "checker": "length",
+    "issue_type": "length_overflow",
+    "severity": "minor",
+    "message": "日语译文长度 13 超过限制 8。",
+    "source_span": null,
+    "target_span": "クエスト目標を更新しました",
+    "evidence": {
+      "target_length": 13,
+      "max_length": 8,
+      "overflow": 5
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_045",
+    "checker": "placeholder",
+    "issue_type": "placeholder_modified",
+    "severity": "major",
+    "message": "源文与日语译文的 Placeholder 不一致。",
+    "source_span": "{artifact_name}",
+    "target_span": "{item_name}",
+    "evidence": {
+      "missing": [
+        "{artifact_name}"
+      ],
+      "extra": [
+        "{item_name}"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_046",
+    "checker": "placeholder",
+    "issue_type": "placeholder_extra",
+    "severity": "minor",
+    "message": "源文与日语译文的 Placeholder 不一致。",
+    "source_span": null,
+    "target_span": "{bonus}",
+    "evidence": {
+      "missing": [],
+      "extra": [
+        "{bonus}"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_047",
+    "checker": "number",
+    "issue_type": "number_missing",
+    "severity": "major",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": "3",
+    "target_span": null,
+    "evidence": {
+      "source_numbers": [
+        "3"
+      ],
+      "target_numbers": [],
+      "missing": [
+        "3"
+      ],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_048",
+    "checker": "number",
+    "issue_type": "number_extra",
+    "severity": "minor",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": null,
+    "target_span": "1",
+    "evidence": {
+      "source_numbers": [],
+      "target_numbers": [
+        "1"
+      ],
+      "missing": [],
+      "extra": [
+        "1"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_049",
+    "checker": "markup",
+    "issue_type": "markup_modified",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": "</b>",
+    "target_span": "<b>",
+    "evidence": {
+      "source_tags": [
+        "<b>",
+        "</b>"
+      ],
+      "target_tags": [
+        "<b>",
+        "<b>"
+      ],
+      "missing": [
+        "</b>"
+      ],
+      "extra": [
+        "<b>"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_050",
+    "checker": "markup",
+    "issue_type": "markup_modified",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": "<color=blue>",
+    "target_span": "<color=red>",
+    "evidence": {
+      "source_tags": [
+        "<color=blue>",
+        "</color>"
+      ],
+      "target_tags": [
+        "<color=red>",
+        "</color>"
+      ],
+      "missing": [
+        "<color=blue>"
+      ],
+      "extra": [
+        "<color=red>"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_051",
+    "checker": "markup",
+    "issue_type": "markup_extra",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": null,
+    "target_span": "<shake>, </shake>",
+    "evidence": {
+      "source_tags": [],
+      "target_tags": [
+        "<shake>",
+        "</shake>"
+      ],
+      "missing": [],
+      "extra": [
+        "<shake>",
+        "</shake>"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_052",
+    "checker": "markup",
+    "issue_type": "markup_order_mismatch",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": null,
+    "target_span": null,
+    "evidence": {
+      "source_tags": [
+        "<b>",
+        "<i>",
+        "</i>",
+        "</b>"
+      ],
+      "target_tags": [
+        "<i>",
+        "<b>",
+        "</i>",
+        "</b>"
+      ],
+      "missing": [],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_053",
+    "checker": "terminology",
+    "issue_type": "terminology_forbidden",
+    "severity": "major",
+    "message": "术语“补给车”使用了禁用译法。",
+    "source_span": "补给车",
+    "target_span": "補給トラック",
+    "evidence": {
+      "source_term": "补给车",
+      "approved_ja": "補給車",
+      "forbidden_ja": [
+        "補給トラック"
+      ],
+      "used_forbidden": [
+        "補給トラック"
+      ]
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "TEST_054",
+    "checker": "terminology",
+    "issue_type": "terminology_not_approved",
+    "severity": "major",
+    "message": "术语“营地”未使用批准译法“野営地”。",
+    "source_span": "营地",
+    "target_span": null,
+    "evidence": {
+      "source_term": "营地",
+      "approved_ja": "野営地",
+      "forbidden_ja": [
+        "キャンプ"
+      ],
+      "used_forbidden": []
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "TEST_054",
+    "checker": "terminology",
+    "issue_type": "terminology_not_approved",
+    "severity": "major",
+    "message": "术语“传送门”未使用批准译法“転送門”。",
+    "source_span": "传送门",
+    "target_span": null,
+    "evidence": {
+      "source_term": "传送门",
+      "approved_ja": "転送門",
+      "forbidden_ja": [
+        "ポータル"
+      ],
+      "used_forbidden": []
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "TEST_057",
+    "checker": "placeholder",
+    "issue_type": "placeholder_missing",
+    "severity": "major",
+    "message": "源文与日语译文的 Placeholder 不一致。",
+    "source_span": "{device_name}",
+    "target_span": null,
+    "evidence": {
+      "missing": [
+        "{device_name}"
+      ],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_058",
+    "checker": "number",
+    "issue_type": "number_mismatch",
+    "severity": "major",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": "40",
+    "target_span": "25",
+    "evidence": {
+      "source_numbers": [
+        "40"
+      ],
+      "target_numbers": [
+        "25"
+      ],
+      "missing": [
+        "40"
+      ],
+      "extra": [
+        "25"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_059",
+    "checker": "markup",
+    "issue_type": "markup_missing",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": "<b>, </b>",
+    "target_span": null,
+    "evidence": {
+      "source_tags": [
+        "<b>",
+        "</b>"
+      ],
+      "target_tags": [],
+      "missing": [
+        "<b>",
+        "</b>"
+      ],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "TEST_060",
+    "checker": "length",
+    "issue_type": "length_overflow",
+    "severity": "minor",
+    "message": "日语译文长度 29 超过限制 10。",
+    "source_span": null,
+    "target_span": "現在においてパーティーメンバーを変更することはできません。",
+    "evidence": {
+      "target_length": 29,
+      "max_length": 10,
+      "overflow": 19
+    },
+    "needs_human_review": false
+  }
+]

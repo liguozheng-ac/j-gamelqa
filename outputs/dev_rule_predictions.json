@@ -1,0 +1,561 @@
+[
+  {
+    "string_id": "DEV_002",
+    "checker": "placeholder",
+    "issue_type": "placeholder_missing",
+    "severity": "major",
+    "message": "源文与日语译文的 Placeholder 不一致。",
+    "source_span": "{player_name}",
+    "target_span": null,
+    "evidence": {
+      "missing": [
+        "{player_name}"
+      ],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_003",
+    "checker": "placeholder",
+    "issue_type": "placeholder_modified",
+    "severity": "major",
+    "message": "源文与日语译文的 Placeholder 不一致。",
+    "source_span": "{item_count}",
+    "target_span": "{item_num}",
+    "evidence": {
+      "missing": [
+        "{item_count}"
+      ],
+      "extra": [
+        "{item_num}"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_004",
+    "checker": "number",
+    "issue_type": "number_mismatch",
+    "severity": "major",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": "3",
+    "target_span": "5",
+    "evidence": {
+      "source_numbers": [
+        "3"
+      ],
+      "target_numbers": [
+        "5"
+      ],
+      "missing": [
+        "3"
+      ],
+      "extra": [
+        "5"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_015",
+    "checker": "number",
+    "issue_type": "number_extra",
+    "severity": "minor",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": null,
+    "target_span": "1, 2",
+    "evidence": {
+      "source_numbers": [],
+      "target_numbers": [
+        "1",
+        "2"
+      ],
+      "missing": [],
+      "extra": [
+        "1",
+        "2"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_017",
+    "checker": "terminology",
+    "issue_type": "terminology_forbidden",
+    "severity": "major",
+    "message": "术语“营地”使用了禁用译法。",
+    "source_span": "营地",
+    "target_span": "キャンプ",
+    "evidence": {
+      "source_term": "营地",
+      "approved_ja": "野営地",
+      "forbidden_ja": [
+        "キャンプ"
+      ],
+      "used_forbidden": [
+        "キャンプ"
+      ]
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_018",
+    "checker": "placeholder",
+    "issue_type": "placeholder_extra",
+    "severity": "minor",
+    "message": "源文与日语译文的 Placeholder 不一致。",
+    "source_span": null,
+    "target_span": "{player_name}",
+    "evidence": {
+      "missing": [],
+      "extra": [
+        "{player_name}"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_019",
+    "checker": "number",
+    "issue_type": "number_missing",
+    "severity": "major",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": "15",
+    "target_span": null,
+    "evidence": {
+      "source_numbers": [
+        "15"
+      ],
+      "target_numbers": [],
+      "missing": [
+        "15"
+      ],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_020",
+    "checker": "number",
+    "issue_type": "number_extra",
+    "severity": "minor",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": null,
+    "target_span": "30",
+    "evidence": {
+      "source_numbers": [],
+      "target_numbers": [
+        "30"
+      ],
+      "missing": [],
+      "extra": [
+        "30"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_021",
+    "checker": "markup",
+    "issue_type": "markup_malformed",
+    "severity": "major",
+    "message": "日语译文中存在明显损坏的技术标签。",
+    "source_span": null,
+    "target_span": "<b緊急</b>：城門が攻撃されています！",
+    "evidence": {
+      "source_tags": [
+        "<b>",
+        "</b>"
+      ],
+      "target_tags": [
+        "</b>"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_022",
+    "checker": "markup",
+    "issue_type": "markup_modified",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": "<color=red>",
+    "target_span": "<color=blue>",
+    "evidence": {
+      "source_tags": [
+        "<color=red>",
+        "</color>"
+      ],
+      "target_tags": [
+        "<color=blue>",
+        "</color>"
+      ],
+      "missing": [
+        "<color=red>"
+      ],
+      "extra": [
+        "<color=blue>"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_023",
+    "checker": "markup",
+    "issue_type": "markup_missing",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": "</b>",
+    "target_span": null,
+    "evidence": {
+      "source_tags": [
+        "<b>",
+        "</b>"
+      ],
+      "target_tags": [
+        "<b>"
+      ],
+      "missing": [
+        "</b>"
+      ],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_024",
+    "checker": "markup",
+    "issue_type": "markup_extra",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": null,
+    "target_span": "<b>, </b>",
+    "evidence": {
+      "source_tags": [],
+      "target_tags": [
+        "<b>",
+        "</b>"
+      ],
+      "missing": [],
+      "extra": [
+        "<b>",
+        "</b>"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_025",
+    "checker": "markup",
+    "issue_type": "markup_order_mismatch",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": null,
+    "target_span": null,
+    "evidence": {
+      "source_tags": [
+        "<b>",
+        "<color=red>",
+        "</color>",
+        "</b>"
+      ],
+      "target_tags": [
+        "<color=red>",
+        "<b>",
+        "</b>",
+        "</color>"
+      ],
+      "missing": [],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_026",
+    "checker": "linebreak",
+    "issue_type": "linebreak_mismatch",
+    "severity": "major",
+    "message": "必要换行在源文和日语译文中的数量不一致。",
+    "source_span": null,
+    "target_span": null,
+    "evidence": {
+      "source": {
+        "actual_newlines": 0,
+        "escaped_newlines": 1
+      },
+      "target": {
+        "actual_newlines": 0,
+        "escaped_newlines": 0
+      }
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_027",
+    "checker": "length",
+    "issue_type": "length_overflow",
+    "severity": "minor",
+    "message": "日语译文长度 21 超过限制 12。",
+    "source_span": null,
+    "target_span": "この装備を本当に破棄してもよろしいですか？",
+    "evidence": {
+      "target_length": 21,
+      "max_length": 12,
+      "overflow": 9
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_028",
+    "checker": "terminology",
+    "issue_type": "terminology_forbidden",
+    "severity": "major",
+    "message": "术语“传送门”使用了禁用译法。",
+    "source_span": "传送门",
+    "target_span": "ポータル",
+    "evidence": {
+      "source_term": "传送门",
+      "approved_ja": "転送門",
+      "forbidden_ja": [
+        "ポータル"
+      ],
+      "used_forbidden": [
+        "ポータル"
+      ]
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_029",
+    "checker": "terminology",
+    "issue_type": "terminology_not_approved",
+    "severity": "major",
+    "message": "术语“补给车”未使用批准译法“補給車”。",
+    "source_span": "补给车",
+    "target_span": null,
+    "evidence": {
+      "source_term": "补给车",
+      "approved_ja": "補給車",
+      "forbidden_ja": [
+        "補給トラック"
+      ],
+      "used_forbidden": []
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_038",
+    "checker": "placeholder",
+    "issue_type": "placeholder_missing",
+    "severity": "major",
+    "message": "源文与日语译文的 Placeholder 不一致。",
+    "source_span": "{player_name}",
+    "target_span": null,
+    "evidence": {
+      "missing": [
+        "{player_name}"
+      ],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_038",
+    "checker": "terminology",
+    "issue_type": "terminology_forbidden",
+    "severity": "major",
+    "message": "术语“传送门”使用了禁用译法。",
+    "source_span": "传送门",
+    "target_span": "ポータル",
+    "evidence": {
+      "source_term": "传送门",
+      "approved_ja": "転送門",
+      "forbidden_ja": [
+        "ポータル"
+      ],
+      "used_forbidden": [
+        "ポータル"
+      ]
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_039",
+    "checker": "number",
+    "issue_type": "number_missing",
+    "severity": "major",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": "20%",
+    "target_span": null,
+    "evidence": {
+      "source_numbers": [
+        "20%"
+      ],
+      "target_numbers": [],
+      "missing": [
+        "20%"
+      ],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_039",
+    "checker": "markup",
+    "issue_type": "markup_missing",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": "</b>",
+    "target_span": null,
+    "evidence": {
+      "source_tags": [
+        "<b>",
+        "</b>"
+      ],
+      "target_tags": [
+        "<b>"
+      ],
+      "missing": [
+        "</b>"
+      ],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_040",
+    "checker": "number",
+    "issue_type": "number_mismatch",
+    "severity": "major",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": "10",
+    "target_span": "5",
+    "evidence": {
+      "source_numbers": [
+        "10"
+      ],
+      "target_numbers": [
+        "5"
+      ],
+      "missing": [
+        "10"
+      ],
+      "extra": [
+        "5"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_041",
+    "checker": "length",
+    "issue_type": "length_overflow",
+    "severity": "minor",
+    "message": "日语译文长度 26 超过限制 16。",
+    "source_span": null,
+    "target_span": "私はこのことに対して異議というものを持っていません。",
+    "evidence": {
+      "target_length": 26,
+      "max_length": 16,
+      "overflow": 10
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_044",
+    "checker": "terminology",
+    "issue_type": "terminology_not_approved",
+    "severity": "major",
+    "message": "术语“金币”未使用批准译法“金貨”。",
+    "source_span": "金币",
+    "target_span": null,
+    "evidence": {
+      "source_term": "金币",
+      "approved_ja": "金貨",
+      "forbidden_ja": [
+        "コイン"
+      ],
+      "used_forbidden": []
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_045",
+    "checker": "placeholder",
+    "issue_type": "placeholder_extra",
+    "severity": "minor",
+    "message": "源文与日语译文的 Placeholder 不一致。",
+    "source_span": null,
+    "target_span": "{guest_name}",
+    "evidence": {
+      "missing": [],
+      "extra": [
+        "{guest_name}"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_046",
+    "checker": "terminology",
+    "issue_type": "terminology_forbidden",
+    "severity": "major",
+    "message": "术语“侦察报告”使用了禁用译法。",
+    "source_span": "侦察报告",
+    "target_span": "スカウトレポート",
+    "evidence": {
+      "source_term": "侦察报告",
+      "approved_ja": "偵察報告",
+      "forbidden_ja": [
+        "スカウトレポート"
+      ],
+      "used_forbidden": [
+        "スカウトレポート"
+      ]
+    },
+    "needs_human_review": true
+  },
+  {
+    "string_id": "DEV_047",
+    "checker": "linebreak",
+    "issue_type": "linebreak_mismatch",
+    "severity": "major",
+    "message": "必要换行在源文和日语译文中的数量不一致。",
+    "source_span": null,
+    "target_span": null,
+    "evidence": {
+      "source": {
+        "actual_newlines": 0,
+        "escaped_newlines": 1
+      },
+      "target": {
+        "actual_newlines": 0,
+        "escaped_newlines": 0
+      }
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "DEV_048",
+    "checker": "markup",
+    "issue_type": "markup_extra",
+    "severity": "major",
+    "message": "源文与日语译文中的技术标签不一致。",
+    "source_span": null,
+    "target_span": "<b>, </b>",
+    "evidence": {
+      "source_tags": [],
+      "target_tags": [
+        "<b>",
+        "</b>"
+      ],
+      "missing": [],
+      "extra": [
+        "<b>",
+        "</b>"
+      ]
+    },
+    "needs_human_review": false
+  }
+]

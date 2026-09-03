@@ -1,0 +1,81 @@
+{
+  "experiment_id": "rule_qwen35_context_hybrid_v1",
+  "created_at_utc": "2026-09-02T18:45:03.572527+00:00",
+  "rule_component": "rule_baseline_v1",
+  "llm_component": "qwen35_9b_with_context_v1",
+  "llm_model": "qwen3.5:9b",
+  "llm_input_mode": "with_context",
+  "hybrid_policy": "all_rule_predictions__plus_llm_required_from_with_context_llm",
+  "provider_calls": 0,
+  "dataset": "48-item synthetic development benchmark v1",
+  "dataset_item_count": 48,
+  "taxonomy_source": "src/j_gamelqa/taxonomy.py",
+  "rule_addressable_issue_types": [
+    "length_overflow",
+    "linebreak_mismatch",
+    "markup_extra",
+    "markup_malformed",
+    "markup_missing",
+    "markup_modified",
+    "markup_order_mismatch",
+    "number_extra",
+    "number_mismatch",
+    "number_missing",
+    "placeholder_extra",
+    "placeholder_missing",
+    "placeholder_modified",
+    "terminology_forbidden",
+    "terminology_not_approved"
+  ],
+  "llm_required_issue_types": [
+    "addition",
+    "character_voice_mismatch",
+    "first_person_mismatch",
+    "keigo_mismatch",
+    "mistranslation",
+    "omission",
+    "translationese"
+  ],
+  "evaluation_key": [
+    "string_id",
+    "issue_type"
+  ],
+  "component_artifacts": {
+    "dev": {
+      "path": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\data\\dev.csv",
+      "sha256": "8F0AD5D320F1FE8EB2C2813409055DA4D5F5A1E86174D832B04C0D36288B0495"
+    },
+    "reference_annotations": {
+      "path": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\data\\dev_annotations.csv",
+      "sha256": "04D331B09C9080406F9195E287B0A9D730D00F2163D8B18144C6C5C8D0A6116A"
+    },
+    "rule_predictions": {
+      "path": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\outputs\\dev_rule_predictions.json",
+      "sha256": "8B53636F970051CEDDF302C6ECA9420B11A4373C8ED4BBCEEC0403405B40F688"
+    },
+    "rule_evaluation": {
+      "path": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\outputs\\dev_evaluation.json",
+      "sha256": "54C60C34ED3A287E7535A0AE661FE64735D4C671C909E0D03C98D3B15A02111E"
+    },
+    "llm_no_context_predictions": {
+      "path": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\outputs\\qwen35_9b_no_context_predictions.json",
+      "sha256": "C334528827E36E1BFC97846BB4796CDBE45728B56823AD9FFE732DBFE3FEF13C"
+    },
+    "llm_no_context_evaluation": {
+      "path": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\outputs\\qwen35_9b_no_context_evaluation.json",
+      "sha256": "2CEB571A8E9A3B7DBCF1E5294AFED1715D6A120595E96BC5D7F84E760ED5582A"
+    },
+    "llm_with_context_predictions": {
+      "path": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\outputs\\qwen35_9b_with_context_predictions.json",
+      "sha256": "502C920887948BF5D1813D670BB943B4F0A0B7871DCADDD01898830B7D71FC4B"
+    },
+    "llm_with_context_evaluation": {
+      "path": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\outputs\\qwen35_9b_with_context_evaluation.json",
+      "sha256": "176D6C97FE0CE9E8B3010A63B4779AFE6DCC39AA020817DAB8B36D0E48A594F5"
+    },
+    "llm_with_context_config": {
+      "path": "D:\\AI-Projects\\J-GameLQA\\j-gamelqa\\outputs\\qwen35_9b_with_context_config.json",
+      "sha256": "76928AD892153CE54A9D16778E26ADB9DE4ADA5ABA780517A969EFDF99DCB7DF"
+    }
+  }
+}

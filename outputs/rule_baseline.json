@@ -1,0 +1,60 @@
+[
+  {
+    "string_id": "PILOT_002",
+    "checker": "placeholder",
+    "issue_type": "placeholder_missing",
+    "severity": "major",
+    "message": "源文与日语译文的 Placeholder 不一致。",
+    "source_span": "{player_name}",
+    "target_span": null,
+    "evidence": {
+      "missing": [
+        "{player_name}"
+      ],
+      "extra": []
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "PILOT_003",
+    "checker": "placeholder",
+    "issue_type": "placeholder_modified",
+    "severity": "major",
+    "message": "源文与日语译文的 Placeholder 不一致。",
+    "source_span": "{item_count}",
+    "target_span": "{item_num}",
+    "evidence": {
+      "missing": [
+        "{item_count}"
+      ],
+      "extra": [
+        "{item_num}"
+      ]
+    },
+    "needs_human_review": false
+  },
+  {
+    "string_id": "PILOT_004",
+    "checker": "number",
+    "issue_type": "number_mismatch",
+    "severity": "major",
+    "message": "源文与日语译文中的数字、数值或百分比不一致。",
+    "source_span": "3",
+    "target_span": "5",
+    "evidence": {
+      "source_numbers": [
+        "3"
+      ],
+      "target_numbers": [
+        "5"
+      ],
+      "missing": [
+        "3"
+      ],
+      "extra": [
+        "5"
+      ]
+    },
+    "needs_human_review": false
+  }
+]

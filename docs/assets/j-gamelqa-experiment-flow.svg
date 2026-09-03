@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1320" viewBox="0 0 900 1320" role="img" aria-labelledby="title desc">
+  <title id="title">J-GameLQA v1 experiment flow</title>
+  <desc id="desc">A controlled experimental path from rule baseline through context ablation and prompt revisions to the first and final held-out evaluation and version 1 freeze.</desc>
+  <defs>
+    <style>
+      .title { font: 700 32px Arial, sans-serif; fill: #172033; }
+      .subtitle { font: 400 16px Arial, sans-serif; fill: #5c667a; }
+      .step { fill: #ffffff; stroke: #aab7ca; stroke-width: 2; rx: 16; }
+      .decision { fill: #eef6ff; stroke: #4f8edc; stroke-width: 2.5; rx: 16; }
+      .negative { fill: #fff1f1; stroke: #d45d5d; stroke-width: 2.5; rx: 16; }
+      .positive { fill: #eefbf5; stroke: #39a275; stroke-width: 2.5; rx: 16; }
+      .freeze { fill: #f7f2ff; stroke: #8264c7; stroke-width: 3; rx: 18; }
+      .label { font: 700 20px Arial, sans-serif; fill: #172033; }
+      .note { font: 400 14px Arial, sans-serif; fill: #5c667a; }
+      .cross { font: 700 25px Arial, sans-serif; fill: #b33f3f; }
+      .check { font: 700 25px Arial, sans-serif; fill: #27835b; }
+      .arrow { fill: none; stroke: #738198; stroke-width: 3; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#738198"/>
+    </marker>
+  </defs>
+  <rect width="900" height="1320" fill="#ffffff"/>
+  <text x="450" y="48" text-anchor="middle" class="title">J-GameLQA v1 Experiment Flow</text>
+  <text x="450" y="76" text-anchor="middle" class="subtitle">Baseline → controlled experiments → frozen held-out result</text>
+
+  <rect x="210" y="105" width="480" height="76" class="step"/>
+  <text x="450" y="137" text-anchor="middle" class="label">Rule Baseline</text>
+  <text x="450" y="160" text-anchor="middle" class="note">Deterministic technical QA</text>
+  <path d="M450 181 V218" class="arrow"/>
+
+  <rect x="210" y="221" width="480" height="76" class="step"/>
+  <text x="450" y="253" text-anchor="middle" class="label">LLM — No Context</text>
+  <text x="450" y="276" text-anchor="middle" class="note">Source + target baseline</text>
+  <path d="M450 297 V334" class="arrow"/>
+
+  <rect x="210" y="337" width="480" height="76" class="decision"/>
+  <text x="450" y="369" text-anchor="middle" class="label">LLM — With Context</text>
+  <text x="450" y="392" text-anchor="middle" class="note">Speaker · relationship · scene · neighboring text</text>
+  <path d="M450 413 V450" class="arrow"/>
+
+  <rect x="210" y="453" width="480" height="76" class="decision"/>
+  <text x="450" y="485" text-anchor="middle" class="label">Context Ablation</text>
+  <text x="450" y="508" text-anchor="middle" class="note">Only context changes; other settings fixed</text>
+  <path d="M450 529 V566" class="arrow"/>
+
+  <rect x="210" y="569" width="480" height="76" class="step"/>
+  <text x="450" y="601" text-anchor="middle" class="label">Hybrid v1</text>
+  <text x="450" y="624" text-anchor="middle" class="note">Transparent taxonomy routing</text>
+  <path d="M450 645 V682" class="arrow"/>
+
+  <rect x="210" y="685" width="480" height="76" class="decision"/>
+  <text x="450" y="717" text-anchor="middle" class="label">DEV / Held-out Split</text>
+  <text x="450" y="740" text-anchor="middle" class="note">Prompt development separated from final evaluation</text>
+  <path d="M450 761 V798" class="arrow"/>
+
+  <rect x="210" y="801" width="480" height="76" class="negative"/>
+  <text x="450" y="833" text-anchor="middle" class="label">Prompt v2</text>
+  <text x="450" y="856" text-anchor="middle" class="note">Over-specified; primary DEV metrics regressed</text>
+  <text x="654" y="849" text-anchor="middle" class="cross">×</text>
+  <path d="M450 877 V914" class="arrow"/>
+
+  <rect x="210" y="917" width="480" height="76" class="positive"/>
+  <text x="450" y="949" text-anchor="middle" class="label">Prompt v2.1</text>
+  <text x="450" y="972" text-anchor="middle" class="note">Minimal revision; passed pre-registered DEV gates</text>
+  <text x="654" y="965" text-anchor="middle" class="check">✓</text>
+  <path d="M450 993 V1030" class="arrow"/>
+
+  <rect x="210" y="1033" width="480" height="86" class="decision"/>
+  <text x="450" y="1067" text-anchor="middle" class="label">First &amp; Final Held-out Evaluation</text>
+  <text x="450" y="1092" text-anchor="middle" class="note">Predictions frozen before annotations were loaded</text>
+  <path d="M450 1119 V1162" class="arrow"/>
+
+  <rect x="190" y="1165" width="520" height="100" class="freeze"/>
+  <text x="450" y="1204" text-anchor="middle" class="label">J-GameLQA v1.0 Freeze</text>
+  <text x="450" y="1232" text-anchor="middle" class="note">Held-out Test retired · artifacts hashed · no retuning</text>
+  <text x="450" y="1295" text-anchor="middle" class="subtitle">A measured experiment, not a one-prompt demo</text>
+</svg>

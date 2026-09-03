@@ -1,0 +1,783 @@
+{
+  "protocol_version": "heldout_evaluation_protocol_v1",
+  "primary_metric": "overall_detection_f1",
+  "methods": {
+    "Rule Only": {
+      "overall": {
+        "tp": 33,
+        "fp": 4,
+        "fn": 33,
+        "precision": 0.8918918918918919,
+        "recall": 0.5,
+        "f1": 0.6407766990291263
+      },
+      "rule_addressable": {
+        "tp": 33,
+        "fp": 4,
+        "fn": 1,
+        "precision": 0.8918918918918919,
+        "recall": 0.9705882352941176,
+        "f1": 0.9295774647887325
+      },
+      "llm_required": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 32,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "context_sensitive": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 14,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "LLM Prompt v1": {
+      "overall": {
+        "tp": 34,
+        "fp": 42,
+        "fn": 32,
+        "precision": 0.4473684210526316,
+        "recall": 0.5151515151515151,
+        "f1": 0.4788732394366197
+      },
+      "rule_addressable": {
+        "tp": 12,
+        "fp": 3,
+        "fn": 22,
+        "precision": 0.8,
+        "recall": 0.35294117647058826,
+        "f1": 0.489795918367347
+      },
+      "llm_required": {
+        "tp": 22,
+        "fp": 39,
+        "fn": 10,
+        "precision": 0.36065573770491804,
+        "recall": 0.6875,
+        "f1": 0.4731182795698925
+      },
+      "context_sensitive": {
+        "tp": 11,
+        "fp": 7,
+        "fn": 3,
+        "precision": 0.6111111111111112,
+        "recall": 0.7857142857142857,
+        "f1": 0.6875000000000001
+      }
+    },
+    "LLM Prompt v2.1": {
+      "overall": {
+        "tp": 37,
+        "fp": 40,
+        "fn": 29,
+        "precision": 0.4805194805194805,
+        "recall": 0.5606060606060606,
+        "f1": 0.5174825174825174
+      },
+      "rule_addressable": {
+        "tp": 12,
+        "fp": 3,
+        "fn": 22,
+        "precision": 0.8,
+        "recall": 0.35294117647058826,
+        "f1": 0.489795918367347
+      },
+      "llm_required": {
+        "tp": 25,
+        "fp": 37,
+        "fn": 7,
+        "precision": 0.4032258064516129,
+        "recall": 0.78125,
+        "f1": 0.5319148936170212
+      },
+      "context_sensitive": {
+        "tp": 13,
+        "fp": 8,
+        "fn": 1,
+        "precision": 0.6190476190476191,
+        "recall": 0.9285714285714286,
+        "f1": 0.742857142857143
+      }
+    },
+    "Hybrid Prompt v1": {
+      "overall": {
+        "tp": 55,
+        "fp": 43,
+        "fn": 11,
+        "precision": 0.5612244897959183,
+        "recall": 0.8333333333333334,
+        "f1": 0.6707317073170731
+      },
+      "rule_addressable": {
+        "tp": 33,
+        "fp": 4,
+        "fn": 1,
+        "precision": 0.8918918918918919,
+        "recall": 0.9705882352941176,
+        "f1": 0.9295774647887325
+      },
+      "llm_required": {
+        "tp": 22,
+        "fp": 39,
+        "fn": 10,
+        "precision": 0.36065573770491804,
+        "recall": 0.6875,
+        "f1": 0.4731182795698925
+      },
+      "context_sensitive": {
+        "tp": 11,
+        "fp": 7,
+        "fn": 3,
+        "precision": 0.6111111111111112,
+        "recall": 0.7857142857142857,
+        "f1": 0.6875000000000001
+      }
+    },
+    "Hybrid Prompt v2.1": {
+      "overall": {
+        "tp": 58,
+        "fp": 41,
+        "fn": 8,
+        "precision": 0.5858585858585859,
+        "recall": 0.8787878787878788,
+        "f1": 0.7030303030303031
+      },
+      "rule_addressable": {
+        "tp": 33,
+        "fp": 4,
+        "fn": 1,
+        "precision": 0.8918918918918919,
+        "recall": 0.9705882352941176,
+        "f1": 0.9295774647887325
+      },
+      "llm_required": {
+        "tp": 25,
+        "fp": 37,
+        "fn": 7,
+        "precision": 0.4032258064516129,
+        "recall": 0.78125,
+        "f1": 0.5319148936170212
+      },
+      "context_sensitive": {
+        "tp": 13,
+        "fp": 8,
+        "fn": 1,
+        "precision": 0.6190476190476191,
+        "recall": 0.9285714285714286,
+        "f1": 0.742857142857143
+      }
+    }
+  },
+  "focus_per_issue": {
+    "mistranslation": {
+      "Rule Only": {
+        "issue_type": "mistranslation",
+        "reference_count": 5,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "LLM Prompt v1": {
+        "issue_type": "mistranslation",
+        "reference_count": 5,
+        "prediction_count": 21,
+        "tp": 4,
+        "fp": 17,
+        "fn": 1,
+        "precision": 0.19047619047619047,
+        "recall": 0.8,
+        "f1": 0.3076923076923077
+      },
+      "LLM Prompt v2.1": {
+        "issue_type": "mistranslation",
+        "reference_count": 5,
+        "prediction_count": 15,
+        "tp": 4,
+        "fp": 11,
+        "fn": 1,
+        "precision": 0.26666666666666666,
+        "recall": 0.8,
+        "f1": 0.4
+      },
+      "Hybrid Prompt v1": {
+        "issue_type": "mistranslation",
+        "reference_count": 5,
+        "prediction_count": 21,
+        "tp": 4,
+        "fp": 17,
+        "fn": 1,
+        "precision": 0.19047619047619047,
+        "recall": 0.8,
+        "f1": 0.3076923076923077
+      },
+      "Hybrid Prompt v2.1": {
+        "issue_type": "mistranslation",
+        "reference_count": 5,
+        "prediction_count": 15,
+        "tp": 4,
+        "fp": 11,
+        "fn": 1,
+        "precision": 0.26666666666666666,
+        "recall": 0.8,
+        "f1": 0.4
+      }
+    },
+    "translationese": {
+      "Rule Only": {
+        "issue_type": "translationese",
+        "reference_count": 5,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "LLM Prompt v1": {
+        "issue_type": "translationese",
+        "reference_count": 5,
+        "prediction_count": 3,
+        "tp": 3,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1": 0.7499999999999999
+      },
+      "LLM Prompt v2.1": {
+        "issue_type": "translationese",
+        "reference_count": 5,
+        "prediction_count": 3,
+        "tp": 2,
+        "fp": 1,
+        "fn": 3,
+        "precision": 0.6666666666666666,
+        "recall": 0.4,
+        "f1": 0.5
+      },
+      "Hybrid Prompt v1": {
+        "issue_type": "translationese",
+        "reference_count": 5,
+        "prediction_count": 3,
+        "tp": 3,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1": 0.7499999999999999
+      },
+      "Hybrid Prompt v2.1": {
+        "issue_type": "translationese",
+        "reference_count": 5,
+        "prediction_count": 3,
+        "tp": 2,
+        "fp": 1,
+        "fn": 3,
+        "precision": 0.6666666666666666,
+        "recall": 0.4,
+        "f1": 0.5
+      }
+    },
+    "keigo_mismatch": {
+      "Rule Only": {
+        "issue_type": "keigo_mismatch",
+        "reference_count": 5,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "LLM Prompt v1": {
+        "issue_type": "keigo_mismatch",
+        "reference_count": 5,
+        "prediction_count": 6,
+        "tp": 4,
+        "fp": 2,
+        "fn": 1,
+        "precision": 0.6666666666666666,
+        "recall": 0.8,
+        "f1": 0.7272727272727272
+      },
+      "LLM Prompt v2.1": {
+        "issue_type": "keigo_mismatch",
+        "reference_count": 5,
+        "prediction_count": 9,
+        "tp": 4,
+        "fp": 5,
+        "fn": 1,
+        "precision": 0.4444444444444444,
+        "recall": 0.8,
+        "f1": 0.5714285714285714
+      },
+      "Hybrid Prompt v1": {
+        "issue_type": "keigo_mismatch",
+        "reference_count": 5,
+        "prediction_count": 6,
+        "tp": 4,
+        "fp": 2,
+        "fn": 1,
+        "precision": 0.6666666666666666,
+        "recall": 0.8,
+        "f1": 0.7272727272727272
+      },
+      "Hybrid Prompt v2.1": {
+        "issue_type": "keigo_mismatch",
+        "reference_count": 5,
+        "prediction_count": 9,
+        "tp": 4,
+        "fp": 5,
+        "fn": 1,
+        "precision": 0.4444444444444444,
+        "recall": 0.8,
+        "f1": 0.5714285714285714
+      }
+    },
+    "first_person_mismatch": {
+      "Rule Only": {
+        "issue_type": "first_person_mismatch",
+        "reference_count": 4,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "LLM Prompt v1": {
+        "issue_type": "first_person_mismatch",
+        "reference_count": 4,
+        "prediction_count": 5,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888888888888889
+      },
+      "LLM Prompt v2.1": {
+        "issue_type": "first_person_mismatch",
+        "reference_count": 4,
+        "prediction_count": 5,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888888888888889
+      },
+      "Hybrid Prompt v1": {
+        "issue_type": "first_person_mismatch",
+        "reference_count": 4,
+        "prediction_count": 5,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888888888888889
+      },
+      "Hybrid Prompt v2.1": {
+        "issue_type": "first_person_mismatch",
+        "reference_count": 4,
+        "prediction_count": 5,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888888888888889
+      }
+    },
+    "character_voice_mismatch": {
+      "Rule Only": {
+        "issue_type": "character_voice_mismatch",
+        "reference_count": 5,
+        "prediction_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "LLM Prompt v1": {
+        "issue_type": "character_voice_mismatch",
+        "reference_count": 5,
+        "prediction_count": 7,
+        "tp": 3,
+        "fp": 4,
+        "fn": 2,
+        "precision": 0.42857142857142855,
+        "recall": 0.6,
+        "f1": 0.5
+      },
+      "LLM Prompt v2.1": {
+        "issue_type": "character_voice_mismatch",
+        "reference_count": 5,
+        "prediction_count": 7,
+        "tp": 5,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "f1": 0.8333333333333333
+      },
+      "Hybrid Prompt v1": {
+        "issue_type": "character_voice_mismatch",
+        "reference_count": 5,
+        "prediction_count": 7,
+        "tp": 3,
+        "fp": 4,
+        "fn": 2,
+        "precision": 0.42857142857142855,
+        "recall": 0.6,
+        "f1": 0.5
+      },
+      "Hybrid Prompt v2.1": {
+        "issue_type": "character_voice_mismatch",
+        "reference_count": 5,
+        "prediction_count": 7,
+        "tp": 5,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "f1": 0.8333333333333333
+      }
+    }
+  },
+  "development_to_heldout_gap": {
+    "Rule Only": {
+      "development_f1": 0.6582278481012658,
+      "heldout_f1": 0.6407766990291263,
+      "test_minus_dev": -0.017451149072139516
+    },
+    "LLM Prompt v1": {
+      "development_f1": 0.6601941747572816,
+      "heldout_f1": 0.4788732394366197,
+      "test_minus_dev": -0.1813209353206619
+    },
+    "LLM Prompt v2.1": {
+      "development_f1": 0.6732673267326733,
+      "heldout_f1": 0.5174825174825174,
+      "test_minus_dev": -0.15578480925015592
+    },
+    "Hybrid Prompt v1": {
+      "development_f1": 0.8376068376068376,
+      "heldout_f1": 0.6707317073170731,
+      "test_minus_dev": -0.16687513028976453
+    },
+    "Hybrid Prompt v2.1": {
+      "development_f1": 0.8521739130434782,
+      "heldout_f1": 0.7030303030303031,
+      "test_minus_dev": -0.1491436100131751
+    }
+  },
+  "clean_false_alarm": {
+    "clean_sample_count": 10,
+    "clean_sample_ids": [
+      "TEST_001",
+      "TEST_002",
+      "TEST_003",
+      "TEST_004",
+      "TEST_005",
+      "TEST_006",
+      "TEST_007",
+      "TEST_008",
+      "TEST_009",
+      "TEST_010"
+    ],
+    "methods": {
+      "Rule Only": {
+        "false_alarmed_clean_samples": 2,
+        "false_alarm_rate": 0.2,
+        "false_alarm_ids": [
+          "TEST_003",
+          "TEST_010"
+        ]
+      },
+      "LLM Prompt v1": {
+        "false_alarmed_clean_samples": 5,
+        "false_alarm_rate": 0.5,
+        "false_alarm_ids": [
+          "TEST_001",
+          "TEST_006",
+          "TEST_007",
+          "TEST_009",
+          "TEST_010"
+        ]
+      },
+      "LLM Prompt v2.1": {
+        "false_alarmed_clean_samples": 7,
+        "false_alarm_rate": 0.7,
+        "false_alarm_ids": [
+          "TEST_001",
+          "TEST_002",
+          "TEST_006",
+          "TEST_007",
+          "TEST_008",
+          "TEST_009",
+          "TEST_010"
+        ]
+      },
+      "Hybrid Prompt v1": {
+        "false_alarmed_clean_samples": 6,
+        "false_alarm_rate": 0.6,
+        "false_alarm_ids": [
+          "TEST_001",
+          "TEST_003",
+          "TEST_006",
+          "TEST_007",
+          "TEST_009",
+          "TEST_010"
+        ]
+      },
+      "Hybrid Prompt v2.1": {
+        "false_alarmed_clean_samples": 8,
+        "false_alarm_rate": 0.8,
+        "false_alarm_ids": [
+          "TEST_001",
+          "TEST_002",
+          "TEST_003",
+          "TEST_006",
+          "TEST_007",
+          "TEST_008",
+          "TEST_009",
+          "TEST_010"
+        ]
+      }
+    }
+  },
+  "multi_issue": {
+    "multi_issue_sample_count": 16,
+    "methods": {
+      "Rule Only": {
+        "fully_detected": 0,
+        "partially_detected": 13,
+        "completely_missed": 3,
+        "fully_detected_ids": [],
+        "partially_detected_ids": [
+          "TEST_045",
+          "TEST_046",
+          "TEST_047",
+          "TEST_048",
+          "TEST_050",
+          "TEST_051",
+          "TEST_052",
+          "TEST_053",
+          "TEST_054",
+          "TEST_057",
+          "TEST_058",
+          "TEST_059",
+          "TEST_060"
+        ],
+        "completely_missed_ids": [
+          "TEST_049",
+          "TEST_055",
+          "TEST_056"
+        ]
+      },
+      "LLM Prompt v1": {
+        "fully_detected": 2,
+        "partially_detected": 12,
+        "completely_missed": 2,
+        "fully_detected_ids": [
+          "TEST_047",
+          "TEST_049"
+        ],
+        "partially_detected_ids": [
+          "TEST_045",
+          "TEST_046",
+          "TEST_050",
+          "TEST_052",
+          "TEST_053",
+          "TEST_054",
+          "TEST_055",
+          "TEST_056",
+          "TEST_057",
+          "TEST_058",
+          "TEST_059",
+          "TEST_060"
+        ],
+        "completely_missed_ids": [
+          "TEST_048",
+          "TEST_051"
+        ]
+      },
+      "LLM Prompt v2.1": {
+        "fully_detected": 3,
+        "partially_detected": 12,
+        "completely_missed": 1,
+        "fully_detected_ids": [
+          "TEST_049",
+          "TEST_053",
+          "TEST_056"
+        ],
+        "partially_detected_ids": [
+          "TEST_045",
+          "TEST_046",
+          "TEST_047",
+          "TEST_050",
+          "TEST_051",
+          "TEST_052",
+          "TEST_054",
+          "TEST_055",
+          "TEST_057",
+          "TEST_058",
+          "TEST_059",
+          "TEST_060"
+        ],
+        "completely_missed_ids": [
+          "TEST_048"
+        ]
+      },
+      "Hybrid Prompt v1": {
+        "fully_detected": 8,
+        "partially_detected": 8,
+        "completely_missed": 0,
+        "fully_detected_ids": [
+          "TEST_045",
+          "TEST_046",
+          "TEST_047",
+          "TEST_050",
+          "TEST_052",
+          "TEST_054",
+          "TEST_057",
+          "TEST_059"
+        ],
+        "partially_detected_ids": [
+          "TEST_048",
+          "TEST_049",
+          "TEST_051",
+          "TEST_053",
+          "TEST_055",
+          "TEST_056",
+          "TEST_058",
+          "TEST_060"
+        ],
+        "completely_missed_ids": []
+      },
+      "Hybrid Prompt v2.1": {
+        "fully_detected": 11,
+        "partially_detected": 5,
+        "completely_missed": 0,
+        "fully_detected_ids": [
+          "TEST_045",
+          "TEST_046",
+          "TEST_047",
+          "TEST_050",
+          "TEST_051",
+          "TEST_052",
+          "TEST_053",
+          "TEST_054",
+          "TEST_056",
+          "TEST_057",
+          "TEST_059"
+        ],
+        "partially_detected_ids": [
+          "TEST_048",
+          "TEST_049",
+          "TEST_055",
+          "TEST_058",
+          "TEST_060"
+        ],
+        "completely_missed_ids": []
+      }
+    }
+  },
+  "protocol_comparison": {
+    "Prompt v1": {
+      "total_requests": 60,
+      "successful_provider_calls": 60,
+      "provider_failures": 0,
+      "provider_failure_details": [],
+      "protocol_successful_responses": 60,
+      "parse_failures": 0,
+      "schema_failures": 0,
+      "validation_failures": 0,
+      "unknown_issue_types": [],
+      "unknown_issue_type_count": 0,
+      "duplicate_predictions": [
+        {
+          "string_id": "TEST_001",
+          "issue_type": "mistranslation",
+          "count": 2
+        },
+        {
+          "string_id": "TEST_018",
+          "issue_type": "mistranslation",
+          "count": 2
+        },
+        {
+          "string_id": "TEST_054",
+          "issue_type": "mistranslation",
+          "count": 2
+        }
+      ],
+      "duplicate_prediction_key_count": 3,
+      "protocol_success_rate": 1.0,
+      "protocol_success_rate_denominator": "successful_provider_calls",
+      "raw_prediction_count": 79,
+      "unique_prediction_detection_count": 76,
+      "mean_latency_seconds": 2.500566526663412,
+      "median_latency_seconds": 2.035173300013412,
+      "thinking_content_responses": 0
+    },
+    "Prompt v2.1": {
+      "total_requests": 60,
+      "successful_provider_calls": 60,
+      "provider_failures": 0,
+      "provider_failure_details": [],
+      "protocol_successful_responses": 60,
+      "parse_failures": 0,
+      "schema_failures": 0,
+      "validation_failures": 0,
+      "unknown_issue_types": [],
+      "unknown_issue_type_count": 0,
+      "duplicate_predictions": [
+        {
+          "string_id": "TEST_009",
+          "issue_type": "omission",
+          "count": 3
+        },
+        {
+          "string_id": "TEST_054",
+          "issue_type": "mistranslation",
+          "count": 2
+        }
+      ],
+      "duplicate_prediction_key_count": 2,
+      "protocol_success_rate": 1.0,
+      "protocol_success_rate_denominator": "successful_provider_calls",
+      "raw_prediction_count": 80,
+      "unique_prediction_detection_count": 77,
+      "mean_latency_seconds": 2.100743531664678,
+      "median_latency_seconds": 1.845239849993959,
+      "thinking_content_responses": 0
+    }
+  },
+  "winner_policy": {
+    "primary": "Hybrid Overall F1",
+    "broadly_comparable_threshold": 0.02,
+    "secondary": [
+      "LLM-required F1",
+      "Precision/Recall trade-off",
+      "Protocol reliability",
+      "Paired bad-case pattern"
+    ]
+  }
+}
