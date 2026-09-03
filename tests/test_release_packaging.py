@@ -8,6 +8,7 @@ from j_gamelqa.release import (
     EXPECTED_PROMPT_SHA256,
     EXPECTED_TEST_SHA256,
     build_release_manifest,
+    sha256_file,
 )
 from j_gamelqa.rule_engine import evaluate_dataframe
 
@@ -48,7 +49,11 @@ class ReleasePackagingTests(unittest.TestCase):
         )
 
     def test_release_manifest_builder_verifies_frozen_inputs(self):
-        manifest = build_release_manifest(PROJECT_ROOT, automated_test_count=176)
+        manifest = build_release_manifest(
+            PROJECT_ROOT,
+            automated_test_count=188,
+            demo_smoke_inference_calls=1,
+        )
         self.assertEqual(manifest["version"], "1.0.0")
         self.assertEqual(manifest["prompt_sha256"], EXPECTED_PROMPT_SHA256)
         self.assertEqual(manifest["test_sha256"], EXPECTED_TEST_SHA256)
@@ -58,7 +63,18 @@ class ReleasePackagingTests(unittest.TestCase):
         )
         self.assertEqual(manifest["heldout_result"]["tp"], 58)
         self.assertEqual(manifest["counts"]["held_out_test_sample_count"], 60)
-        self.assertEqual(manifest["counts"]["automated_unittest_count"], 176)
+        self.assertEqual(manifest["counts"]["automated_unittest_count"], 188)
+        self.assertEqual(manifest["pyproject_sha256"], sha256_file(PROJECT_ROOT / "pyproject.toml"))
+        self.assertEqual(
+            manifest["demo"],
+            {
+                "available": True,
+                "framework": "Streamlit",
+                "entry_point": "j-gamelqa-demo",
+                "optional_dependency": "streamlit>=1.63,<2",
+                "smoke_inference_calls": 1,
+            },
+        )
 
     def test_public_markdown_has_no_absolute_windows_path(self):
         findings = []

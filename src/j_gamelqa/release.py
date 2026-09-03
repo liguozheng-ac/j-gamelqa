@@ -50,6 +50,7 @@ RELEASE_DOCUMENTS = (
     "docs/portfolio_onepager.md",
     "docs/resume_cn.md",
     "docs/reproducibility.md",
+    "docs/local_demo.md",
     "docs/public_release_audit.md",
     "docs/github_release_checklist.md",
     "docs/git_commit_plan.md",
@@ -72,6 +73,7 @@ def _csv_row_count(path: Path) -> int:
 def build_release_manifest(
     project_root: str | Path = PROJECT_ROOT,
     automated_test_count: int = 0,
+    demo_smoke_inference_calls: int = 0,
 ) -> dict[str, object]:
     """Verify frozen inputs and return the deterministic v1 release manifest."""
     root = Path(project_root)
@@ -123,6 +125,14 @@ def build_release_manifest(
         "heldout_freeze_manifest_sha256": sha256_file(
             root / "outputs" / "heldout_evaluation_freeze_manifest.json"
         ),
+        "pyproject_sha256": sha256_file(root / "pyproject.toml"),
+        "demo": {
+            "available": True,
+            "framework": "Streamlit",
+            "entry_point": "j-gamelqa-demo",
+            "optional_dependency": "streamlit>=1.63,<2",
+            "smoke_inference_calls": demo_smoke_inference_calls,
+        },
         "document_sha256": {
             path: sha256_file(root / path) for path in RELEASE_DOCUMENTS
         },
@@ -135,7 +145,7 @@ def build_release_manifest(
             ),
         },
         "policy": {
-            "ollama_calls_during_release_packaging": 0,
+            "ollama_calls_during_release_packaging": demo_smoke_inference_calls,
             "held_out_test_inference_during_release_packaging": 0,
             "held_out_test_evaluation_during_release_packaging": 0,
             "no_retuning": (
@@ -149,12 +159,16 @@ def build_release_manifest(
 def write_release_manifest(
     output_path: str | Path,
     automated_test_count: int,
+    demo_smoke_inference_calls: int = 0,
 ) -> Path:
     """Write one new release manifest without overwriting an existing file."""
     destination = Path(output_path)
     if destination.exists():
         raise FileExistsError(f"release manifest already exists: {destination}")
-    payload = build_release_manifest(automated_test_count=automated_test_count)
+    payload = build_release_manifest(
+        automated_test_count=automated_test_count,
+        demo_smoke_inference_calls=demo_smoke_inference_calls,
+    )
     destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_text(
         json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
@@ -173,8 +187,15 @@ def main() -> None:
         default=PROJECT_ROOT / "outputs" / "v1_release_manifest.json",
     )
     parser.add_argument("--automated-test-count", type=int, required=True)
+    parser.add_argument("--demo-smoke-inference-calls", type=int, default=0)
     args = parser.parse_args()
-    print(write_release_manifest(args.output, args.automated_test_count))
+    print(
+        write_release_manifest(
+            args.output,
+            args.automated_test_count,
+            args.demo_smoke_inference_calls,
+        )
+    )
 
 
 if __name__ == "__main__":

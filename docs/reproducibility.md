@@ -16,7 +16,7 @@
 | LLM provider used in frozen experiments | Local Ollama HTTP API |
 | Model | `qwen3.5:9b` |
 
-The project has only two runtime Python dependencies in `pyproject.toml`: `pandas>=2.3` and `openpyxl>=3.1`. Ollama and its model are external local runtime components, not Python dependencies. The exact Ollama executable version was not recorded in the frozen config, so this document does not invent one.
+The core project has only two required runtime Python dependencies in `pyproject.toml`: `pandas>=2.3` and `openpyxl>=3.1`. The optional local presentation layer adds `streamlit>=1.63,<2` through the `demo` extra. Ollama and its model are external local runtime components, not Python dependencies. The exact Ollama executable version was not recorded in the frozen config, so this document does not invent one.
 
 ## Safe Setup and Verification
 
@@ -31,6 +31,15 @@ python -X utf8 examples\run_rule_demo.py
 ```
 
 The demo reads only `examples/example_input.csv` and `examples/example_glossary.csv`, writes no report, and makes no provider call.
+
+For the optional manual-input Streamlit demo, install and run:
+
+```powershell
+python -m pip install -e ".[demo]"
+j-gamelqa-demo
+```
+
+Rule Only remains available without Ollama. Hybrid QA uses the frozen Prompt v2.1 and provider settings described below; see `docs/local_demo.md` for the full boundary.
 
 ## Frozen LLM Configuration
 

@@ -26,16 +26,25 @@
   "heldout_result_artifact": "outputs/heldout_method_comparison_v1.json",
   "heldout_result_artifact_sha256": "31208B6B2BF2B3AC1CFDFD3DA14ABC8A76F85EED43A4D1B5AB5FC602F5A8D329",
   "heldout_freeze_manifest_sha256": "E0545DE0F6EE4DFC784441A5F5B059A9E3C40127A60C0ADA42D231FD08D02D3E",
+  "pyproject_sha256": "B34C1E6E618EB36F13B005ADA55632E45F7903BFCD79601437F12D614D095F65",
+  "demo": {
+    "available": true,
+    "framework": "Streamlit",
+    "entry_point": "j-gamelqa-demo",
+    "optional_dependency": "streamlit>=1.63,<2",
+    "smoke_inference_calls": 1
+  },
   "document_sha256": {
-    "README.md": "7368F160D158CA17EC56C316F2F42CF96EEF43F1A1193411A810E3B851585BAD",
-    "RELEASE_NOTES.md": "2AC1DE9BEA512CE39808537F1F12C3D89E003BCB91B824944AF385FF6DC55699",
+    "README.md": "BD7C473240E058C1511975DB29EAF3E93F0DE2AA6AA0E7154DF8CE9ED1B85261",
+    "RELEASE_NOTES.md": "A9F3C45AB21830B173E63D8229E5973EB29E226EB8593439CDA597FEDDAEFF97",
     "docs/architecture.md": "B0F46B27AA9A583B7141543861914B38BA8236EF30F7A7E80A9F327A580CB989",
     "docs/experiment_flow.md": "F90F4B5E36BA91D7D1AD7C95F22839005F1BD49C5A5AD1AD021A6567107A47D4",
     "docs/interview_deep_dive.md": "09932A12B01CD15902B156B395F2CA15D04687AA16D50951493B0073E42F180A",
     "docs/job_talk_tracks.md": "B30BEEBD3E4673DB43807D8686E289A579DC00E9BF9C206ADAC5C88FC025AB2B",
     "docs/portfolio_onepager.md": "034980C92EDC9DBFD4B678D6E6AC45596A4EE20DC1B602C56A13FD90BE217159",
     "docs/resume_cn.md": "850FE0761F4C3805814D73266C43F2A595C81D1C2F248011335114B1DC559C2E",
-    "docs/reproducibility.md": "689496285670D42486A1312B279289BD4F6268546098AC629974398D48A5B427",
+    "docs/reproducibility.md": "B32E82DB29ED79D487C35BD1901CFAA6A55A383D6C49D8E9B26B0D967807E225",
+    "docs/local_demo.md": "7338DF076E3E90047961138408ACA05A6B8D695CF711F121105B09609C8A6D17",
     "docs/public_release_audit.md": "797B6863599D8011D84C689C2FE8F6C1527852F649FF87D4C6D89539B301AC1A",
     "docs/github_release_checklist.md": "F325F7FE85EA4314A1660D43C35810421F3A8B8FEF212D9674BF28A752739FE6",
     "docs/git_commit_plan.md": "757D69FA25DF3252D856AA4EB4771A7305511CFEE9D29EB257DE2C210B16CC76",
@@ -44,13 +53,13 @@
     "docs/assets/j-gamelqa-experiment-flow.svg": "4A3D5CCC21FEBFF1E09046B368C43A2AAC15869FB810385BA6289FFA20A478BD"
   },
   "counts": {
-    "automated_unittest_count": 176,
+    "automated_unittest_count": 188,
     "development_sample_count": 48,
     "held_out_test_sample_count": 60,
     "held_out_reference_detection_count": 66
   },
   "policy": {
-    "ollama_calls_during_release_packaging": 0,
+    "ollama_calls_during_release_packaging": 1,
     "held_out_test_inference_during_release_packaging": 0,
     "held_out_test_evaluation_during_release_packaging": 0,
     "no_retuning": "Future development requires Test v2 or an external human-reviewed evaluation set."

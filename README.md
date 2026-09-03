@@ -26,6 +26,18 @@ J-GameLQA 不是自动翻译器。它接收中文源文、日语译文和游戏�
 > Hybrid v2.1 — Precision `0.5859` · Recall `0.8788` · F1 `0.7030`<br>
 > *Synthetic held-out benchmark; not production accuracy.*
 
+## Local Demo
+
+可选的 Streamlit 展示层允许手动输入中文原文、日语译文和人物上下文，并分别查看 Rule、LLM 与 Hybrid Issues。它直接调用现有 QA 模块，不读取 DEV/Test benchmark，也不改变冻结的 Prompt、规则或 Hybrid policy。
+
+```powershell
+python -m pip install -e ".[demo]"
+ollama pull qwen3.5:9b
+j-gamelqa-demo
+```
+
+没有 Ollama 时仍可使用 **Rule Only**；Hybrid QA 需要本机 Ollama 和 `qwen3.5:9b`。完整运行条件、模式和错误处理见 [Local Demo](docs/local_demo.md)。
+
 ## Architecture
 
 | Layer | Components | Responsibility |
@@ -127,6 +139,7 @@ j-gamelqa/
 ├── src/j_gamelqa/
 │   ├── rules/              # 6 类确定性 Checker
 │   ├── providers/          # 可注入的本地 Ollama provider
+│   ├── demo_*.py           # 可选 Streamlit 展示层与单条输入适配
 │   ├── models.py           # 统一 Issue contract
 │   ├── llm_evaluator.py    # Prompt → strict parser → Issue
 │   ├── hybrid.py           # Rule / LLM 类型路由
@@ -140,6 +153,7 @@ j-gamelqa/
 ## Documentation
 
 - [Architecture](docs/architecture.md)：模块边界与设计取舍
+- [Local Demo](docs/local_demo.md)：安装、启动、两种运行模式和已知限制
 - [Experiment Flow](docs/experiment_flow.md)：从 Rule baseline 到最终 Held-out 的假设—实验—决策链
 - [Portfolio One-pager](docs/portfolio_onepager.md)：一分钟项目复习页
 - [Reproducibility](docs/reproducibility.md)：环境、协议、哈希与安全复现范围

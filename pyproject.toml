@@ -14,6 +14,11 @@ dependencies = [
   "openpyxl>=3.1",
 ]
 
+[project.optional-dependencies]
+demo = [
+  "streamlit>=1.63,<2",
+]
+
 [project.scripts]
 j-gamelqa-rules = "j_gamelqa.rule_engine:main"
 j-gamelqa-evaluate = "j_gamelqa.evaluate:main"
@@ -32,6 +37,7 @@ j-gamelqa-heldout-preflight = "j_gamelqa.heldout_freeze:main"
 j-gamelqa-heldout-predict = "j_gamelqa.heldout_inference:main"
 j-gamelqa-heldout-evaluate = "j_gamelqa.heldout_analysis:main"
 j-gamelqa-release-manifest = "j_gamelqa.release:main"
+j-gamelqa-demo = "j_gamelqa.demo_cli:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
