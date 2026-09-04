@@ -171,3 +171,9 @@ j-gamelqa/
 3. 增加 Severity evaluation 和 span localization evaluation。
 4. 在不重用已退役 Test 的前提下比较第二模型与重复运行稳定性。
 5. 用获授权的真实本地化数据验证人工审核流程、成本与吞吐。
+
+## License
+
+This project is licensed under the MIT License. See `LICENSE`.
+
+本项目采用 MIT License，详见 `LICENSE`。

@@ -16,4 +16,4 @@ Initial public release: J-GameLQA v1.0.0
 - 架构图、实验流程图和技术文档
 - Demo examples
 
-提交前仍需人工决定 LICENSE，并逐项执行 `docs/github_release_checklist.md`。不要在首个 commit 中包含 `.venv`、cache、egg-info、IDE 文件、个人联系方式或本地 secret。
+最初两个本地提交已经完成，且没有包含 `.venv`、cache、egg-info、IDE 文件、个人联系方式或本地 secret。用户现已选择 MIT License 和 Public visibility；剩余发布状态由 `docs/github_release_checklist.md` 记录。

@@ -61,6 +61,12 @@ class ReleasePackagingTests(unittest.TestCase):
             manifest["heldout_result_artifact_sha256"],
             EXPECTED_HELDOUT_COMPARISON_SHA256,
         )
+        self.assertEqual(manifest["license"]["type"], "MIT")
+        self.assertEqual(manifest["license"]["file"], "LICENSE")
+        self.assertEqual(
+            manifest["license"]["sha256"],
+            sha256_file(PROJECT_ROOT / "LICENSE"),
+        )
         self.assertEqual(manifest["heldout_result"]["tp"], 58)
         self.assertEqual(manifest["counts"]["held_out_test_sample_count"], 60)
         self.assertEqual(manifest["counts"]["automated_unittest_count"], 188)
@@ -100,6 +106,13 @@ class ReleasePackagingTests(unittest.TestCase):
             path = PROJECT_ROOT / relative_path
             self.assertTrue(path.is_file(), relative_path)
             self.assertGreater(path.stat().st_size, 0, relative_path)
+
+    def test_standard_mit_license_has_selected_copyright(self):
+        license_text = (PROJECT_ROOT / "LICENSE").read_text(encoding="utf-8")
+        self.assertTrue(license_text.startswith("MIT License\n"))
+        self.assertIn("Copyright (c) 2026 Guozheng Li", license_text)
+        self.assertIn("Permission is hereby granted, free of charge", license_text)
+        self.assertIn('THE SOFTWARE IS PROVIDED "AS IS"', license_text)
 
 
 if __name__ == "__main__":

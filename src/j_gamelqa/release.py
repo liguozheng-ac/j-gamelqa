@@ -125,6 +125,11 @@ def build_release_manifest(
         "heldout_freeze_manifest_sha256": sha256_file(
             root / "outputs" / "heldout_evaluation_freeze_manifest.json"
         ),
+        "license": {
+            "type": "MIT",
+            "file": "LICENSE",
+            "sha256": sha256_file(root / "LICENSE"),
+        },
         "pyproject_sha256": sha256_file(root / "pyproject.toml"),
         "demo": {
             "available": True,

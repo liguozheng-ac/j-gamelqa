@@ -20,21 +20,18 @@
 - [x] Remote is not configured
 - [x] Working tree is clean after the local release commit
 
-## User decisions before publication
+## Publication status
 
-- [ ] Decide and add an appropriate LICENSE, or explicitly publish without one
-- [ ] Confirm Public repository visibility (recommended for this portfolio project)
-- [ ] Confirm repository name `j-gamelqa`
+- [x] Add MIT License
+- [x] Confirm Public repository visibility
+- [x] Confirm repository name `j-gamelqa`
 - [ ] Configure GitHub remote
 - [ ] Perform the first push
 - [ ] Apply or edit the proposed GitHub description and topics
 
 ## LICENSE decision
 
-Codex has deliberately not selected a license. The user should choose between:
-
-1. A permissive open-source license that allows use, modification, and redistribution while retaining the copyright and license notice.
-2. Publicly readable source with no added license, which by default does not grant others permission to copy, modify, or redistribute it.
+The user selected the standard MIT License. The repository-root `LICENSE` file carries `Copyright (c) 2026 Guozheng Li` without additional restrictions.
 
 ## Suggested GitHub About
 

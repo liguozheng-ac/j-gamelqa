@@ -11,6 +11,7 @@ Release date: 2026-09-04
 - Detection evaluation with overall and scoped Precision/Recall/F1, per-type metrics, FP/FN, duplicate, unknown-type, clean-sample, and multi-issue analysis.
 - Separate 48-item Development and 60-item Held-out Test splits with freeze and leakage controls.
 - An optional local Streamlit demo with Rule Only and Hybrid QA modes, implemented as a presentation layer over the frozen v1 APIs.
+- Released under the MIT License, Copyright (c) 2026 Guozheng Li.
 
 ## Experiments
 

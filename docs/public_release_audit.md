@@ -1,6 +1,6 @@
 # Public Release Audit
 
-Audit date: 2026-09-04
+Audit date: 2026-09-05
 Scope: repository files outside `.git/`, `.venv/`, Python caches, and generated egg-info.
 
 本报告只记录命中位置和处理决定，不复制任何疑似 secret 内容。
@@ -18,7 +18,7 @@ Scope: repository files outside `.git/`, `.venv/`, Python caches, and generated 
 | Absolute Windows paths in frozen artifacts | Present in 8 historical experiment JSON files | Preserved; see exception below |
 | Universal local endpoint | `http://127.0.0.1:11434` | Retained as documented Ollama default |
 | Files >= 1 MiB | None | No action |
-| LICENSE | Missing | User decision remains pending |
+| LICENSE | Standard MIT License | Added with Copyright (c) 2026 Guozheng Li |
 
 ## README Readability
 
@@ -62,4 +62,4 @@ The Stage 8C public candidate contains 179 files across project metadata, `src/`
 
 ## Audit Limitations
 
-Pattern scanning reduces obvious release risk but cannot mathematically prove that every sentence is non-sensitive. Repository visibility, final name, LICENSE, remote creation, GitHub metadata, and first push therefore remain explicit user decisions.
+Pattern scanning reduces obvious release risk but cannot mathematically prove that every sentence is non-sensitive. The user explicitly selected MIT and Public visibility; remote creation, GitHub metadata, first push, and the final online audit are verified as separate release steps.
