@@ -17,17 +17,22 @@
 - [x] Public candidate file inventory reviewed
 - [x] Staged files reviewed and rescanned before the initial commit
 - [x] Initial local release commit created
-- [x] Remote is not configured
-- [x] Working tree is clean after the local release commit
+- [x] `origin` points to `https://github.com/liguozheng-ac/j-gamelqa.git`
+- [x] Working tree is clean after the public release push
 
 ## Publication status
 
 - [x] Add MIT License
 - [x] Confirm Public repository visibility
 - [x] Confirm repository name `j-gamelqa`
-- [ ] Configure GitHub remote
-- [ ] Perform the first push
-- [ ] Apply or edit the proposed GitHub description and topics
+- [x] Create the empty GitHub repository
+- [x] Configure GitHub remote
+- [x] Perform the first push to `main`
+- [x] Confirm the GitHub description
+- [x] Verify the online README, MIT License, documentation links, and SVG assets
+- [x] Verify Local Demo installation and startup instructions are visible online
+- [x] Complete the post-push secret, privacy, absolute-path, and ignored-file audit
+- [ ] Add the suggested GitHub topics manually (the available GitHub integration has no repository-topics write interface)
 
 ## LICENSE decision
 
