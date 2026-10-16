@@ -32,7 +32,8 @@
 - [x] Verify the online README, MIT License, documentation links, and SVG assets
 - [x] Verify Local Demo installation and startup instructions are visible online
 - [x] Complete the post-push secret, privacy, absolute-path, and ignored-file audit
-- [ ] Add the suggested GitHub topics manually (the available GitHub integration has no repository-topics write interface)
+- [x] Add and verify the nine suggested GitHub topics
+- [x] Publish an English README and a Chinese README with reciprocal language links
 
 ## LICENSE decision
 

@@ -30,8 +30,13 @@ class ReleasePackagingTests(unittest.TestCase):
         ):
             self.assertIn(heading, readme)
         self.assertIn("F1 = 0.7030", readme)
-        self.assertIn("误报 8 条", readme)
-        self.assertIn("已冻结并退役", readme)
+        self.assertIn("8 of 10", readme)
+        self.assertIn("frozen and retired", readme)
+        self.assertIn("[简体中文](README.zh-CN.md)", readme)
+        chinese_readme = (PROJECT_ROOT / "README.zh-CN.md").read_text(encoding="utf-8")
+        self.assertIn("[English](README.md)", chinese_readme)
+        self.assertIn("误报 8 条", chinese_readme)
+        self.assertIn("已冻结并退役", chinese_readme)
 
     def test_demo_is_answer_free_and_runs_only_rule_pipeline(self):
         frame = load_dev_dataset(PROJECT_ROOT / "examples" / "example_input.csv")

@@ -42,6 +42,7 @@ EXPECTED_HELDOUT_RESULT = {
 }
 RELEASE_DOCUMENTS = (
     "README.md",
+    "README.zh-CN.md",
     "RELEASE_NOTES.md",
     "docs/architecture.md",
     "docs/experiment_flow.md",
